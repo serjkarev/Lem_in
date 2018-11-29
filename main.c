@@ -14,15 +14,15 @@
 
 int		main(void)
 {
-	// char	*str;
-
+	char	*str;
 	t_lem	*lem;
 
+	str = NULL;
 	lem = (t_lem*)ft_memalloc(sizeof(t_lem));
 	init_lem(lem);
 	parse_ants(lem);
-	// str = parse_rooms(lem, str);
-
+	str = parse_rooms(lem);
+	printf("%s\n", str);
 	// valid_links(lem);
 	// bfs(lem);
 	// system("leaks -q lem-in");

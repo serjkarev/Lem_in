@@ -43,7 +43,7 @@ t_room	*find_start_room(t_lem *lem)
 	{
 		if (lem->rooms->type == 1)
 			return (lem->rooms);
-		lem->rooms = lem->rooms->prev;
+		// lem->rooms = lem->rooms->prev;
 	}
 	return (NULL);
 }

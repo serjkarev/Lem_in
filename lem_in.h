@@ -19,6 +19,10 @@
 # define ER02 "🖕\x1B[31m ERROR: NO ANTS \033[0m🖕\n"
 # define ER03 "🖕\x1B[31m ERROR: ANTS CAN'T BE NEGATIVE \033[0m🖕\n"
 # define ER04 "🖕\x1B[31m ERROR: TRASH BEFORE ANTS \033[0m🖕\n"
+# define ER05 "🖕\x1B[31m ERROR: BAD ROOM \033[0m🖕\n"
+# define ER06 "🖕\x1B[31m ERROR: Invalid room coordinates \033[0m🖕\n"
+# define ER07 "🖕\x1B[31m ERROR: 'start' must be one \033[0m🖕\n"
+# define ER08 "🖕\x1B[31m ERROR: 'end' must be one \033[0m🖕\n"
 
 typedef struct		s_nghbr
 {
@@ -35,7 +39,6 @@ typedef struct		s_room
 	int				y;
 	int				type;
 	struct	s_room	*next;
-	struct	s_room	*prev;
 	struct	s_nghbr	*nghbrs;
 }					t_room;
 
@@ -47,20 +50,20 @@ typedef struct		s_lem
 }					t_lem;
 
 void	init_lem(t_lem *lem);
-void	ft_error(char *str, char *error);
+void	ft_error(char *str, char **arr, char *error);
+int		ft_isdigit_str(char *str);
+int		space_detect(char *str);
+void	free_arr(char **arr);
 void	*parse_ants(t_lem *lem);
-char	*parse_rooms(t_lem *lem, char *str);
+char	*parse_rooms(t_lem *lem);
+void	parse_room(char *str, t_lem *lem, int type);
+t_room	*create_room(char **arr, t_lem *lem, int type);
 
 //########################################################
-int					ft_isdigit_str(char *str);
-int					space_detect(char *str);
-t_room				*create_room(char **arr, t_lem *lem);
 
-void				parse_room(char *str, t_lem *lem);
 void				parse_links(t_lem *lem, char *str);
 t_room				*get_room_by_name(t_lem *lem, char *name);
 
-void				free_arr(char **arr);
 t_nghbr				*create_nghbrs(char **arr, t_room *room, t_room *n);
 void				find_neighbor(t_lem *lem, char **arr, int n1, int n2);
 // void				valid_links(t_lem *lem);

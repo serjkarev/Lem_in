@@ -1,4 +1,4 @@
-# Install script for directory: /Users/skarev/Documents/lem_in_new
+# Install script for directory: /Users/skarev/Desktop/tmp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/skarev/Documents/lem_in_new/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/skarev/Desktop/tmp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

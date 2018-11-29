@@ -21,23 +21,10 @@ t_room	*get_room_by_name(t_lem *lem, char *name)
 	{
 		if (ft_strequ(tmp->name, name))
 			return (tmp);
-		tmp = tmp->prev;
+		// tmp = tmp->prev;
 		
 	}
 	return (NULL);
-}
-
-void	free_arr(char **arr)
-{
-	int		i;
-
-	i = 0;
-	while (arr[i])
-	{
-		free(arr[i]);
-		i++;
-	}
-	free(arr);
 }
 
 t_nghbr	*create_nghbrs(char **arr, t_room *room, t_room *n)

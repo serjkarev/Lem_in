@@ -12,11 +12,27 @@
 
 #include "lem_in.h"
 
-void	ft_error(char *str, char *error)
+void	ft_error(char *str, char **arr, char *error)
 {
 	ft_putstr_fd(error, 2);
-	free(str);
+	if (str)
+		free(str);
+	else if (arr)
+		free_arr(arr); 
 	exit(1);
+}
+
+void	free_arr(char **arr)
+{
+	int		i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
 }
 
 int		ft_isdigit_str(char *str)
@@ -39,3 +55,49 @@ int		ft_isdigit_str(char *str)
 	}
 	return (i - d);
 }
+
+int		space_detect(char *str)
+{
+	int		i;
+	int		space;
+
+	i = 0;
+	space = 0;
+	while (str[i])
+		if (str[i++] == ' ')
+			space++;
+	return (space);
+}
+
+t_room	*create_room(char **arr, t_lem *lem, int type)
+{
+	t_room *room;
+	t_room *head;
+
+	if (!arr)
+		return (NULL);
+	room = lem->rooms;
+	head = lem->rooms;
+	if (room)
+	{
+		while (room)
+			room = room->next;
+	}
+	else
+	{
+		if (!(room = (t_room*)ft_memalloc(sizeof(t_room))))
+			return (NULL);
+	}
+	room->name = ft_strdup(arr[0]);
+	room->visited = 0;
+	if (!ft_isdigit_str(arr[1]) && !ft_isdigit_str(arr[2]))
+	{
+		room->x = ft_atoi(arr[1]);
+		room->y = ft_atoi(arr[2]);
+	}
+	else
+		ft_error(NULL, arr, ER06);
+	room->next = NULL;
+	return (head);
+}
+

@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/skarev/Documents/lem_in_new/. -I/Users/skarev/Documents/lem_in_new/libft 
+C_INCLUDES = -I/Users/skarev/Desktop/tmp/. -I/Users/skarev/Desktop/tmp/libft 
 
