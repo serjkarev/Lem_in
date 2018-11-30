@@ -16,17 +16,23 @@ fcntl.h
 stdio.h
 -
 
-/Users/skarev/Desktop/tmp/bfs.c
-lem_in.h
-/Users/skarev/Desktop/tmp/lem_in.h
-
-/Users/skarev/Desktop/tmp/init_stuff.c
-lem_in.h
-/Users/skarev/Desktop/tmp/lem_in.h
-
 /Users/skarev/Desktop/tmp/lem_in.h
 ./libft/libft.h
 /Users/skarev/Desktop/tmp/./libft/libft.h
+stdio.h
+-
+
+/Users/skarev/Desktop/tmp/libft/get_next_line.c
+libft.h
+/Users/skarev/Desktop/tmp/libft/libft.h
+
+/Users/skarev/Desktop/tmp/libft/libft.h
+unistd.h
+-
+stdlib.h
+-
+fcntl.h
+-
 stdio.h
 -
 
@@ -35,18 +41,6 @@ lem_in.h
 /Users/skarev/Desktop/tmp/lem_in.h
 
 /Users/skarev/Desktop/tmp/parsing.c
-lem_in.h
-/Users/skarev/Desktop/tmp/lem_in.h
-
-/Users/skarev/Desktop/tmp/tools.c
-lem_in.h
-/Users/skarev/Desktop/tmp/lem_in.h
-
-/Users/skarev/Desktop/tmp/tools_2.c
-lem_in.h
-/Users/skarev/Desktop/tmp/lem_in.h
-
-/Users/skarev/Desktop/tmp/validlinks.c
 lem_in.h
 /Users/skarev/Desktop/tmp/lem_in.h
 

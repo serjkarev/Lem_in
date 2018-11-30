@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-void	*parse_ants(t_lem *lem)
+void	parse_ants(t_lem *lem)
 {
 	char	*str;
 
@@ -41,9 +41,9 @@ char	*parse_rooms(t_lem *lem)
 	int		type;
 	int		det[2];
 
-	type = 0;
 	det[0] = 0;
 	det[1] = 0;
+    type = 0;
 	while (get_next_line(0, &str))
 	{
 		if (ft_strequ(str, "##start") || ft_strequ(str, "##end"))
@@ -57,10 +57,14 @@ char	*parse_rooms(t_lem *lem)
 		else if (str[0] == '#' && str[1] != '#')
 			continue ;
 		else if (space_detect(str) == 2)
+		{
 			parse_room(str, lem, type);
+			type = 0;
+		}
 		else
 			return (str);
 	}
+	return (str);
 }
 
 void	parse_room(char *str, t_lem *lem, int type)
@@ -73,7 +77,7 @@ void	parse_room(char *str, t_lem *lem, int type)
 	if (arr[3] != NULL || space != 2 || !arr[0] || !arr[1] || !arr[2] ||\
 										 ft_strchr(arr[0], '-') != NULL)
 		ft_error(str, arr, ER05);
-	lem->rooms = create_room(arr, lem, type);
+	create_room(arr, lem, type);
 	free_arr(arr);
 }
 
@@ -81,15 +85,25 @@ void	parse_links(t_lem *lem, char *str)
 {
 	char	**arr;
 
-	arr = ft_strsplit(str, '-');
-	if (arr[2] != NULL || !arr[0] || !arr[1])
-	{
+	if (str)
+	{	
+		arr = ft_strsplit(str, '-');
+		if (arr[2] != NULL || !arr[0] || !arr[1])
+			ft_error(NULL, arr, ER09);
+		find_neighbor(lem, arr, 0, 1);
+		find_neighbor(lem, arr, 1, 0);
 		free_arr(arr);
-		// ft_error(ER26);
 	}
-	find_neighbor(lem, arr, 0, 1);
-	find_neighbor(lem, arr, 1, 0);
-	free_arr(arr);
+	while (get_next_line(0, &str))
+	{
+		arr = ft_strsplit(str, '-');
+		if (arr[2] != NULL || !arr[0] || !arr[1])
+			ft_error(NULL, arr, ER09);
+		find_neighbor(lem, arr, 0, 1);
+		find_neighbor(lem, arr, 1, 0);
+		free_arr(arr);
+	}
+	free(str);
 }
 
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2)
@@ -100,9 +114,6 @@ void	find_neighbor(t_lem *lem, char **arr, int n1, int n2)
 	room = get_room_by_name(lem, arr[n1]);
 	n = get_room_by_name(lem, arr[n2]);
 	if (room == NULL || n == NULL)
-	{
-		free_arr(arr);
-		// ft_error(ER05);
-	}
-	room->nghbrs = create_nghbrs(arr, room, n);
+		ft_error(NULL, arr, ER10);
+	create_nghbrs(room, n);
 }

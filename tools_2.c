@@ -21,41 +21,29 @@ t_room	*get_room_by_name(t_lem *lem, char *name)
 	{
 		if (ft_strequ(tmp->name, name))
 			return (tmp);
-		// tmp = tmp->prev;
+		tmp = tmp->next;
 		
 	}
 	return (NULL);
 }
 
-t_nghbr	*create_nghbrs(char **arr, t_room *room, t_room *n)
+void	create_nghbrs(t_room *room, t_room *n)
 {
-	t_nghbr	*nghbrs;
-	t_nghbr	*temp;
+	t_nghbr	*current;
 
-	if (!arr)
-		return (NULL);
 	if (!room->nghbrs)
 	{
-		if (!(nghbrs = (t_nghbr*)ft_memalloc(sizeof(t_nghbr))))
-			return (NULL);
-		nghbrs->neighbor = n;
-		nghbrs->next = NULL;
-		nghbrs->prev = NULL;
+		room->nghbrs = (t_nghbr*)ft_memalloc(sizeof(t_nghbr));
+		room->nghbrs->neighbor = n;
+		room->nghbrs->next = NULL;
 	}
 	else
 	{
-	    nghbrs = room->nghbrs;
-		while (nghbrs)
-		{
-			temp = nghbrs;
-			nghbrs = nghbrs->next;
-		}
-		if (!(nghbrs = (t_nghbr*)ft_memalloc(sizeof(t_nghbr))))
-			return (NULL);
-		nghbrs->neighbor = n;
-		nghbrs->next = NULL;
-		nghbrs->prev = temp;
-		temp->next = nghbrs;
+	    current = room->nghbrs;
+		while (current->next)
+			current = current->next;
+		current->next = (t_nghbr*)ft_memalloc(sizeof(t_nghbr));
+		current->next->neighbor = n;
+		current->next->next = NULL;
 	}
-	return (nghbrs);
 }

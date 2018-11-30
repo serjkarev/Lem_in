@@ -123,33 +123,6 @@ lem_in_new/fast:
 	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/build
 .PHONY : lem_in_new/fast
 
-bfs.o: bfs.c.o
-
-.PHONY : bfs.o
-
-# target to build an object file
-bfs.c.o:
-	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/bfs.c.o
-.PHONY : bfs.c.o
-
-bfs.i: bfs.c.i
-
-.PHONY : bfs.i
-
-# target to preprocess a source file
-bfs.c.i:
-	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/bfs.c.i
-.PHONY : bfs.c.i
-
-bfs.s: bfs.c.s
-
-.PHONY : bfs.s
-
-# target to generate assembly for a file
-bfs.c.s:
-	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/bfs.c.s
-.PHONY : bfs.c.s
-
 init_stuff.o: init_stuff.c.o
 
 .PHONY : init_stuff.o
@@ -2049,9 +2022,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lem_in_new"
-	@echo "... bfs.o"
-	@echo "... bfs.i"
-	@echo "... bfs.s"
 	@echo "... init_stuff.o"
 	@echo "... init_stuff.i"
 	@echo "... init_stuff.s"

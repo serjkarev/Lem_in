@@ -72,7 +72,7 @@ add_executable(lem_in_new
         libft/ft_toupper.c
         libft/get_next_line.c
         libft/libft.h
-        bfs.c
+
         init_stuff.c
         lem_in.h
         main.c

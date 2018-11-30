@@ -22,10 +22,10 @@ int		main(void)
 	init_lem(lem);
 	parse_ants(lem);
 	str = parse_rooms(lem);
-	printf("%s\n", str);
+	parse_links(lem, str);
 	// valid_links(lem);
 	// bfs(lem);
 	// system("leaks -q lem-in");
-	// printf("ants = %d\n", lem->ants);
+	printf("ants = %d\n", lem->ants);
 	return (0);
 }
