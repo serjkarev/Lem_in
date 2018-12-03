@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <sys/types.h>
+# include <sys/stat.h>
 # include <stdio.h>
 # define BUFF_SIZE 16
 # define MAX_FD 8192

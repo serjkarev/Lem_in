@@ -41,7 +41,10 @@ int			ft_line(char **tmp, char **line, char *buf)
 	{
 		sk = *tmp;
 		dif = check - sk;
-		*line = ft_strndup(sk, dif);
+		if (ft_strequ(sk, "\n"))
+			*line = ft_strndup(sk, dif + 1);
+		else
+			*line = ft_strndup(sk, dif);
 		*tmp = ft_strsub(sk, dif + 1, ft_strlen(sk) - (dif + 1));
 		ft_strdel(&sk);
 		ft_strdel(&buf);
@@ -78,6 +81,7 @@ int			get_next_line(const int fd, char **line)
 	if ((fd < 0 || fd > MAX_FD || !line ||
 		read(fd, buf, 0) < 0) || BUFF_SIZE < 1)
 		return (-1);
+//	 *line ? ft_strdel(line) : line;
 	buf = ft_strnew(BUFF_SIZE + 1);
 	if (tmp[fd] != NULL)
 		if (ft_line(&tmp[fd], line, buf))

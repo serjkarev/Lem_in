@@ -25,6 +25,13 @@
 # define ER08 "🖕\x1B[31m ERROR: 'end' must be one \033[0m🖕\n"
 # define ER09 "🖕\x1B[31m ERROR: invalid links \033[0m🖕\n"
 # define ER10 "🖕\x1B[31m ERROR: link to a non-existent room \033[0m🖕\n"
+# define ER11 "🖕\x1B[31m ERROR: START room not found \033[0m🖕\n"
+
+typedef struct		s_q
+{
+	struct	s_room	*room;
+	struct	s_q		*next;
+}					t_q;
 
 typedef struct		s_nghbr
 {
@@ -39,6 +46,7 @@ typedef struct		s_room
 	int				x;
 	int				y;
 	int				type;
+	int				deep;
 	struct	s_room	*next;
 	struct	s_nghbr	*nghbrs;
 }					t_room;
@@ -46,7 +54,7 @@ typedef struct		s_room
 typedef struct		s_lem
 {
 	int				ants;
-	t_nghbr			*queue;
+	t_q				*queue;
 	t_room			*rooms;
 }					t_lem;
 
@@ -63,14 +71,10 @@ void	parse_links(t_lem *lem, char *str);
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2);
 t_room	*get_room_by_name(t_lem *lem, char *name);
 void	create_nghbrs(t_room *room, t_room *n);
-
-//########################################################
-
-void				bfs(t_lem *lem);
-t_room				*find_start_room(t_lem *lem);
-void				add_to_queue(t_lem *lem, t_room *room);
-int					is_empty(t_nghbr *queue);
-t_room				*dell_from_queue(t_nghbr *q);
-
+void	bfs(t_lem *lem);
+t_room	*find_start_room(t_lem *lem);
+void	add_to_queue(t_lem *lem, t_room *room, int deep);
+void	dell_from_queue(t_lem *lem, t_room *room);
+int		is_in_queue(t_q *queue, t_room *room);
 
 #endif

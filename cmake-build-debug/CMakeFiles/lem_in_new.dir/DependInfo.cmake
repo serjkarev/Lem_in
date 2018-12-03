@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/skarev/Desktop/tmp/bfs.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/lem_in_new.dir/bfs.c.o"
   "/Users/skarev/Desktop/tmp/init_stuff.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/lem_in_new.dir/init_stuff.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_atoi.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/lem_in_new.dir/libft/ft_atoi.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_bzero.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/lem_in_new.dir/libft/ft_bzero.c.o"
@@ -73,7 +74,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/skarev/Desktop/tmp/parsing.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/lem_in_new.dir/parsing.c.o"
   "/Users/skarev/Desktop/tmp/tools.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/lem_in_new.dir/tools.c.o"
   "/Users/skarev/Desktop/tmp/tools_2.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/lem_in_new.dir/tools_2.c.o"
-  "/Users/skarev/Desktop/tmp/validlinks.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/lem_in_new.dir/validlinks.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

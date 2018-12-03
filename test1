@@ -1,10 +1,15 @@
 42
 ##start
-0 1 0
+Start 1 0
+first 9 0
+second 13 0
+third 3 3
+fourth 4 4
 ##end
-1 5 0
-2 9 0
-3 13 0
-0-2
-2-3
-3-1
+End 5 0
+Start-first
+Start-third
+third-fourth
+first-second
+second-End
+fourth-End

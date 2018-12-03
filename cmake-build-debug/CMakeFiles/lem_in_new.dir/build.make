@@ -954,18 +954,18 @@ CMakeFiles/lem_in_new.dir/tools_2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in_new.dir/tools_2.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/skarev/Desktop/tmp/tools_2.c -o CMakeFiles/lem_in_new.dir/tools_2.c.s
 
-CMakeFiles/lem_in_new.dir/validlinks.c.o: CMakeFiles/lem_in_new.dir/flags.make
-CMakeFiles/lem_in_new.dir/validlinks.c.o: ../validlinks.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/lem_in_new.dir/validlinks.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_new.dir/validlinks.c.o   -c /Users/skarev/Desktop/tmp/validlinks.c
+CMakeFiles/lem_in_new.dir/bfs.c.o: CMakeFiles/lem_in_new.dir/flags.make
+CMakeFiles/lem_in_new.dir/bfs.c.o: ../bfs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/lem_in_new.dir/bfs.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in_new.dir/bfs.c.o   -c /Users/skarev/Desktop/tmp/bfs.c
 
-CMakeFiles/lem_in_new.dir/validlinks.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in_new.dir/validlinks.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/skarev/Desktop/tmp/validlinks.c > CMakeFiles/lem_in_new.dir/validlinks.c.i
+CMakeFiles/lem_in_new.dir/bfs.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in_new.dir/bfs.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/skarev/Desktop/tmp/bfs.c > CMakeFiles/lem_in_new.dir/bfs.c.i
 
-CMakeFiles/lem_in_new.dir/validlinks.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in_new.dir/validlinks.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/skarev/Desktop/tmp/validlinks.c -o CMakeFiles/lem_in_new.dir/validlinks.c.s
+CMakeFiles/lem_in_new.dir/bfs.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in_new.dir/bfs.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/skarev/Desktop/tmp/bfs.c -o CMakeFiles/lem_in_new.dir/bfs.c.s
 
 # Object files for target lem_in_new
 lem_in_new_OBJECTS = \
@@ -1038,7 +1038,7 @@ lem_in_new_OBJECTS = \
 "CMakeFiles/lem_in_new.dir/parsing.c.o" \
 "CMakeFiles/lem_in_new.dir/tools.c.o" \
 "CMakeFiles/lem_in_new.dir/tools_2.c.o" \
-"CMakeFiles/lem_in_new.dir/validlinks.c.o"
+"CMakeFiles/lem_in_new.dir/bfs.c.o"
 
 # External object files for target lem_in_new
 lem_in_new_EXTERNAL_OBJECTS =
@@ -1112,7 +1112,7 @@ lem_in_new: CMakeFiles/lem_in_new.dir/main.c.o
 lem_in_new: CMakeFiles/lem_in_new.dir/parsing.c.o
 lem_in_new: CMakeFiles/lem_in_new.dir/tools.c.o
 lem_in_new: CMakeFiles/lem_in_new.dir/tools_2.c.o
-lem_in_new: CMakeFiles/lem_in_new.dir/validlinks.c.o
+lem_in_new: CMakeFiles/lem_in_new.dir/bfs.c.o
 lem_in_new: CMakeFiles/lem_in_new.dir/build.make
 lem_in_new: CMakeFiles/lem_in_new.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Linking C executable lem_in_new"

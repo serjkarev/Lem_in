@@ -12,83 +12,129 @@
 
 #include "lem_in.h"
 
+// void bfs(struct Graph* graph, int startVertex)
+// {
+
+//     struct queue* q = createQueue();
+    
+//     graph->visited[startVertex] = 1;
+//     enqueue(q, startVertex);
+    
+//     while(!isEmpty(q)){
+//         printQueue(q);
+//         int currentVertex = dequeue(q);
+//         printf("Visited %d\n", currentVertex);
+    
+//        struct node* temp = graph->adjLists[currentVertex];
+    
+//        while(temp) {
+//             int adjVertex = temp->vertex;
+
+//             if(graph->visited[adjVertex] == 0){
+//                 graph->visited[adjVertex] = 1;
+//                 enqueue(q, adjVertex);
+//             }
+//             temp = temp->next;
+//        }
+//     }
+// }
+
+
+
 void	bfs(t_lem *lem)
 {
-	t_room	*start;
 	t_room	*current;
-	t_room	*tmp;
-	
+	t_nghbr	*tmp;
+	t_room	*start;
+
 	start = find_start_room(lem);
-	start->visited = 1;
-	add_to_queue(lem, start);
-	while (!is_empty(lem->queue))
+	if (!start)
+		ft_error(NULL, NULL, ER11);
+	add_to_queue(lem, start, 0);
+	while (lem->queue && lem->queue->room->type != 3)
 	{
-		current = dell_from_queue(lem->queue);
-		tmp = current;
+		current = lem->queue->room;
+		dell_from_queue(lem, current);
+		printf("del: %s --> ", current->name);
+		tmp = current->nghbrs;
 		while (tmp)
 		{
-			if (tmp->visited == 0)
+			printf("%s -> ", tmp->neighbor->name);
+			if (!is_in_queue(lem->queue, tmp->neighbor) && tmp->neighbor->visited == 0)
 			{
-				tmp->visited = 1;
-				add_to_queue(lem, tmp);
+				printf(" | add to Q %s curr %s -> deep %d | ", tmp->neighbor->name, current->name, current->deep);
+				add_to_queue(lem, tmp->neighbor, current->deep + 1);
 			}
-			tmp = tmp->nghbrs->neighbor;
+			tmp = tmp->next;
 		}
+		printf("...\n");
+	}
+	t_room *ttmp = lem->rooms;
+	while (ttmp)
+	{
+		printf("%s -> %d \n", ttmp->name, ttmp->deep);
+		ttmp = ttmp->next;
 	}
 }
 
-t_room	*find_start_room(t_lem *lem)
+int		is_in_queue(t_q *queue, t_room *room)
 {
-	while (lem->rooms)
+	t_q		*tmp;
+
+	tmp = queue;
+	while (tmp)
 	{
-		if (lem->rooms->type == 1)
-			return (lem->rooms);
-		// lem->rooms = lem->rooms->prev;
+		if (ft_strequ(tmp->room->name, room->name))
+			return (1);
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+t_room		*find_start_room(t_lem *lem)
+{
+	t_room		*current;
+
+	current = lem->rooms;
+	while(current->next)
+	{
+		if (current->type == 1)
+			return (current);
+		current = current->next;
 	}
 	return (NULL);
 }
 
-void	add_to_queue(t_lem *lem, t_room *room)
+void	add_to_queue(t_lem *lem, t_room *room, int deep)
 {
-	t_nghbr	*temp;
-
+	t_q	*current;
+	
 	if (!lem->queue)
 	{
-		lem->queue = (t_nghbr*)ft_memalloc(sizeof(t_nghbr));
-		lem->queue->neighbor = room;
-		// room->visited = 1;
+		lem->queue = (t_q*)ft_memalloc(sizeof(t_q));
+		lem->queue->room = room;
 		lem->queue->next = NULL;
-		lem->queue->prev = NULL;
+		lem->queue->room->deep = deep;
 	}
 	else
 	{
-		while (lem->queue)
-		{
-			temp = lem->queue;
-			lem->queue = lem->queue->next;
-		}
-		lem->queue = (t_nghbr*)ft_memalloc(sizeof(t_nghbr));
-		lem->queue->neighbor = room;
-		lem->queue->next = NULL;
-		lem->queue->prev = temp;
-		temp->next = lem->queue;
+		current = lem->queue;
+		while (current->next)
+			current = current->next;
+		current->next = (t_q*)ft_memalloc(sizeof(t_q));
+		current->next->room = room;
+		current->next->next = NULL;
+		current->room->deep = deep;
 	}
+	
 }
 
-int		is_empty(t_nghbr *queue)
+void	dell_from_queue(t_lem *lem, t_room *room)
 {
-	if (!queue->neighbor)
-		return (1);
-	return (0);
-}
-
-t_room	*dell_from_queue(t_nghbr *q)
-{
-	t_room	*tmp;
-
-	if (!q)
-		return (NULL);
-	tmp = q->neighbor;
-	q = q->next;
-	return (tmp);
+	t_q		*head;
+	
+	room->visited = 1;
+	head = lem->queue->next;
+	lem->queue = NULL;
+	lem->queue = head;
 }

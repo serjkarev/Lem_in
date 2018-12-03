@@ -93,6 +93,7 @@ void	parse_links(t_lem *lem, char *str)
 		find_neighbor(lem, arr, 0, 1);
 		find_neighbor(lem, arr, 1, 0);
 		free_arr(arr);
+		free(str);
 	}
 	while (get_next_line(0, &str))
 	{
@@ -102,8 +103,8 @@ void	parse_links(t_lem *lem, char *str)
 		find_neighbor(lem, arr, 0, 1);
 		find_neighbor(lem, arr, 1, 0);
 		free_arr(arr);
+		free(str);
 	}
-	free(str);
 }
 
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2)
