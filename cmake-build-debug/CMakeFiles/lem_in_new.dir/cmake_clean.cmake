@@ -69,6 +69,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in_new.dir/tools.c.o"
   "CMakeFiles/lem_in_new.dir/tools_2.c.o"
   "CMakeFiles/lem_in_new.dir/bfs.c.o"
+  "CMakeFiles/lem_in_new.dir/find_ways.c.o"
   "lem_in_new.pdb"
   "lem_in_new"
 )

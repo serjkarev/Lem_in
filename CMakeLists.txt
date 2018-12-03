@@ -79,4 +79,5 @@ add_executable(lem_in_new
         parsing.c
         tools.c
         tools_2.c
-        bfs.c)
+        bfs.c
+        find_ways.c)

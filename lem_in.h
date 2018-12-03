@@ -26,6 +26,13 @@
 # define ER09 "🖕\x1B[31m ERROR: invalid links \033[0m🖕\n"
 # define ER10 "🖕\x1B[31m ERROR: link to a non-existent room \033[0m🖕\n"
 # define ER11 "🖕\x1B[31m ERROR: START room not found \033[0m🖕\n"
+# define ER12 "🖕\x1B[31m ERROR: END room not found \033[0m🖕\n"
+
+typedef struct		s_w
+{
+	struct	s_room	*room;
+	struct	s_w		*next;
+}					t_w;
 
 typedef struct		s_q
 {
@@ -54,6 +61,7 @@ typedef struct		s_room
 typedef struct		s_lem
 {
 	int				ants;
+	t_w				*ways;
 	t_q				*queue;
 	t_room			*rooms;
 }					t_lem;
@@ -72,9 +80,14 @@ void	find_neighbor(t_lem *lem, char **arr, int n1, int n2);
 t_room	*get_room_by_name(t_lem *lem, char *name);
 void	create_nghbrs(t_room *room, t_room *n);
 void	bfs(t_lem *lem);
-t_room	*find_start_room(t_lem *lem);
+t_room	*find_room_by_type(t_lem *lem, int type);
 void	add_to_queue(t_lem *lem, t_room *room, int deep);
 void	dell_from_queue(t_lem *lem, t_room *room);
 int		is_in_queue(t_q *queue, t_room *room);
+void	find_ways(t_lem *lem);
+int		count_neighbors(t_room *room);
+void	add_to_ways(t_lem *lem, t_room *room);
+// t_w		*get_the_way(t_lem *lem);
+// void	add_room_in_way(t_w *way, t_room *room);
 
 #endif

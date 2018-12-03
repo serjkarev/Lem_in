@@ -5,6 +5,10 @@ CMakeFiles/lem_in_new.dir/bfs.c.o: .././libft/libft.h
 CMakeFiles/lem_in_new.dir/bfs.c.o: ../bfs.c
 CMakeFiles/lem_in_new.dir/bfs.c.o: ../lem_in.h
 
+CMakeFiles/lem_in_new.dir/find_ways.c.o: .././libft/libft.h
+CMakeFiles/lem_in_new.dir/find_ways.c.o: ../find_ways.c
+CMakeFiles/lem_in_new.dir/find_ways.c.o: ../lem_in.h
+
 CMakeFiles/lem_in_new.dir/init_stuff.c.o: .././libft/libft.h
 CMakeFiles/lem_in_new.dir/init_stuff.c.o: ../init_stuff.c
 CMakeFiles/lem_in_new.dir/init_stuff.c.o: ../lem_in.h

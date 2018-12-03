@@ -150,6 +150,33 @@ bfs.c.s:
 	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/bfs.c.s
 .PHONY : bfs.c.s
 
+find_ways.o: find_ways.c.o
+
+.PHONY : find_ways.o
+
+# target to build an object file
+find_ways.c.o:
+	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/find_ways.c.o
+.PHONY : find_ways.c.o
+
+find_ways.i: find_ways.c.i
+
+.PHONY : find_ways.i
+
+# target to preprocess a source file
+find_ways.c.i:
+	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/find_ways.c.i
+.PHONY : find_ways.c.i
+
+find_ways.s: find_ways.c.s
+
+.PHONY : find_ways.s
+
+# target to generate assembly for a file
+find_ways.c.s:
+	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/find_ways.c.s
+.PHONY : find_ways.c.s
+
 init_stuff.o: init_stuff.c.o
 
 .PHONY : init_stuff.o
@@ -2025,6 +2052,9 @@ help:
 	@echo "... bfs.o"
 	@echo "... bfs.i"
 	@echo "... bfs.s"
+	@echo "... find_ways.o"
+	@echo "... find_ways.i"
+	@echo "... find_ways.s"
 	@echo "... init_stuff.o"
 	@echo "... init_stuff.i"
 	@echo "... init_stuff.s"

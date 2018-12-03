@@ -87,6 +87,9 @@
 		<Unit filename="/Users/skarev/Desktop/tmp/bfs.c">
 			<Option target="lem_in_new"/>
 		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/find_ways.c">
+			<Option target="lem_in_new"/>
+		</Unit>
 		<Unit filename="/Users/skarev/Desktop/tmp/init_stuff.c">
 			<Option target="lem_in_new"/>
 		</Unit>

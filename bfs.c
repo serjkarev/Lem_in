@@ -12,46 +12,19 @@
 
 #include "lem_in.h"
 
-// void bfs(struct Graph* graph, int startVertex)
-// {
-
-//     struct queue* q = createQueue();
-    
-//     graph->visited[startVertex] = 1;
-//     enqueue(q, startVertex);
-    
-//     while(!isEmpty(q)){
-//         printQueue(q);
-//         int currentVertex = dequeue(q);
-//         printf("Visited %d\n", currentVertex);
-    
-//        struct node* temp = graph->adjLists[currentVertex];
-    
-//        while(temp) {
-//             int adjVertex = temp->vertex;
-
-//             if(graph->visited[adjVertex] == 0){
-//                 graph->visited[adjVertex] = 1;
-//                 enqueue(q, adjVertex);
-//             }
-//             temp = temp->next;
-//        }
-//     }
-// }
-
-
-
 void	bfs(t_lem *lem)
 {
 	t_room	*current;
 	t_nghbr	*tmp;
 	t_room	*start;
+	t_room	*end;
 
-	start = find_start_room(lem);
-	if (!start)
-		ft_error(NULL, NULL, ER11);
+	start = find_room_by_type(lem, 1);
+	end = find_room_by_type(lem, 3);
+	if (!start || !end)
+		!start ? ft_error(NULL, NULL, ER11) : ft_error(NULL, NULL, ER12);
 	add_to_queue(lem, start, 0);
-	while (lem->queue && lem->queue->room->type != 3)
+	while (lem->queue /*&& lem->queue->room->type != 3*/)
 	{
 		current = lem->queue->room;
 		dell_from_queue(lem, current);
@@ -91,14 +64,14 @@ int		is_in_queue(t_q *queue, t_room *room)
 	return (0);
 }
 
-t_room		*find_start_room(t_lem *lem)
+t_room		*find_room_by_type(t_lem *lem, int type)
 {
 	t_room		*current;
 
 	current = lem->rooms;
-	while(current->next)
+	while(current)
 	{
-		if (current->type == 1)
+		if (current->type == type)
 			return (current);
 		current = current->next;
 	}
