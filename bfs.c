@@ -124,7 +124,7 @@ void	add_to_queue(t_lem *lem, t_room *room, int deep)
 		current->next = (t_q*)ft_memalloc(sizeof(t_q));
 		current->next->room = room;
 		current->next->next = NULL;
-		current->room->deep = deep;
+		current->next->room->deep = deep;
 	}
 	
 }
