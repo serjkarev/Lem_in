@@ -87,6 +87,7 @@ int		is_in_queue(t_q *queue, t_room *room);
 void	find_ways(t_lem *lem);
 int		count_neighbors(t_room *room);
 void	add_to_ways(t_lem *lem, t_room *room);
+void	get_way(t_lem *lem, t_room *room);
 // t_w		*get_the_way(t_lem *lem);
 // void	add_room_in_way(t_w *way, t_room *room);
 

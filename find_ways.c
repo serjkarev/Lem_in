@@ -16,7 +16,7 @@ void	find_ways(t_lem *lem)
 {
 	int		en;
 	int		sn;
-	// t_w		*ways;
+	// t_w		*w;
 	// t_nghbr	*n;
 	t_room	*room;
 
@@ -26,10 +26,21 @@ void	find_ways(t_lem *lem)
 	room = find_room_by_type(lem, 3);
 	while (sn > 0)
 	{
+		get_way(lem, room);
+		while (room->nghbrs ||room->nghbrs->neighbor->visited == 0)
+			room->nghbrs = room->nghbrs->next;
+		lem->ways = lem->ways->next;
+		sn--;
+	}
+}
+
+void	get_way(t_lem *lem, t_room *room)
+{
+	while (room->type != 1)
+	{
 		if (room->nghbrs->neighbor->visited == 1)
 			add_to_ways(lem, room->nghbrs->neighbor);
-		room->nghbrs->neighbor = room->nghbrs->next->neighbor;
-		sn--;
+		room = room->nghbrs->neighbor;
 	}
 }
 
@@ -50,21 +61,24 @@ int		count_neighbors(t_room *room)
 
 void	add_to_ways(t_lem *lem, t_room *room)
 {
-	t_w	*current;
+	t_room	*current;
 	
 	if (!lem->ways)
 	{
 		lem->ways = (t_w*)ft_memalloc(sizeof(t_w));
 		lem->ways->room = room;
+		lem->ways->room->visited = 0;
 		lem->ways->next = NULL;
+		lem->ways->room->next = NULL;
 	}
 	else
 	{
-		current = lem->ways;
+		current = lem->ways->room;
 		while (current->next)
 			current = current->next;
-		current->next = (t_w*)ft_memalloc(sizeof(t_w));
-		current->next->room = room;
+		current->next = (t_room*)ft_memalloc(sizeof(t_room));
+		current->next = room;
+		current->next->visited = 0;
 		current->next->next = NULL;
 	}
 	
