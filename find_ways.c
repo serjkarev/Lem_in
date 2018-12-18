@@ -5,81 +5,58 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: skarev <skarev@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 16:04:21 by skarev            #+#    #+#             */
-/*   Updated: 2018/12/03 16:04:21 by skarev           ###   ########.fr       */
+/*   Created: 2018/12/07 18:44:28 by skarev            #+#    #+#             */
+/*   Updated: 2018/12/07 18:44:28 by skarev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-void	find_ways(t_lem *lem)
+void	jopa(t_lem *lem)
 {
-	int		en;
-	int		sn;
-	// t_w		*w;
-	// t_nghbr	*n;
-	t_room	*room;
-
-	sn = count_neighbors(find_room_by_type(lem, 1));
-	en = count_neighbors(find_room_by_type(lem, 3));
-	(sn <= en) ? sn : (sn = en);
-	room = find_room_by_type(lem, 3);
-	while (sn > 0)
-	{
-		get_way(lem, room);
-		while (room->nghbrs ||room->nghbrs->neighbor->visited == 0)
-			room->nghbrs = room->nghbrs->next;
-		lem->ways = lem->ways->next;
-		sn--;
-	}
-}
-
-void	get_way(t_lem *lem, t_room *room)
-{
-	while (room->type != 1)
-	{
-		if (room->nghbrs->neighbor->visited == 1)
-			add_to_ways(lem, room->nghbrs->neighbor);
-		room = room->nghbrs->neighbor;
-	}
-}
-
-int		count_neighbors(t_room *room)
-{
-	int		ret;
-	t_nghbr	*r;
-
-	ret = 0;
-	r = room->nghbrs;
-	while (r)
-	{
-		r = r->next;
-		ret++;
-	}
-	return (ret);
-}
-
-void	add_to_ways(t_lem *lem, t_room *room)
-{
+	t_q		*queue = NULL;
 	t_room	*current;
-	
-	if (!lem->ways)
+
+	current = find_room_by_type(lem, 1);
+	queue = q_push_back(queue, current);
+	while (queue)
 	{
-		lem->ways = (t_w*)ft_memalloc(sizeof(t_w));
-		lem->ways->room = room;
-		lem->ways->room->visited = 0;
-		lem->ways->next = NULL;
-		lem->ways->room->next = NULL;
+		current = queue->room;
+		queue = q_pop(queue);
+		// if (current->type == 3)
+			//добавить путь в список путей
+		
+	}
+}
+
+t_q		*q_push_back(t_q *queue, t_room *room)
+{
+	t_q		*current;
+
+	if(!queue)
+	{
+		queue = (t_q*)ft_memalloc(sizeof(t_q));
+		queue->room = room;
+		queue->next = NULL;
 	}
 	else
 	{
-		current = lem->ways->room;
-		while (current->next)
+		current = queue;
+		while(current->next)
 			current = current->next;
-		current->next = (t_room*)ft_memalloc(sizeof(t_room));
-		current->next = room;
-		current->next->visited = 0;
+		current->next = (t_q*)ft_memalloc(sizeof(t_q));
+		current->next->room = room;
 		current->next->next = NULL;
 	}
-	
+	return (queue);
+}
+
+t_q		*q_pop(t_q *queue)
+{
+	t_q		*head;
+
+	head = queue->next;
+	queue = NULL;
+	queue = head;
+	return(head);
 }

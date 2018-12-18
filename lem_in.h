@@ -30,7 +30,7 @@
 
 typedef struct		s_w
 {
-	struct	s_room	*room;
+	struct	s_room	*way;
 	struct	s_w		*next;
 }					t_w;
 
@@ -84,11 +84,14 @@ t_room	*find_room_by_type(t_lem *lem, int type);
 void	add_to_queue(t_lem *lem, t_room *room, int deep);
 void	dell_from_queue(t_lem *lem, t_room *room);
 int		is_in_queue(t_q *queue, t_room *room);
-void	find_ways(t_lem *lem);
-int		count_neighbors(t_room *room);
-void	add_to_ways(t_lem *lem, t_room *room);
-void	get_way(t_lem *lem, t_room *room);
-// t_w		*get_the_way(t_lem *lem);
-// void	add_room_in_way(t_w *way, t_room *room);
+
+void	jopa(t_lem *lem);
+t_q		*q_push_back(t_q *queue, t_room *room);
+t_q		*q_pop(t_q *queue);
+
+// void	find_ways(t_lem *lem);
+// int		count_neighbors(t_room *room);
+// void	get_way(t_lem *lem, t_room *room);
+// void	add_to_ways(t_room *room, t_w *w);
 
 #endif

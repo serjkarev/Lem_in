@@ -24,7 +24,8 @@ int		main(void)
 	str = parse_rooms(lem);
 	parse_links(lem, str);
 	bfs(lem);
-	find_ways(lem);
+	// find_ways(lem);
+	jopa(lem);
 	// system("leaks -q lem-in");
 	printf("ants = %d\n", lem->ants);
 	return (0);

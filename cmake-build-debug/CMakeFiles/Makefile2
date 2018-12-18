@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /Users/skarev/Desktop/tmp
 CMAKE_BINARY_DIR = /Users/skarev/Desktop/tmp/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/lem_in_new.dir
+# Target rules for target CMakeFiles/tmp.dir
 
 # All Build rule for target.
-CMakeFiles/lem_in_new.dir/all:
-	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/depend
-	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72 "Built target lem_in_new"
-.PHONY : CMakeFiles/lem_in_new.dir/all
+CMakeFiles/tmp.dir/all:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/depend
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target tmp"
+.PHONY : CMakeFiles/tmp.dir/all
 
 # Include target in all.
-all: CMakeFiles/lem_in_new.dir/all
+all: CMakeFiles/tmp.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/lem_in_new.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles 72
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lem_in_new.dir/all
+CMakeFiles/tmp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tmp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/lem_in_new.dir/rule
+.PHONY : CMakeFiles/tmp.dir/rule
 
 # Convenience name for target.
-lem_in_new: CMakeFiles/lem_in_new.dir/rule
+tmp: CMakeFiles/tmp.dir/rule
 
-.PHONY : lem_in_new
-
-# clean rule for target.
-CMakeFiles/lem_in_new.dir/clean:
-	$(MAKE) -f CMakeFiles/lem_in_new.dir/build.make CMakeFiles/lem_in_new.dir/clean
-.PHONY : CMakeFiles/lem_in_new.dir/clean
+.PHONY : tmp
 
 # clean rule for target.
-clean: CMakeFiles/lem_in_new.dir/clean
+CMakeFiles/tmp.dir/clean:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/clean
+.PHONY : CMakeFiles/tmp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/tmp.dir/clean
 
 .PHONY : clean
 
