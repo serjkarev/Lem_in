@@ -16,6 +16,7 @@ void	parse_ants(t_lem *lem)
 {
 	char	*str;
 
+	lem->ants = 0;
 	while (get_next_line(0, &str))
 	{
 		if (!ft_isdigit_str(str))

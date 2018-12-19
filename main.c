@@ -19,13 +19,11 @@ int		main(void)
 
 	str = NULL;
 	lem = (t_lem*)ft_memalloc(sizeof(t_lem));
-	init_lem(lem);
 	parse_ants(lem);
 	str = parse_rooms(lem);
 	parse_links(lem, str);
 	bfs(lem);
-	// find_ways(lem);
-	jopa(lem);
+	find_ways(lem);
 	// system("leaks -q lem-in");
 	printf("ants = %d\n", lem->ants);
 	return (0);

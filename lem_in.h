@@ -30,8 +30,8 @@
 
 typedef struct		s_w
 {
-	struct	s_room	*way;
-	struct	s_w		*next;
+	struct	s_q	*path;
+	struct	s_w	*next;
 }					t_w;
 
 typedef struct		s_q
@@ -66,7 +66,6 @@ typedef struct		s_lem
 	t_room			*rooms;
 }					t_lem;
 
-void	init_lem(t_lem *lem);
 void	ft_error(char *str, char **arr, char *error);
 int		ft_isdigit_str(char *str);
 int		space_detect(char *str);
@@ -85,13 +84,11 @@ void	add_to_queue(t_lem *lem, t_room *room, int deep);
 void	dell_from_queue(t_lem *lem, t_room *room);
 int		is_in_queue(t_q *queue, t_room *room);
 
-void	jopa(t_lem *lem);
+void	find_ways(t_lem *lem);
 t_q		*q_push_back(t_q *queue, t_room *room);
 t_q		*q_pop(t_q *queue);
-
-// void	find_ways(t_lem *lem);
-// int		count_neighbors(t_room *room);
-// void	get_way(t_lem *lem, t_room *room);
-// void	add_to_ways(t_room *room, t_w *w);
+t_room	*get_last_elem(t_q *path);
+void	add_path_to_ways(t_lem *lem, t_q *path);
+int		is_not_visited(t_room *n, t_q *path);
 
 #endif

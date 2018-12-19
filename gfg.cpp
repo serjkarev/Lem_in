@@ -39,7 +39,8 @@ void findpaths(vector<vector<int> >&g, int src,
     vector<int> path; 
     path.push_back(src); 
     q.push(path); 
-    while (!q.empty()) { 
+    while (!q.empty())
+    {
         path = q.front(); 
         q.pop(); 
         int last = path[path.size() - 1]; 
@@ -51,8 +52,10 @@ void findpaths(vector<vector<int> >&g, int src,
   
         // traverse to all the nodes connected to  
         // current vertex and push new path to queue 
-        for (int i = 0; i < g[last].size(); i++) { 
-            if (isNotVisited(g[last][i], path)) { 
+        for (int i = 0; i < g[last].size(); i++)
+        {
+            if (isNotVisited(g[last][i], path))
+            {
                 vector<int> newpath(path); 
                 newpath.push_back(g[last][i]); 
                 q.push(newpath); 
