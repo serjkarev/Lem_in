@@ -90,5 +90,6 @@ t_q		*q_pop(t_q *queue);
 t_room	*get_last_elem(t_q *path);
 void	add_path_to_ways(t_lem *lem, t_q *path);
 int		is_not_visited(t_room *n, t_q *path);
+t_q		*q_push(t_q *queue, t_q *newpath);
 
 #endif

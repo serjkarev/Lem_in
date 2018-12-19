@@ -4,7 +4,6 @@
 #include <queue>
 #include <ctime>
 using namespace std; 
-  
 // utility function for printing 
 // the found path in graph 
 void printpath(vector<int>& path) 
@@ -13,8 +12,7 @@ void printpath(vector<int>& path)
     for (int i = 0; i < size; i++)  
         cout << path[i] << " ";     
     cout << endl; 
-} 
-  
+}   
 // utility function to check if current 
 // vertex is already present in path 
 int isNotVisited(int x, vector<int>& path) 
@@ -24,17 +22,14 @@ int isNotVisited(int x, vector<int>& path)
         if (path[i] == x)  
             return 0;  
     return 1; 
-} 
-  
+}
 // utility function for finding paths in graph 
 // from source to destination 
-void findpaths(vector<vector<int> >&g, int src,  
-                                 int dst, int v) 
+void findpaths(vector<vector<int> >&g, int src, int dst, int v) 
 { 
     // create a queue which stores 
     // the paths 
-    queue<vector<int> > q; 
-  
+    queue<vector<int> > q;   
     // path vector to store the current path 
     vector<int> path; 
     path.push_back(src); 
@@ -44,12 +39,10 @@ void findpaths(vector<vector<int> >&g, int src,
         path = q.front(); 
         q.pop(); 
         int last = path[path.size() - 1]; 
-  
         // if last vertex is the desired destination 
         // then print the path 
         if (last == dst)  
             printpath(path);         
-  
         // traverse to all the nodes connected to  
         // current vertex and push new path to queue 
         for (int i = 0; i < g[last].size(); i++)

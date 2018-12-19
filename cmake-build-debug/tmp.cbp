@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="tmp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/skarev/Desktop/tmp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/skarev/Desktop/tmp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/skarev/Desktop/tmp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tmp">
+				<Option output="/Users/skarev/Desktop/tmp/cmake-build-debug/tmp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarev/Desktop/tmp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/skarev/Desktop/tmp/."/>
+					<Add directory="/Users/skarev/Desktop/tmp/libft"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 tmp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tmp/fast">
+				<Option output="/Users/skarev/Desktop/tmp/cmake-build-debug/tmp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarev/Desktop/tmp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/skarev/Desktop/tmp/."/>
+					<Add directory="/Users/skarev/Desktop/tmp/libft"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 tmp/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/skarev/Desktop/tmp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/skarev/Desktop/tmp/bfs.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/find_ways.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/lem_in.h">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_atoi.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_bzero.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_isalnum.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_isalpha.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_isascii.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_isdigit.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_isprint.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_isspace.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_itoa.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_lst_create_elem.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_lst_push_back.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_lstadd.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_lstdel.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_lstdelone.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_lstiter.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_lstmap.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_lstnew.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_memalloc.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_memccpy.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_memchr.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_memcmp.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_memcpy.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_memdel.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_memmove.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_memset.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_nbrlen.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_putchar.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_putchar_fd.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_putendl.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_putendl_fd.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_putnbr.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_putnbr_fd.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_putstr.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_putstr_fd.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strcat.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strchr.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strclr.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strcmp.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strcpy.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strdel.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strdup.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strequ.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_striter.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_striteri.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strjoin.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strlcat.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strlen.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strmap.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strmapi.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strncat.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strncmp.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strncpy.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strnequ.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strnew.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strnstr.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strrchr.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strsplit.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strstr.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strsub.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_strtrim.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_swap.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_tolower.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_toupper.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/get_next_line.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/libft/libft.h">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/main.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/parsing.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/tools.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/tools_2.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
