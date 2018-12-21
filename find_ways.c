@@ -14,49 +14,105 @@
 
 void	find_ways(t_lem *lem)
 {
-	t_q		*queue = NULL;
+	t_w		*queue = NULL;
 	t_q		*path = NULL;
-	t_room	*last;
+	t_room	*room;
 	t_q		*newpath;
 
-	path = (t_q*)ft_memalloc(sizeof(t_q));
-	path->room = find_room_by_type(lem, 1);
-	queue = q_push_back(queue, path->room);
-	while (queue->room)
+	room = copy_room(find_room_by_type(lem, 1));
+	path  = push_back(path, room);
+	queue = push(queue, path);
+	while (queue)
 	{
-		path->room = queue->room;
-		queue = q_pop(queue);
-		last = get_last_elem(path);
-		if (last->type == 3)
-			add_path_to_ways(lem, path);
-		while (last->nghbrs->neighbor)
+		path = queue->path;
+		queue = pop(queue);
+		room = copy_room(get_last_elem(path));
+		if (room->type == 3)
 		{
-			if (is_not_visited(last->nghbrs->neighbor, path))
-			{
-				newpath = path;
-				newpath = q_push_back(newpath, last->nghbrs->neighbor);
-				queue = q_push(queue, newpath);
-			}
-			last->nghbrs->neighbor = last->nghbrs->next->neighbor;
+			// add_path_to_ways(lem, path);
+			print_way(path);
 		}
+		while (room->nghbrs)
+		{
+			if (is_not_visited(room->nghbrs->neighbor, path))
+			{
+				newpath = copy_path(path);
+				newpath = push_back(newpath, room->nghbrs->neighbor);
+				queue = push(queue, newpath);
+//				newpath = freeList(newpath);
+			}
+			room->nghbrs = room->nghbrs->next;
+		}
+//		free(room);
 	}
 }
 
-t_q		*q_push(t_q *queue, t_q *newpath)
+t_q		*push_back(t_q *path, t_room *room)
 {
-	t_q		*path;
 	t_q		*current;
 
-	if (!queue)
-		queue = path;
+	if (!path)
+	{
+		path = (t_q*)ft_memalloc(sizeof(t_q));
+		path->room = room;
+		path->next = NULL;
+	}
 	else
 	{
-		current = queue;
-		while (current->next)
+		current = path;
+		while(current->next)
 			current = current->next;
-		current->next = path;
+		current->next = (t_q*)ft_memalloc(sizeof(t_q));
+		current->next->room = room;
+		current->next->next = NULL;
+	}
+	return (path);
+}
+
+t_w		*push(t_w *queue, t_q *path)
+{
+	t_w		*curr;
+
+	if (!queue)
+	{
+		queue = (t_w*)ft_memalloc(sizeof(t_w));
+		queue->path = path;
+		queue->next = NULL;
+	}
+	else
+	{
+		curr = queue;
+		while (curr->next)
+			curr = curr->next;
+		curr->next = (t_w*)ft_memalloc(sizeof(t_w));
+		curr->next->path = path;
+		curr->next->next = NULL;
 	}
 	return (queue);
+}
+
+t_w		*pop(t_w *queue)
+{
+	t_w		*head;
+
+	if (queue)
+	{
+		head = queue;
+		queue = queue->next;
+		free(head);
+	}
+	return (queue);
+
+}
+
+t_room	*get_last_elem(t_q *path)
+{
+	t_q	*current;
+
+	current = path;
+	while (current->next)
+		current = current->next;
+	return (current->room);
 }
 
 int		is_not_visited(t_room *n, t_q *path)
@@ -70,65 +126,87 @@ int		is_not_visited(t_room *n, t_q *path)
 	return (1);
 }
 
-void	add_path_to_ways(t_lem *lem, t_q *path)
-{
-	t_w		*current;
+// void	add_path_to_ways(t_lem *lem, t_q *path)
+// {
+// 	t_w		*current;
 
-	if (!lem->ways)
+// 	if (!lem->ways)
+// 	{
+// 		lem->ways = (t_w*)ft_memalloc(sizeof(t_w));
+// 		lem->ways->path = path;
+// 		lem->ways->next = NULL;
+// 	}
+// 	else
+// 	{
+// 		current = lem->ways;
+// 		while (current->next)
+// 			current = current->next;
+// 		current->next = (t_w*)ft_memalloc(sizeof(t_w));
+// 		current->next->path = path;
+// 		current->next->next = NULL;
+// 	}
+// }
+
+void	print_way(t_q* path)
+{
+	while (path->room)
 	{
-		lem->ways = (t_w*)ft_memalloc(sizeof(t_w));
-		lem->ways->path = path;
-		lem->ways->next = NULL;
+		printf("%s -> ", path->room->name);
+		path->room = path->room->next;
 	}
-	else
-	{
-		current = lem->ways;
-		while (current->next)
-			current = current->next;
-		current->next = (t_w*)ft_memalloc(sizeof(t_w));
-		current->next->path = path;
-		current->next->next = NULL;
-	}
+	printf("\n");
 }
 
-t_room	*get_last_elem(t_q *path)
+t_q    *copy_path(t_q *path)
 {
-	t_q	*current;
+    t_q     *newpath;
+    t_q     *tmp;
 
-	current = path;
-	while (current->next)
-		current->room = current->next->room;
-	return (current->room);
+    //кароче тут траблы, нужно будет переделать эту ф-ю
+	// if (path)
+    newpath = (t_q*)ft_memalloc(sizeof(t_q));
+    tmp = newpath;
+    while (path)
+    {
+        if (!tmp)
+            tmp = (t_q*)ft_memalloc(sizeof(t_q));
+		tmp->room = (t_room*)ft_memalloc(sizeof(t_room));
+        tmp->room = path->room;
+		path = path->next;
+		tmp = tmp->next;
+    }
+	return (newpath);
 }
 
-t_q		*q_push_back(t_q *queue, t_room *room)
+t_w		*freeList(t_q *path)
 {
-	t_q		*current;
+   t_q	*tmp;
 
-	if (!queue)
-	{
-		queue = (t_q*)ft_memalloc(sizeof(t_q));
-		queue->room = room;
-		queue->next = NULL;
-	}
-	else
-	{
-		current = queue;
-		while(current->next)
-			current = current->next;
-		current->next = (t_q*)ft_memalloc(sizeof(t_q));
-		current->next->room = room;
-		current->next->next = NULL;
-	}
-	return (queue);
+	while (path != NULL)
+    {
+       tmp = path;
+       path = path->next;
+       free(tmp);
+    }
+	return (path);
 }
 
-t_q		*q_pop(t_q *queue)
+t_room		*copy_room(t_room *room)
 {
-	t_q		*head;
+	t_room		*newroom;
 
-	head = queue->next;
-	queue = NULL;
-	queue = head;
-	return(head);
+	newroom = NULL;
+	if (room)
+	{
+		newroom = (t_room*)ft_memalloc(sizeof(t_room));
+		newroom->name = room->name;
+		newroom->visited = room->visited;
+		newroom->x = room->x;
+		newroom->y = room->y;
+		newroom->type = room->type;
+		newroom->deep = room->deep;
+		newroom->next = NULL;
+		newroom->nghbrs = room->nghbrs;
+	}
+	return (newroom);
 }

@@ -85,11 +85,17 @@ void	dell_from_queue(t_lem *lem, t_room *room);
 int		is_in_queue(t_q *queue, t_room *room);
 
 void	find_ways(t_lem *lem);
-t_q		*q_push_back(t_q *queue, t_room *room);
-t_q		*q_pop(t_q *queue);
+t_q		*push_back(t_q *path, t_room *room);
+t_w		*push(t_w *queue, t_q *newpath);
+t_w		*pop(t_w *queue);
 t_room	*get_last_elem(t_q *path);
-void	add_path_to_ways(t_lem *lem, t_q *path);
+// void	add_path_to_ways(t_lem *lem, t_q *path);
 int		is_not_visited(t_room *n, t_q *path);
-t_q		*q_push(t_q *queue, t_q *newpath);
+void	print_way(t_q* path);
+t_q		*copy_path(t_q *path);
+t_w		*freeList(t_q *path);
+t_room	*copy_room(t_room *room);
+
+
 
 #endif
