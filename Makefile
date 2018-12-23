@@ -14,7 +14,7 @@ NAME = lem-in
 
 CFLAG = -g -Wall -Wextra
 
-SRCS = main.c parsing.c tools.c tools_2.c bfs.c find_ways.c
+SRCS = main.c parsing.c tools.c tools_2.c find_ways.c run_ants_run.c
 
 LIBS = ./libft/libft.a
 

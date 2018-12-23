@@ -29,7 +29,7 @@ void	find_ways(t_lem *lem)
 		room = copy_room(get_last_elem(path));
 		if (room->type == 3)
 		{
-			// add_path_to_ways(lem, path);
+			add_path_to_ways(lem, path);
 			print_way(path);
 		}
 		while (room->nghbrs)
@@ -102,7 +102,6 @@ t_w		*pop(t_w *queue)
 		free(head);
 	}
 	return (queue);
-
 }
 
 t_room	*get_last_elem(t_q *path)
@@ -126,59 +125,50 @@ int		is_not_visited(t_room *n, t_q *path)
 	return (1);
 }
 
-// void	add_path_to_ways(t_lem *lem, t_q *path)
-// {
-// 	t_w		*current;
+void	add_path_to_ways(t_lem *lem, t_q *path)
+{
+	t_w		*current;
 
-// 	if (!lem->ways)
-// 	{
-// 		lem->ways = (t_w*)ft_memalloc(sizeof(t_w));
-// 		lem->ways->path = path;
-// 		lem->ways->next = NULL;
-// 	}
-// 	else
-// 	{
-// 		current = lem->ways;
-// 		while (current->next)
-// 			current = current->next;
-// 		current->next = (t_w*)ft_memalloc(sizeof(t_w));
-// 		current->next->path = path;
-// 		current->next->next = NULL;
-// 	}
-// }
+	if (!lem->ways)
+	{
+		lem->ways = (t_w*)ft_memalloc(sizeof(t_w));
+		lem->ways->path = path;
+		lem->ways->next = NULL;
+	}
+	else
+	{
+		current = lem->ways;
+		while (current->next)
+			current = current->next;
+		current->next = (t_w*)ft_memalloc(sizeof(t_w));
+		current->next->path = path;
+		current->next->next = NULL;
+	}
+}
 
 void	print_way(t_q* path)
 {
-	while (path->room)
+	while (path)
 	{
 		printf("%s -> ", path->room->name);
-		path->room = path->room->next;
+		path = path->next;
 	}
 	printf("\n");
 }
 
 t_q    *copy_path(t_q *path)
 {
-    t_q     *newpath;
-    t_q     *tmp;
+    t_q     *newpath = NULL;
 
-    //кароче тут траблы, нужно будет переделать эту ф-ю
-	// if (path)
-    newpath = (t_q*)ft_memalloc(sizeof(t_q));
-    tmp = newpath;
     while (path)
     {
-        if (!tmp)
-            tmp = (t_q*)ft_memalloc(sizeof(t_q));
-		tmp->room = (t_room*)ft_memalloc(sizeof(t_room));
-        tmp->room = path->room;
+		newpath = push_back(newpath, path->room);
 		path = path->next;
-		tmp = tmp->next;
     }
 	return (newpath);
 }
 
-t_w		*freeList(t_q *path)
+t_q		*freeList(t_q *path)
 {
    t_q	*tmp;
 
@@ -200,11 +190,9 @@ t_room		*copy_room(t_room *room)
 	{
 		newroom = (t_room*)ft_memalloc(sizeof(t_room));
 		newroom->name = room->name;
-		newroom->visited = room->visited;
 		newroom->x = room->x;
 		newroom->y = room->y;
 		newroom->type = room->type;
-		newroom->deep = room->deep;
 		newroom->next = NULL;
 		newroom->nghbrs = room->nghbrs;
 	}

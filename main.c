@@ -22,8 +22,9 @@ int		main(void)
 	parse_ants(lem);
 	str = parse_rooms(lem);
 	parse_links(lem, str);
-	bfs(lem);
 	find_ways(lem);
+	packs_of_path(lem->ways);
+	run_ants_run(lem);
 	// system("leaks -q lem-in");
 	printf("ants = %d\n", lem->ants);
 	return (0);

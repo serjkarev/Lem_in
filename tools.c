@@ -77,8 +77,6 @@ void	create_room(char **arr, t_lem *lem, int type)
 	{
 		lem->rooms = (t_room*)ft_memalloc(sizeof(t_room));
 		lem->rooms->name = ft_strdup(arr[0]);
-		lem->rooms->visited = 0;
-		lem->rooms->deep = 0;
 		lem->rooms->type = type;
 		if (!ft_isdigit_str(arr[1]) && !ft_isdigit_str(arr[2]))
 		{
@@ -96,8 +94,6 @@ void	create_room(char **arr, t_lem *lem, int type)
             current = current->next;
 		current->next = (t_room*)ft_memalloc(sizeof(t_room));
 		current->next->name = ft_strdup(arr[0]);
-		current->next->visited = 0;
-		current->next->deep = 0;
 		current->next->type = type;
 		if (!ft_isdigit_str(arr[1]) && !ft_isdigit_str(arr[2]))
 		{

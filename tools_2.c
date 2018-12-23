@@ -47,3 +47,17 @@ void	create_nghbrs(t_room *room, t_room *n)
 		current->next->next = NULL;
 	}
 }
+
+t_room		*find_room_by_type(t_lem *lem, int type)
+{
+	t_room		*current;
+
+	current = lem->rooms;
+	while(current)
+	{
+		if (current->type == type)
+			return (current);
+		current = current->next;
+	}
+	return (NULL);
+}

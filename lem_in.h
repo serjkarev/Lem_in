@@ -30,6 +30,7 @@
 
 typedef struct		s_w
 {
+	int			len;
 	struct	s_q	*path;
 	struct	s_w	*next;
 }					t_w;
@@ -49,11 +50,9 @@ typedef struct		s_nghbr
 typedef struct		s_room
 {
 	char			*name;
-	int				visited;
 	int				x;
 	int				y;
 	int				type;
-	int				deep;
 	struct	s_room	*next;
 	struct	s_nghbr	*nghbrs;
 }					t_room;
@@ -61,6 +60,7 @@ typedef struct		s_room
 typedef struct		s_lem
 {
 	int				ants;
+	// t_p				*packs;
 	t_w				*ways;
 	t_q				*queue;
 	t_room			*rooms;
@@ -78,24 +78,24 @@ void	parse_links(t_lem *lem, char *str);
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2);
 t_room	*get_room_by_name(t_lem *lem, char *name);
 void	create_nghbrs(t_room *room, t_room *n);
-void	bfs(t_lem *lem);
-t_room	*find_room_by_type(t_lem *lem, int type);
-void	add_to_queue(t_lem *lem, t_room *room, int deep);
-void	dell_from_queue(t_lem *lem, t_room *room);
-int		is_in_queue(t_q *queue, t_room *room);
 
+t_room	*find_room_by_type(t_lem *lem, int type);
 void	find_ways(t_lem *lem);
 t_q		*push_back(t_q *path, t_room *room);
 t_w		*push(t_w *queue, t_q *newpath);
 t_w		*pop(t_w *queue);
 t_room	*get_last_elem(t_q *path);
-// void	add_path_to_ways(t_lem *lem, t_q *path);
 int		is_not_visited(t_room *n, t_q *path);
 void	print_way(t_q* path);
 t_q		*copy_path(t_q *path);
-t_w		*freeList(t_q *path);
+t_q		*freeList(t_q *path);
 t_room	*copy_room(t_room *room);
+void	add_path_to_ways(t_lem *lem, t_q *path);
 
+void	packs_of_path(t_w *ways);
 
+void	run_ants_run(t_lem *lem);
+t_w		*cut_the_way(t_w *ways);
+int		way_len(t_q *path);
 
 #endif

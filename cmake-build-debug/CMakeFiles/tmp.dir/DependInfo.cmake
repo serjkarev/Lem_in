@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/skarev/Desktop/tmp/bfs.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/bfs.c.o"
   "/Users/skarev/Desktop/tmp/find_ways.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/find_ways.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_atoi.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_atoi.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_bzero.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_bzero.c.o"

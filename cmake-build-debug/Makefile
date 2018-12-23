@@ -123,33 +123,6 @@ tmp/fast:
 	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/build
 .PHONY : tmp/fast
 
-bfs.o: bfs.c.o
-
-.PHONY : bfs.o
-
-# target to build an object file
-bfs.c.o:
-	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/bfs.c.o
-.PHONY : bfs.c.o
-
-bfs.i: bfs.c.i
-
-.PHONY : bfs.i
-
-# target to preprocess a source file
-bfs.c.i:
-	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/bfs.c.i
-.PHONY : bfs.c.i
-
-bfs.s: bfs.c.s
-
-.PHONY : bfs.s
-
-# target to generate assembly for a file
-bfs.c.s:
-	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/bfs.c.s
-.PHONY : bfs.c.s
-
 find_ways.o: find_ways.c.o
 
 .PHONY : find_ways.o
@@ -2022,9 +1995,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... tmp"
-	@echo "... bfs.o"
-	@echo "... bfs.i"
-	@echo "... bfs.s"
 	@echo "... find_ways.o"
 	@echo "... find_ways.i"
 	@echo "... find_ways.s"
