@@ -123,6 +123,33 @@ tmp/fast:
 	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/build
 .PHONY : tmp/fast
 
+cut_n_pack.o: cut_n_pack.c.o
+
+.PHONY : cut_n_pack.o
+
+# target to build an object file
+cut_n_pack.c.o:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/cut_n_pack.c.o
+.PHONY : cut_n_pack.c.o
+
+cut_n_pack.i: cut_n_pack.c.i
+
+.PHONY : cut_n_pack.i
+
+# target to preprocess a source file
+cut_n_pack.c.i:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/cut_n_pack.c.i
+.PHONY : cut_n_pack.c.i
+
+cut_n_pack.s: cut_n_pack.c.s
+
+.PHONY : cut_n_pack.s
+
+# target to generate assembly for a file
+cut_n_pack.c.s:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/cut_n_pack.c.s
+.PHONY : cut_n_pack.c.s
+
 find_ways.o: find_ways.c.o
 
 .PHONY : find_ways.o
@@ -2049,6 +2076,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... tmp"
+	@echo "... cut_n_pack.o"
+	@echo "... cut_n_pack.i"
+	@echo "... cut_n_pack.s"
 	@echo "... find_ways.o"
 	@echo "... find_ways.i"
 	@echo "... find_ways.s"

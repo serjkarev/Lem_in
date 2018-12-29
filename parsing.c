@@ -17,7 +17,6 @@ void	parse_ants(t_lem *lem)
 	char	*str;
 
 	lem->ants = 0;
-//	while (get_next_line(0, &str))
 	while (lgnl(0, &str))
 	{
 		add_to_print(lem, str);
@@ -29,13 +28,15 @@ void	parse_ants(t_lem *lem)
 			free(str);
 			break;
 		}
-		else if (str[0] == '#' && str[1] != '#')
-			continue ;
 		else if (ft_strequ(str, "##start") || ft_strequ(str, "##end"))
 			ft_error(str, NULL, ER01);
+		else if (str[0] == '#')
+			continue ;
 		else if (lem->ants == 0 && str)
 			ft_error(str, NULL, ER04);
 	}
+	if (lem->ants == 0)
+		ft_error(str, NULL, ER02);
 }
 
 char	*parse_rooms(t_lem *lem)
@@ -47,7 +48,6 @@ char	*parse_rooms(t_lem *lem)
 	det[0] = 0;
 	det[1] = 0;
     type = 0;
-//	while (get_next_line(0, &str))
 	while (lgnl(0, &str))
 	{
 		add_to_print(lem, str);
@@ -59,7 +59,7 @@ char	*parse_rooms(t_lem *lem)
 				det[0] > 1 ? ft_error(str, NULL, ER07) : ft_error(str, NULL, ER08);
 			continue ;
 		}
-		else if (str[0] == '#' && str[1] != '#')
+		else if (str[0] == '#')
 			continue ;
 		else if (space_detect(str) == 2)
 		{
@@ -82,6 +82,8 @@ void	parse_room(char *str, t_lem *lem, int type)
 	if (arr[3] != NULL || space != 2 || !arr[0] || !arr[1] || !arr[2] ||\
 										 ft_strchr(arr[0], '-') != NULL)
 		ft_error(str, arr, ER05);
+	if (get_room_by_name(lem, arr[0]))
+		ft_error(str, arr, ER15);
 	create_room(arr, lem, type);
 	free_arr(arr);
 }
@@ -94,21 +96,20 @@ void	parse_links(t_lem *lem, char *str)
 	{
 		add_to_print(lem, str);
 		arr = ft_strsplit(str, '-');
-		if (arr[2] != NULL || !arr[0] || !arr[1])
+		if (arr[2] != NULL || !arr[0] || !arr[1] || check_link(str) > 1)
 			ft_error(NULL, arr, ER09);
 		find_neighbor(lem, arr, 0, 1);
 		find_neighbor(lem, arr, 1, 0);
 		free_arr(arr);
 		free(str);
 	}
-//	while (get_next_line(0, &str))
 	while (lgnl(0, &str))
 	{
 		add_to_print(lem, str);
 		if (str[0] != '#')
 		{
 			arr = ft_strsplit(str, '-');
-			if (arr[2] != NULL || !arr[0] || !arr[1])
+			if (arr[2] != NULL || !arr[0] || !arr[1] || check_link(str) > 1)
 				ft_error(NULL, arr, ER09);
 			find_neighbor(lem, arr, 0, 1);
 			find_neighbor(lem, arr, 1, 0);

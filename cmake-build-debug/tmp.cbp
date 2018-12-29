@@ -86,6 +86,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/skarev/Desktop/tmp/cut_n_pack.c">
+			<Option target="tmp"/>
+		</Unit>
 		<Unit filename="/Users/skarev/Desktop/tmp/find_ways.c">
 			<Option target="tmp"/>
 		</Unit>

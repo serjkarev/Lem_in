@@ -73,6 +73,7 @@ add_executable(tmp
         libft/get_next_line.c
         libft/libft.h
         run_ants_run.c
+        cut_n_pack.c
         find_ways.c
         lem_in.h
         main.c

@@ -1,0 +1,1188 @@
+Norme: ./a.out
+Warning: Not a valid file
+Norme: ./a.out.dSYM/Contents/Info.plist
+Warning: Not a valid file
+Norme: ./a.out.dSYM/Contents/Resources/DWARF/a.out
+Warning: Not a valid file
+Norme: ./cmake-build-debug/cmake_install.cmake
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeCache.txt
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CMakeCCompiler.cmake
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CMakeCXXCompiler.cmake
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CMakeDetermineCompilerABI_C.bin
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CMakeDetermineCompilerABI_CXX.bin
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CMakeSystem.cmake
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CompilerIdC/a.out
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CompilerIdCXX/a.out
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/clion-environment.txt
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/clion-log.txt
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/cmake.check_cache
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/CMakeOutput.log
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/feature_tests.bin
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/feature_tests.cxx
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/Makefile.cmake
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/Makefile2
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/progress.marks
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/TargetDirectories.txt
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/build.make
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/C.includecache
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/cmake_clean.cmake
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/cut_n_pack.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/CXX.includecache
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/depend.internal
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/depend.make
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/DependInfo.cmake
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/find_ways.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/flags.make
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/gfg.cpp.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/lgnl.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_atoi.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_bzero.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_isalnum.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_isalpha.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_isascii.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_isdigit.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_isprint.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_isspace.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_itoa.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_lst_create_elem.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_lst_push_back.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_lstadd.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_lstdel.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_lstdelone.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_lstiter.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_lstmap.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_lstnew.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_memalloc.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_memccpy.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_memchr.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_memcmp.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_memcpy.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_memdel.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_memmove.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_memset.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_nbrlen.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_putchar.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_putchar_fd.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_putendl.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_putendl_fd.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_putnbr.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_putnbr_fd.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_putstr.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_putstr_fd.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strcat.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strchr.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strclr.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strcmp.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strcpy.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strdel.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strdup.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strequ.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_striter.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_striteri.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strjoin.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strlcat.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strlen.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strmap.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strmapi.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strncat.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strncmp.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strncpy.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strnequ.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strnew.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strnstr.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strrchr.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strsplit.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strstr.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strsub.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_strtrim.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_swap.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_tolower.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_toupper.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/libft/get_next_line.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/link.txt
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/main.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/parsing.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/progress.make
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/run_ants_run.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/tools.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/tmp.dir/tools_2.c.o
+Warning: Not a valid file
+Norme: ./cmake-build-debug/Makefile
+Warning: Not a valid file
+Norme: ./cmake-build-debug/tmp
+Warning: Not a valid file
+Norme: ./cmake-build-debug/tmp.cbp
+Warning: Not a valid file
+Norme: ./CMakeLists.txt
+Warning: Not a valid file
+Norme: ./lem-in
+Warning: Not a valid file
+Norme: ./lem-in.dSYM/Contents/Info.plist
+Warning: Not a valid file
+Norme: ./lem-in.dSYM/Contents/Resources/DWARF/lem-in
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/100_map_0
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size/char_bit
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size/char_max
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size/int_max
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size/short_max
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size/uchar_max
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size/uint_max
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size/ushort_max
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size_trace/char_bit_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size_trace/char_max_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size_trace/short_max_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size_trace/uchar_max_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size_trace/uint_max_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/ant_size_trace/ushort_max_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/big_maps/map100k-m
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/big_maps/map200k-m
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/big_maps/map20k-m
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/big_maps/map50k-1000m
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/big_maps/map50k-300m
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/big_maps/map50k-m
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_after_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_after_end
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_after_pipes
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_after_rooms
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_after_start
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_b_a_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_b_a_pipes
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_b_a_rooms
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_before_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_before_end
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_before_pipes
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_before_rooms
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_before_start
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_mass_pipes
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd/cmd_mass_rooms
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_after_ant_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_after_end_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_after_pipes_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_after_rooms_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_after_start_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_b_a_ant_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_b_a_pipes_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_b_a_rooms_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_before_ant_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_before_end_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_before_pipes_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_before_rooms_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_before_start_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_mass_pipes_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/cmd_trace/cmd_mass_rooms_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_###
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_###2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_after_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_after_end
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_after_end2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_after_pipes
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_after_rooms
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_after_start
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_after_start2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_b_a_pipes
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_b_a_rooms
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_before_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_before_ant2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_before_end
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_before_pipes
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_before_rooms
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_before_start
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_mass_pipes
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_mass_rooms
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_pipe
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment/comment_room
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_###2_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_###_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_after_ant_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_after_end2_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_after_end_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_after_pipes_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_after_rooms_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_after_start2_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_after_start_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_b_a_pipes_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_b_a_rooms_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_before_ant2_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_before_ant_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_before_end_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_before_pipes_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_before_rooms_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_before_start_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_mass_pipes_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_mass_rooms_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_pipe_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/comment_trace/comment_room_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/directly_s_e
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_ants/alpha_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_ants/alphanum_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_ants/backn_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_ants/no_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_ants/space_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_ants/zero_ant
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_ant_0
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_ant_1
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_ant_2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_0
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_1
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_3
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_4
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_5
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_6
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_7
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_room_8
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_start_0
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_start_1
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_bad_line/bad_line_start_2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/Lroom
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/no_pipe
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/no_room
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/same_coo
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/same_room
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/same_room2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/space_after_room
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/space_before_room
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_rooms/space_middle_room
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_start_end/multi_end
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_start_end/multi_start
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_start_end/no_access_end
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_start_end/no_end
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_start_end/no_path_start
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/error_start_end/no_start
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way0
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way1
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way4
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way5
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way6
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way7
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way8
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/error/no_way/no_way9
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/map_6
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/map_test0
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/map_test2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways/four_ways
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways/three_ways
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways/two_ways
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways/two_ways_collision
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways/two_ways_long
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways_trace/four_ways_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways_trace/three_ways_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways_trace/two_ways_collision_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways_trace/two_ways_long_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/multiple_ways_trace/two_ways_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_0
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_1
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_11
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_12
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_13
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_14
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_3
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_4
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_5
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_6
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_7
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_8
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/bad_line_pipe_9
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/error_middle_pipe
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/pipe_to_itself
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/same_pipe
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/same_pipe2
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/same_pipe3
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error/space_middle_pipe
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_0_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_11_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_12_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_13_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_14_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_1_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_2_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_3_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_4_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_5_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_6_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_7_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_8_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/bad_line_pipe_9_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/error_middle_pipe_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/pipe_to_itself_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/same_pipe2_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/same_pipe3_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/same_pipe_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/pipes_error_trace/space_middle_pipe_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/subject0.map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/subject1.map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/subject2.map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1/1000_map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1/100_map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1/200_map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1/300_map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1/400_map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1/500_map
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1_trace/1000_map_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1_trace/100_map_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1_trace/200_map_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1_trace/300_map_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1_trace/400_map_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1_trace/500_map_alt_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_1_trace/500_map_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/01for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/02for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/03for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/04for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/05for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/06for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/07for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/08for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/09for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2/10for10
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/01for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/02for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/03for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/04for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/05for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/06for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/07for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/08for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/09for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/lem-in_maps/valid_maps_part_2_trace/10for10_trace
+Warning: Not a valid file
+Norme: ./Lem_in_test/README.md
+Warning: Not a valid file
+Norme: ./Lem_in_test/src/false_pos_valgrind.supp
+Warning: Not a valid file
+Norme: ./Lem_in_test/src/ft_basic_checks.sh
+Warning: Not a valid file
+Norme: ./Lem_in_test/src/ft_tests.sh
+Warning: Not a valid file
+Norme: ./Lem_in_test/src/ft_var.sh
+Warning: Not a valid file
+Norme: ./Lem_in_test/src/path_to_exec
+Warning: Not a valid file
+Norme: ./Lem_in_test/unit_tests.sh
+Warning: Not a valid file
+Norme: ./libft/author
+Warning: Not a valid file
+Norme: ./libft/ft_atoi.o
+Warning: Not a valid file
+Norme: ./libft/ft_bzero.o
+Warning: Not a valid file
+Norme: ./libft/ft_isalnum.o
+Warning: Not a valid file
+Norme: ./libft/ft_isalpha.o
+Warning: Not a valid file
+Norme: ./libft/ft_isascii.o
+Warning: Not a valid file
+Norme: ./libft/ft_isdigit.o
+Warning: Not a valid file
+Norme: ./libft/ft_isprint.o
+Warning: Not a valid file
+Norme: ./libft/ft_isspace.o
+Warning: Not a valid file
+Norme: ./libft/ft_itoa.o
+Warning: Not a valid file
+Norme: ./libft/ft_lst_create_elem.o
+Warning: Not a valid file
+Norme: ./libft/ft_lst_push_back.o
+Warning: Not a valid file
+Norme: ./libft/ft_lstadd.o
+Warning: Not a valid file
+Norme: ./libft/ft_lstdel.o
+Warning: Not a valid file
+Norme: ./libft/ft_lstdelone.o
+Warning: Not a valid file
+Norme: ./libft/ft_lstiter.o
+Warning: Not a valid file
+Norme: ./libft/ft_lstmap.o
+Warning: Not a valid file
+Norme: ./libft/ft_lstnew.o
+Warning: Not a valid file
+Norme: ./libft/ft_memalloc.o
+Warning: Not a valid file
+Norme: ./libft/ft_memccpy.o
+Warning: Not a valid file
+Norme: ./libft/ft_memchr.o
+Warning: Not a valid file
+Norme: ./libft/ft_memcmp.o
+Warning: Not a valid file
+Norme: ./libft/ft_memcpy.o
+Warning: Not a valid file
+Norme: ./libft/ft_memdel.o
+Warning: Not a valid file
+Norme: ./libft/ft_memmove.o
+Warning: Not a valid file
+Norme: ./libft/ft_memset.o
+Warning: Not a valid file
+Norme: ./libft/ft_nbrlen.o
+Warning: Not a valid file
+Norme: ./libft/ft_putchar.o
+Warning: Not a valid file
+Norme: ./libft/ft_putchar_fd.o
+Warning: Not a valid file
+Norme: ./libft/ft_putendl.o
+Warning: Not a valid file
+Norme: ./libft/ft_putendl_fd.o
+Warning: Not a valid file
+Norme: ./libft/ft_putnbr.o
+Warning: Not a valid file
+Norme: ./libft/ft_putnbr_fd.o
+Warning: Not a valid file
+Norme: ./libft/ft_putstr.o
+Warning: Not a valid file
+Norme: ./libft/ft_putstr_fd.o
+Warning: Not a valid file
+Norme: ./libft/ft_strcat.o
+Warning: Not a valid file
+Norme: ./libft/ft_strchr.o
+Warning: Not a valid file
+Norme: ./libft/ft_strclr.o
+Warning: Not a valid file
+Norme: ./libft/ft_strcmp.o
+Warning: Not a valid file
+Norme: ./libft/ft_strcpy.o
+Warning: Not a valid file
+Norme: ./libft/ft_strdel.o
+Warning: Not a valid file
+Norme: ./libft/ft_strdup.o
+Warning: Not a valid file
+Norme: ./libft/ft_strequ.o
+Warning: Not a valid file
+Norme: ./libft/ft_striter.o
+Warning: Not a valid file
+Norme: ./libft/ft_striteri.o
+Warning: Not a valid file
+Norme: ./libft/ft_strjoin.o
+Warning: Not a valid file
+Norme: ./libft/ft_strlcat.o
+Warning: Not a valid file
+Norme: ./libft/ft_strlen.o
+Warning: Not a valid file
+Norme: ./libft/ft_strmap.o
+Warning: Not a valid file
+Norme: ./libft/ft_strmapi.o
+Warning: Not a valid file
+Norme: ./libft/ft_strncat.o
+Warning: Not a valid file
+Norme: ./libft/ft_strncmp.o
+Warning: Not a valid file
+Norme: ./libft/ft_strncpy.o
+Warning: Not a valid file
+Norme: ./libft/ft_strnequ.o
+Warning: Not a valid file
+Norme: ./libft/ft_strnew.o
+Warning: Not a valid file
+Norme: ./libft/ft_strnstr.o
+Warning: Not a valid file
+Norme: ./libft/ft_strrchr.o
+Warning: Not a valid file
+Norme: ./libft/ft_strsplit.o
+Warning: Not a valid file
+Norme: ./libft/ft_strstr.o
+Warning: Not a valid file
+Norme: ./libft/ft_strsub.o
+Warning: Not a valid file
+Norme: ./libft/ft_strtrim.o
+Warning: Not a valid file
+Norme: ./libft/ft_swap.o
+Warning: Not a valid file
+Norme: ./libft/ft_tolower.o
+Warning: Not a valid file
+Norme: ./libft/ft_toupper.o
+Warning: Not a valid file
+Norme: ./libft/get_next_line.o
+Warning: Not a valid file
+Norme: ./libft/libft.a
+Warning: Not a valid file
+Norme: ./libft/Makefile
+Warning: Not a valid file
+Norme: ./Makefile
+Warning: Not a valid file
+Norme: ./map_editors/generator
+Warning: Not a valid file
+Norme: ./map_editors/map_edit
+Warning: Not a valid file
+Norme: ./norm
+Warning: Not a valid file
+Norme: ./test
+Warning: Not a valid file
+Norme: ./test1
+Warning: Not a valid file
+Norme: ./test2
+Warning: Not a valid file
+Norme: ./test_1
+Warning: Not a valid file
+Norme: ./test_10
+Warning: Not a valid file
+Norme: ./test_1000
+Warning: Not a valid file
+Norme: ./test_big
+Warning: Not a valid file
+Norme: ./test_big_sup
+Warning: Not a valid file
+Norme: ./test_parallel
+Warning: Not a valid file
+Norme: ./cmake-build-debug/CMakeFiles/3.12.1/CompilerIdC/CMakeCCompilerId.c
+Warning: /Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/3.12.1/CompilerIdC/CMakeCCompilerId.c may not compile or is invalid for some reasons.
+Norme: ./cmake-build-debug/CMakeFiles/feature_tests.c
+Error: 42 header not at top of the file
+Error (line 2): must begin only by tabulations
+Error (line 2, col 13): global named features is not well prefixed
+Error (line 3): bad indentation
+Error (line 4): preprocessor block must be followed by one empty line
+Error (line 5): bad indentation
+Error (line 6): preprocessor block must be followed by one empty line
+Error (line 7): bad indentation
+Error (line 8): preprocessor block must be followed by one empty line
+Error (line 9): bad indentation
+Error (line 10): bad indentation
+Error (line 11): preprocessor block must be followed by one empty line
+Error (line 11): line has 115 characters
+Error (line 12): bad indentation
+Error (line 13): preprocessor block must be followed by one empty line
+Error (line 14): bad indentation
+Error (line 15): preprocessor block must be followed by one empty line
+Error (line 16): bad indentation
+Error (line 17): bad indentation
+Error (line 18): preprocessor block must be followed by one empty line
+Error (line 18): line has 115 characters
+Error (line 19): bad indentation
+Error (line 20): preprocessor block must be followed by one empty line
+Error (line 21): bad indentation
+Error (line 22): preprocessor block must be followed by one empty line
+Error (line 23): bad indentation
+Error (line 24): bad indentation
+Error (line 25): preprocessor block must be followed by one empty line
+Error (line 25): line has 115 characters
+Error (line 26): bad indentation
+Error (line 27): preprocessor block must be followed by one empty line
+Error (line 28): bad indentation
+Error (line 29): preprocessor block must be followed by one empty line
+Error (line 30): bad indentation
+Error (line 34): 2 instructions
+Error (line 34): Space before function name
+Error (line 34, col 24): space after pointer
+Error (line 34, col 32): no newline before block
+Error (line 34, col 32): no newline after block
+Error (line 34, col 53): missing parentheses in return statement
+Error (line 34, col 69): no newline before block
+Norme: ./lgnl.c
+Error: file must end with a single empty line
+Error: 42 header not at top of the file
+Error: global scope bad aligned
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): Space before function name
+Error (line 3): declarations in append_char are bad aligned
+Error (line 3, col 11): bad spacing
+Error (line 5): must begin only by tabulations
+Error (line 5): bad indentation
+Error (line 5, col 8): bad spacing
+Error (line 6): must begin only by tabulations
+Error (line 6): bad indentation
+Error (line 6, col 10): bad spacing
+Error (line 8): must begin only by tabulations
+Error (line 8): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 9): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 10): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 11): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 13): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 14): bad indentation
+Error (line 15): must begin only by tabulations
+Error (line 15): bad indentation
+Error (line 16): must begin only by tabulations
+Error (line 16): bad indentation
+Error (line 17): must begin only by tabulations
+Error (line 17): bad indentation
+Error (line 18): must begin only by tabulations
+Error (line 18): bad indentation
+Error (line 19): must begin only by tabulations
+Error (line 19): bad indentation
+Error (line 20): must begin only by tabulations
+Error (line 20): bad indentation
+Error (line 21): must begin only by tabulations
+Error (line 21): bad indentation
+Error (line 22): must begin only by tabulations
+Error (line 22): bad indentation
+Error (line 25): Space before function name
+Error (line 25): Space before function name
+Error (line 25): Space before function name
+Error (line 25): Space before function name
+Error (line 25): Space before function name
+Error (line 25, col 3): bad spacing
+Error (line 27): must begin only by tabulations
+Error (line 27): bad indentation
+Error (line 27, col 8): bad spacing
+Error (line 29): must begin only by tabulations
+Error (line 29): bad indentation
+Error (line 30): must begin only by tabulations
+Error (line 30): bad indentation
+Error (line 31): must begin only by tabulations
+Error (line 31): bad indentation
+Error (line 32): must begin only by tabulations
+Error (line 32): bad indentation
+Error (line 33): must begin only by tabulations
+Error (line 33): bad indentation
+Error (line 34): must begin only by tabulations
+Error (line 34): bad indentation
+Error (line 35): must begin only by tabulations
+Error (line 35): bad indentation
+Error (line 36): must begin only by tabulations
+Error (line 36): bad indentation
+Error (line 37): must begin only by tabulations
+Error (line 37): bad indentation
+Error (line 38): must begin only by tabulations
+Error (line 38): bad indentation
+Error (line 39, col 0): no newline after block
+Norme: ./libft/ft_atoi.c
+Norme: ./libft/ft_bzero.c
+Norme: ./libft/ft_isalnum.c
+Norme: ./lem_in.h
+Error: global scope bad aligned
+Error (line 30): line has 84 characters
+Error (line 37): struct and s_w not separated by a single space.
+Error (line 38): struct and s_p not separated by a single space.
+Error (line 44): struct and s_s not separated by a single space.
+Error (line 52): struct and s_q not separated by a single space.
+Error (line 53): struct and s_w not separated by a single space.
+Error (line 58): struct and s_room not separated by a single space.
+Error (line 59): struct and s_q not separated by a single space.
+Error (line 64): struct and s_room not separated by a single space.
+Error (line 65): struct and s_nghbr not separated by a single space.
+Error (line 74): struct and s_room not separated by a single space.
+Error (line 75): struct and s_nghbr not separated by a single space.
+Error (line 89): C++ comment
+Error (line 114, col 18): space after pointer
+Error (line 116, col 6): freeList not unixcase
+Norme: ./libft/ft_isalpha.c
+Norme: ./cut_n_pack.c
+Error: file must end with a single empty line
+Error: 6 functions in the file
+Error (line 52): function packs_of_path has 26 lines
+Error (line 60): must begin only by tabulations
+Error (line 60): bad indentation
+Error (line 61): must begin only by tabulations
+Error (line 61): bad indentation
+Error (line 61, col 8): missing space after return
+Error (line 62): bad indentation
+Error (line 62): spaces at the end of line
+Error (line 70): line has 83 characters
+Error (line 77): must begin only by tabulations
+Error (line 77): bad indentation
+Error (line 94): must begin only by tabulations
+Error (line 94): bad indentation
+Error (line 95): must begin only by tabulations
+Error (line 95): bad indentation
+Error (line 96): must begin only by tabulations
+Error (line 97): must begin only by tabulations
+Error (line 97): bad indentation
+Error (line 98): must begin only by tabulations
+Error (line 98): bad indentation
+Error (line 99): must begin only by tabulations
+Error (line 99): bad indentation
+Error (line 100): must begin only by tabulations
+Error (line 100): bad indentation
+Error (line 124): must begin only by tabulations
+Error (line 124): bad indentation
+Error (line 133): function add_new_pack has 26 lines
+Error (line 133): declarations must be followed by one empty line in add_new_pack
+Error (line 136): must begin only by tabulations
+Error (line 136): bad indentation
+Error (line 136): spaces at the end of line
+Error (line 143): must begin only by tabulations
+Error (line 143): bad indentation
+Error (line 157): must begin only by tabulations
+Error (line 157): bad indentation
+Error (line 161, col 0): no newline after block
+Norme: ./libft/ft_isprint.c
+Norme: ./libft/ft_isascii.c
+Norme: ./find_ways.c
+Error: file must end with a single empty line
+Error: global scope bad aligned
+Error: 11 functions in the file
+Error (line 15): function find_ways has 28 lines
+Error (line 17, col 7): queue is instanciated during declaration
+Error (line 18, col 7): path is instanciated during declaration
+Error (line 23, col 5): bad spacing
+Error (line 39): C++ comment
+Error (line 40, col 3): no empty line before block
+Error (line 43): C++ comment
+Error (line 44, col 1): no empty line before block
+Error (line 60, col 2): missing space after while
+Error (line 146, col 18): space after pointer
+Error (line 159): Space before function name
+Error (line 159): Space before function name
+Error (line 159): Space before function name
+Error (line 159): Space before function name
+Error (line 159, col 3): bad spacing
+Error (line 161): must begin only by tabulations
+Error (line 161): bad indentation
+Error (line 161, col 7): bad spacing
+Error (line 161, col 13): newpath is instanciated during declaration
+Error (line 163): must begin only by tabulations
+Error (line 163): bad indentation
+Error (line 164): must begin only by tabulations
+Error (line 164): bad indentation
+Error (line 167): must begin only by tabulations
+Error (line 167): bad indentation
+Error (line 171, col 0): freeList not unixcase
+Error (line 173): must begin only by tabulations
+Error (line 173): bad indentation
+Error (line 176): must begin only by tabulations
+Error (line 176): bad indentation
+Error (line 177): must begin only by tabulations
+Error (line 177): bad indentation
+Error (line 178): must begin only by tabulations
+Error (line 178): bad indentation
+Error (line 179): must begin only by tabulations
+Error (line 179): bad indentation
+Error (line 180): must begin only by tabulations
+Error (line 180): bad indentation
+Error (line 200, col 0): no newline after block
+Norme: ./libft/ft_isdigit.c
+Norme: ./libft/ft_isspace.c
+Norme: ./libft/ft_lst_create_elem.c
+Norme: ./libft/ft_itoa.c
+Norme: ./libft/ft_lstadd.c
+Norme: ./libft/ft_lst_push_back.c
+Norme: ./libft/ft_lstdel.c
+Norme: ./libft/ft_lstiter.c
+Norme: ./libft/ft_lstdelone.c
+Norme: ./libft/ft_memalloc.c
+Norme: ./libft/ft_lstmap.c
+Norme: ./libft/ft_memchr.c
+Norme: ./libft/ft_lstnew.c
+Norme: ./libft/ft_memdel.c
+Norme: ./libft/ft_memccpy.c
+Norme: ./libft/ft_memcpy.c
+Norme: ./libft/ft_memcmp.c
+Norme: ./libft/ft_memset.c
+Norme: ./libft/ft_nbrlen.c
+Norme: ./libft/ft_putendl.c
+Norme: ./libft/ft_putchar_fd.c
+Norme: ./libft/ft_putchar.c
+Norme: ./libft/ft_putendl_fd.c
+Norme: ./libft/ft_memmove.c
+Norme: ./libft/ft_putstr.c
+Norme: ./libft/ft_putnbr.c
+Norme: ./libft/ft_putstr_fd.c
+Norme: ./libft/ft_strchr.c
+Norme: ./libft/ft_strcat.c
+Norme: ./libft/ft_strclr.c
+Norme: ./libft/ft_putnbr_fd.c
+Norme: ./libft/ft_strcmp.c
+Norme: ./libft/ft_strcpy.c
+Norme: ./libft/ft_strdel.c
+Norme: ./libft/ft_striter.c
+Norme: ./libft/ft_strdup.c
+Norme: ./libft/ft_striteri.c
+Norme: ./libft/ft_strlcat.c
+Norme: ./libft/ft_strequ.c
+Norme: ./libft/ft_strlen.c
+Norme: ./libft/ft_strjoin.c
+Norme: ./libft/ft_strncat.c
+Norme: ./libft/ft_strncmp.c
+Norme: ./libft/ft_strmapi.c
+Norme: ./libft/ft_strmap.c
+Norme: ./libft/ft_strncpy.c
+Norme: ./libft/ft_strnequ.c
+Norme: ./libft/ft_strnew.c
+Norme: ./libft/ft_strnstr.c
+Norme: ./libft/ft_strrchr.c
+Norme: ./libft/ft_strstr.c
+Norme: ./libft/ft_swap.c
+Norme: ./libft/ft_tolower.c
+Norme: ./libft/ft_strsub.c
+Norme: ./libft/ft_toupper.c
+Norme: ./libft/ft_strtrim.c
+Norme: ./libft/ft_strsplit.c
+Norme: ./main.c
+Error: file must end with a single empty line
+Error (line 15): function main has 37 lines
+Error (line 52): C++ comment
+Error (line 54, col 0): no newline after block
+Norme: ./run_ants_run.c
+Error: file must end with a single empty line
+Error (line 17): bad indentation
+Error (line 17): spaces at the end of line
+Error (line 18, col 0): no newline after block
+Norme: ./libft/get_next_line.c
+Error (line 84): C++ comment
+Norme: ./libft/libft.h
+Norme: ./tools.c
+Error: file must end with a single empty line
+Error (line 21): spaces at the end of line
+Error (line 50, col 1): missing space after while
+Error (line 72): function create_room has 33 lines
+Error (line 72): declarations must be followed by one empty line in create_room
+Error (line 75): spaces at the end of line
+Error (line 94): must begin only by tabulations
+Error (line 94): bad indentation
+Error (line 104, col 21): bad character after ,
+Norme: ./tools_2.c
+Error: file must end with a single empty line
+Error: global scope bad aligned
+Error: 7 functions in the file
+Error (line 25): spaces at the end of line
+Error (line 42): must begin only by tabulations
+Error (line 42): bad indentation
+Error (line 56, col 1): missing space after while
+Error (line 123, col 0): no newline after block
+Norme: ./parsing.c
+Error: file must end with a single empty line
+Error: 6 functions in the file
+Error (line 27): line has 88 characters
+Error (line 29, col 3): missing space after break
+Error (line 42): function parse_rooms has 29 lines
+Error (line 50): must begin only by tabulations
+Error (line 50): bad indentation
+Error (line 56): 2 assignations
+Error (line 59): line has 84 characters
+Error (line 83): must begin only by tabulations
+Error (line 91): function parse_links has 27 lines
+Error (line 147, col 0): no newline after block

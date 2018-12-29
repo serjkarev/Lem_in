@@ -27,6 +27,10 @@
 # define ER10 "🖕\x1B[31m ERROR: link to a non-existent room \033[0m🖕\n"
 # define ER11 "🖕\x1B[31m ERROR: START room not found \033[0m🖕\n"
 # define ER12 "🖕\x1B[31m ERROR: END room not found \033[0m🖕\n"
+# define ER13 "🖕\x1B[31m ERROR: not enough information to build a graph \033[0m🖕\n"
+# define ER14 "🖕\x1B[31m ERROR: no way available \033[0m🖕\n"
+# define ER15 "🖕\x1B[31m ERROR: duplicate room names \033[0m🖕\n"
+# define ER16 "🖕\x1B[31m ERROR: !!! TRASH !!! \033[0m🖕\n"
 
 typedef struct		s_p
 {
@@ -92,7 +96,9 @@ void	parse_ants(t_lem *lem);
 char	*parse_rooms(t_lem *lem);
 void	parse_room(char *str, t_lem *lem, int type);
 void	create_room(char **arr, t_lem *lem, int type);
+void	piece_of_valid(t_lem *lem, char *str);
 void	parse_links(t_lem *lem, char *str);
+int		check_link(char *str);
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2);
 t_room	*get_room_by_name(t_lem *lem, char *name);
 int		check_nghbrs(t_nghbr *ns, char *name);
@@ -117,5 +123,7 @@ void	packs_of_path(t_lem *lem);
 int		compare_ways(t_w *way1, t_w *way2);
 void	add_to_pack(t_p *pack, t_q *path, int len);
 t_p		*add_new_pack(t_lem *lem, t_q *path, int len);
+
+void	run_ants_run(t_lem *lem);
 
 #endif

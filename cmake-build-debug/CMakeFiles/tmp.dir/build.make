@@ -902,9 +902,22 @@ CMakeFiles/tmp.dir/run_ants_run.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tmp.dir/run_ants_run.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/skarev/Desktop/tmp/run_ants_run.c -o CMakeFiles/tmp.dir/run_ants_run.c.s
 
+CMakeFiles/tmp.dir/cut_n_pack.c.o: CMakeFiles/tmp.dir/flags.make
+CMakeFiles/tmp.dir/cut_n_pack.c.o: ../cut_n_pack.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/tmp.dir/cut_n_pack.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/cut_n_pack.c.o   -c /Users/skarev/Desktop/tmp/cut_n_pack.c
+
+CMakeFiles/tmp.dir/cut_n_pack.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tmp.dir/cut_n_pack.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/skarev/Desktop/tmp/cut_n_pack.c > CMakeFiles/tmp.dir/cut_n_pack.c.i
+
+CMakeFiles/tmp.dir/cut_n_pack.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tmp.dir/cut_n_pack.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/skarev/Desktop/tmp/cut_n_pack.c -o CMakeFiles/tmp.dir/cut_n_pack.c.s
+
 CMakeFiles/tmp.dir/find_ways.c.o: CMakeFiles/tmp.dir/flags.make
 CMakeFiles/tmp.dir/find_ways.c.o: ../find_ways.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/tmp.dir/find_ways.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/tmp.dir/find_ways.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/find_ways.c.o   -c /Users/skarev/Desktop/tmp/find_ways.c
 
 CMakeFiles/tmp.dir/find_ways.c.i: cmake_force
@@ -917,7 +930,7 @@ CMakeFiles/tmp.dir/find_ways.c.s: cmake_force
 
 CMakeFiles/tmp.dir/main.c.o: CMakeFiles/tmp.dir/flags.make
 CMakeFiles/tmp.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/tmp.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/tmp.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/main.c.o   -c /Users/skarev/Desktop/tmp/main.c
 
 CMakeFiles/tmp.dir/main.c.i: cmake_force
@@ -930,7 +943,7 @@ CMakeFiles/tmp.dir/main.c.s: cmake_force
 
 CMakeFiles/tmp.dir/parsing.c.o: CMakeFiles/tmp.dir/flags.make
 CMakeFiles/tmp.dir/parsing.c.o: ../parsing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/tmp.dir/parsing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/tmp.dir/parsing.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/parsing.c.o   -c /Users/skarev/Desktop/tmp/parsing.c
 
 CMakeFiles/tmp.dir/parsing.c.i: cmake_force
@@ -943,7 +956,7 @@ CMakeFiles/tmp.dir/parsing.c.s: cmake_force
 
 CMakeFiles/tmp.dir/tools.c.o: CMakeFiles/tmp.dir/flags.make
 CMakeFiles/tmp.dir/tools.c.o: ../tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/tmp.dir/tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/tmp.dir/tools.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/tools.c.o   -c /Users/skarev/Desktop/tmp/tools.c
 
 CMakeFiles/tmp.dir/tools.c.i: cmake_force
@@ -956,7 +969,7 @@ CMakeFiles/tmp.dir/tools.c.s: cmake_force
 
 CMakeFiles/tmp.dir/tools_2.c.o: CMakeFiles/tmp.dir/flags.make
 CMakeFiles/tmp.dir/tools_2.c.o: ../tools_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/tmp.dir/tools_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/tmp.dir/tools_2.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/tools_2.c.o   -c /Users/skarev/Desktop/tmp/tools_2.c
 
 CMakeFiles/tmp.dir/tools_2.c.i: cmake_force
@@ -969,7 +982,7 @@ CMakeFiles/tmp.dir/tools_2.c.s: cmake_force
 
 CMakeFiles/tmp.dir/lgnl.c.o: CMakeFiles/tmp.dir/flags.make
 CMakeFiles/tmp.dir/lgnl.c.o: ../lgnl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/tmp.dir/lgnl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/tmp.dir/lgnl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/lgnl.c.o   -c /Users/skarev/Desktop/tmp/lgnl.c
 
 CMakeFiles/tmp.dir/lgnl.c.i: cmake_force
@@ -1047,6 +1060,7 @@ tmp_OBJECTS = \
 "CMakeFiles/tmp.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/tmp.dir/libft/get_next_line.c.o" \
 "CMakeFiles/tmp.dir/run_ants_run.c.o" \
+"CMakeFiles/tmp.dir/cut_n_pack.c.o" \
 "CMakeFiles/tmp.dir/find_ways.c.o" \
 "CMakeFiles/tmp.dir/main.c.o" \
 "CMakeFiles/tmp.dir/parsing.c.o" \
@@ -1122,6 +1136,7 @@ tmp: CMakeFiles/tmp.dir/libft/ft_tolower.c.o
 tmp: CMakeFiles/tmp.dir/libft/ft_toupper.c.o
 tmp: CMakeFiles/tmp.dir/libft/get_next_line.c.o
 tmp: CMakeFiles/tmp.dir/run_ants_run.c.o
+tmp: CMakeFiles/tmp.dir/cut_n_pack.c.o
 tmp: CMakeFiles/tmp.dir/find_ways.c.o
 tmp: CMakeFiles/tmp.dir/main.c.o
 tmp: CMakeFiles/tmp.dir/parsing.c.o
@@ -1130,7 +1145,7 @@ tmp: CMakeFiles/tmp.dir/tools_2.c.o
 tmp: CMakeFiles/tmp.dir/lgnl.c.o
 tmp: CMakeFiles/tmp.dir/build.make
 tmp: CMakeFiles/tmp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Linking C executable tmp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Linking C executable tmp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tmp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
