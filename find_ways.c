@@ -28,10 +28,7 @@ void	find_ways(t_lem *lem)
 		queue = pop(queue);
 		room = copy_room(get_last_elem(path));
 		if (room->type == 3)
-		{
 			add_path_to_ways(lem, path);
-			print_way(path);
-		}
 		while (room->nghbrs)
 		{
 			if (is_not_visited(room->nghbrs->neighbor, path))
@@ -150,7 +147,10 @@ void	print_way(t_q* path)
 {
 	while (path)
 	{
-		printf("%s -> ", path->room->name);
+		if (path->next)
+			printf("%s -> ", path->room->name);
+		else
+			printf("%s", path->room->name);
 		path = path->next;
 	}
 	printf("\n");

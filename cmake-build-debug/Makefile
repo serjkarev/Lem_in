@@ -150,6 +150,33 @@ find_ways.c.s:
 	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/find_ways.c.s
 .PHONY : find_ways.c.s
 
+lgnl.o: lgnl.c.o
+
+.PHONY : lgnl.o
+
+# target to build an object file
+lgnl.c.o:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/lgnl.c.o
+.PHONY : lgnl.c.o
+
+lgnl.i: lgnl.c.i
+
+.PHONY : lgnl.i
+
+# target to preprocess a source file
+lgnl.c.i:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/lgnl.c.i
+.PHONY : lgnl.c.i
+
+lgnl.s: lgnl.c.s
+
+.PHONY : lgnl.s
+
+# target to generate assembly for a file
+lgnl.c.s:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/lgnl.c.s
+.PHONY : lgnl.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -1932,6 +1959,33 @@ parsing.c.s:
 	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/parsing.c.s
 .PHONY : parsing.c.s
 
+run_ants_run.o: run_ants_run.c.o
+
+.PHONY : run_ants_run.o
+
+# target to build an object file
+run_ants_run.c.o:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/run_ants_run.c.o
+.PHONY : run_ants_run.c.o
+
+run_ants_run.i: run_ants_run.c.i
+
+.PHONY : run_ants_run.i
+
+# target to preprocess a source file
+run_ants_run.c.i:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/run_ants_run.c.i
+.PHONY : run_ants_run.c.i
+
+run_ants_run.s: run_ants_run.c.s
+
+.PHONY : run_ants_run.s
+
+# target to generate assembly for a file
+run_ants_run.c.s:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/run_ants_run.c.s
+.PHONY : run_ants_run.c.s
+
 tools.o: tools.c.o
 
 .PHONY : tools.o
@@ -1998,6 +2052,9 @@ help:
 	@echo "... find_ways.o"
 	@echo "... find_ways.i"
 	@echo "... find_ways.s"
+	@echo "... lgnl.o"
+	@echo "... lgnl.i"
+	@echo "... lgnl.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -2196,6 +2253,9 @@ help:
 	@echo "... parsing.o"
 	@echo "... parsing.i"
 	@echo "... parsing.s"
+	@echo "... run_ants_run.o"
+	@echo "... run_ants_run.i"
+	@echo "... run_ants_run.s"
 	@echo "... tools.o"
 	@echo "... tools.i"
 	@echo "... tools.s"

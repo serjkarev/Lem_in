@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/skarev/Desktop/tmp/find_ways.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/find_ways.c.o"
+  "/Users/skarev/Desktop/tmp/lgnl.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/lgnl.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_atoi.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_atoi.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_bzero.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_bzero.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_isalnum.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_isalnum.c.o"
@@ -71,6 +72,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/skarev/Desktop/tmp/libft/get_next_line.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/libft/get_next_line.c.o"
   "/Users/skarev/Desktop/tmp/main.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/main.c.o"
   "/Users/skarev/Desktop/tmp/parsing.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/parsing.c.o"
+  "/Users/skarev/Desktop/tmp/run_ants_run.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/run_ants_run.c.o"
   "/Users/skarev/Desktop/tmp/tools.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/tools.c.o"
   "/Users/skarev/Desktop/tmp/tools_2.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/tools_2.c.o"
   )

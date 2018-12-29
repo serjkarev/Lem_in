@@ -6,15 +6,15 @@
 #    By: skarev <skarev@student.unit.ua>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/01 14:41:37 by skarev            #+#    #+#              #
-#    Updated: 2018/11/01 14:41:37 by skarev           ###   ########.fr        #
+#    Updated: 2018/12/26 12:15:36 by skarev           ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = lem-in
 
-CFLAG = -g -Wall -Wextra
+CFLAG = -g -Wall -Wextra -Wextra
 
-SRCS = main.c parsing.c tools.c tools_2.c find_ways.c run_ants_run.c
+SRCS = main.c parsing.c tools.c tools_2.c find_ways.c run_ants_run.c lgnl.c
 
 LIBS = ./libft/libft.a
 

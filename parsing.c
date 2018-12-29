@@ -17,8 +17,10 @@ void	parse_ants(t_lem *lem)
 	char	*str;
 
 	lem->ants = 0;
-	while (get_next_line(0, &str))
+//	while (get_next_line(0, &str))
+	while (lgnl(0, &str))
 	{
+		add_to_print(lem, str);
 		if (!ft_isdigit_str(str))
 		{
 			lem->ants = ft_atoi(str);
@@ -45,8 +47,10 @@ char	*parse_rooms(t_lem *lem)
 	det[0] = 0;
 	det[1] = 0;
     type = 0;
-	while (get_next_line(0, &str))
+//	while (get_next_line(0, &str))
+	while (lgnl(0, &str))
 	{
+		add_to_print(lem, str);
 		if (ft_strequ(str, "##start") || ft_strequ(str, "##end"))
 		{
 			(ft_strequ(str, "##start") == 1) ? (type = 1) : (type = 3);
@@ -87,7 +91,8 @@ void	parse_links(t_lem *lem, char *str)
 	char	**arr;
 
 	if (str)
-	{	
+	{
+		add_to_print(lem, str);
 		arr = ft_strsplit(str, '-');
 		if (arr[2] != NULL || !arr[0] || !arr[1])
 			ft_error(NULL, arr, ER09);
@@ -96,15 +101,20 @@ void	parse_links(t_lem *lem, char *str)
 		free_arr(arr);
 		free(str);
 	}
-	while (get_next_line(0, &str))
+//	while (get_next_line(0, &str))
+	while (lgnl(0, &str))
 	{
-		arr = ft_strsplit(str, '-');
-		if (arr[2] != NULL || !arr[0] || !arr[1])
-			ft_error(NULL, arr, ER09);
-		find_neighbor(lem, arr, 0, 1);
-		find_neighbor(lem, arr, 1, 0);
-		free_arr(arr);
-		free(str);
+		add_to_print(lem, str);
+		if (str[0] != '#')
+		{
+			arr = ft_strsplit(str, '-');
+			if (arr[2] != NULL || !arr[0] || !arr[1])
+				ft_error(NULL, arr, ER09);
+			find_neighbor(lem, arr, 0, 1);
+			find_neighbor(lem, arr, 1, 0);
+			free_arr(arr);
+			free(str);
+		}
 	}
 }
 
@@ -117,5 +127,20 @@ void	find_neighbor(t_lem *lem, char **arr, int n1, int n2)
 	n = get_room_by_name(lem, arr[n2]);
 	if (room == NULL || n == NULL)
 		ft_error(NULL, arr, ER10);
-	create_nghbrs(room, n);
+	if (check_nghbrs(room->nghbrs, n->name))
+		create_nghbrs(room, n);
+}
+
+int		check_nghbrs(t_nghbr *ns, char *name)
+{
+	t_nghbr		*head;
+
+	head = ns;
+	while (head)
+	{
+		if (ft_strequ(head->neighbor->name, name))
+			return (0);
+		head = head->next;
+	}
+	return (1);
 }

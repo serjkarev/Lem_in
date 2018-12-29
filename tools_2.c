@@ -61,3 +61,35 @@ t_room		*find_room_by_type(t_lem *lem, int type)
 	}
 	return (NULL);
 }
+
+void	add_to_print(t_lem *lem, char *str)
+{
+	t_s		*current;
+
+	if (!lem->print)
+	{
+		lem->print = (t_s*)ft_memalloc(sizeof(t_s));
+		lem->print->str = ft_strdup(str);
+		lem->print->next = NULL;
+	}
+	else
+	{
+		current = lem->print;
+		while (current->next)
+			current = current->next;
+		current->next = (t_s*)ft_memalloc(sizeof(t_s));
+		current->next->str = ft_strdup(str);
+		current->next->next = NULL;
+	}
+}
+
+void	print_map(t_lem *lem)
+{
+	while (lem->print)
+	{
+		ft_putstr(lem->print->str);
+		write(1, "\n", 1);
+		lem->print = lem->print->next;
+	}
+	write(1, "\n", 1);
+}

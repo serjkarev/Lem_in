@@ -5,6 +5,10 @@ CMakeFiles/tmp.dir/find_ways.c.o: .././libft/libft.h
 CMakeFiles/tmp.dir/find_ways.c.o: ../find_ways.c
 CMakeFiles/tmp.dir/find_ways.c.o: ../lem_in.h
 
+CMakeFiles/tmp.dir/lgnl.c.o: .././libft/libft.h
+CMakeFiles/tmp.dir/lgnl.c.o: ../lem_in.h
+CMakeFiles/tmp.dir/lgnl.c.o: ../lgnl.c
+
 CMakeFiles/tmp.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 
 CMakeFiles/tmp.dir/libft/ft_bzero.c.o: ../libft/ft_bzero.c
@@ -188,6 +192,10 @@ CMakeFiles/tmp.dir/main.c.o: ../main.c
 CMakeFiles/tmp.dir/parsing.c.o: .././libft/libft.h
 CMakeFiles/tmp.dir/parsing.c.o: ../lem_in.h
 CMakeFiles/tmp.dir/parsing.c.o: ../parsing.c
+
+CMakeFiles/tmp.dir/run_ants_run.c.o: .././libft/libft.h
+CMakeFiles/tmp.dir/run_ants_run.c.o: ../lem_in.h
+CMakeFiles/tmp.dir/run_ants_run.c.o: ../run_ants_run.c
 
 CMakeFiles/tmp.dir/tools.c.o: .././libft/libft.h
 CMakeFiles/tmp.dir/tools.c.o: ../lem_in.h

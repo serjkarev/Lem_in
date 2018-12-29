@@ -92,6 +92,9 @@
 		<Unit filename="/Users/skarev/Desktop/tmp/lem_in.h">
 			<Option target="tmp"/>
 		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/lgnl.c">
+			<Option target="tmp"/>
+		</Unit>
 		<Unit filename="/Users/skarev/Desktop/tmp/libft/ft_atoi.c">
 			<Option target="tmp"/>
 		</Unit>
@@ -291,6 +294,9 @@
 			<Option target="tmp"/>
 		</Unit>
 		<Unit filename="/Users/skarev/Desktop/tmp/parsing.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/run_ants_run.c">
 			<Option target="tmp"/>
 		</Unit>
 		<Unit filename="/Users/skarev/Desktop/tmp/tools.c">

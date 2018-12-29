@@ -28,9 +28,23 @@
 # define ER11 "🖕\x1B[31m ERROR: START room not found \033[0m🖕\n"
 # define ER12 "🖕\x1B[31m ERROR: END room not found \033[0m🖕\n"
 
+typedef struct		s_p
+{
+	struct	s_w	*ways;
+	struct	s_p	*next;
+}					t_p;
+
+typedef struct		s_s
+{
+	char		*str;
+	struct	s_s	*next;
+}					t_s;
+
 typedef struct		s_w
 {
 	int			len;
+	int			block;
+	int			flow;
 	struct	s_q	*path;
 	struct	s_w	*next;
 }					t_w;
@@ -60,12 +74,16 @@ typedef struct		s_room
 typedef struct		s_lem
 {
 	int				ants;
-	// t_p				*packs;
+	t_s				*print;
+	t_p				*packs;
 	t_w				*ways;
 	t_q				*queue;
 	t_room			*rooms;
 }					t_lem;
 
+void	print_map(t_lem *lem);
+int		lgnl(int fd, char **line);  // delete me
+void	add_to_print(t_lem *lem, char *str);
 void	ft_error(char *str, char **arr, char *error);
 int		ft_isdigit_str(char *str);
 int		space_detect(char *str);
@@ -77,6 +95,7 @@ void	create_room(char **arr, t_lem *lem, int type);
 void	parse_links(t_lem *lem, char *str);
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2);
 t_room	*get_room_by_name(t_lem *lem, char *name);
+int		check_nghbrs(t_nghbr *ns, char *name);
 void	create_nghbrs(t_room *room, t_room *n);
 
 t_room	*find_room_by_type(t_lem *lem, int type);
@@ -91,11 +110,12 @@ t_q		*copy_path(t_q *path);
 t_q		*freeList(t_q *path);
 t_room	*copy_room(t_room *room);
 void	add_path_to_ways(t_lem *lem, t_q *path);
-
-void	packs_of_path(t_w *ways);
-
-void	run_ants_run(t_lem *lem);
 t_w		*cut_the_way(t_w *ways);
 int		way_len(t_q *path);
+
+void	packs_of_path(t_lem *lem);
+int		compare_ways(t_w *way1, t_w *way2);
+void	add_to_pack(t_p *pack, t_q *path, int len);
+t_p		*add_new_pack(t_lem *lem, t_q *path, int len);
 
 #endif

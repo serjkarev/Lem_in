@@ -63,11 +63,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/tmp.dir/libft/ft_tolower.c.o"
   "CMakeFiles/tmp.dir/libft/ft_toupper.c.o"
   "CMakeFiles/tmp.dir/libft/get_next_line.c.o"
+  "CMakeFiles/tmp.dir/run_ants_run.c.o"
   "CMakeFiles/tmp.dir/find_ways.c.o"
   "CMakeFiles/tmp.dir/main.c.o"
   "CMakeFiles/tmp.dir/parsing.c.o"
   "CMakeFiles/tmp.dir/tools.c.o"
   "CMakeFiles/tmp.dir/tools_2.c.o"
+  "CMakeFiles/tmp.dir/lgnl.c.o"
   "tmp.pdb"
   "tmp"
 )

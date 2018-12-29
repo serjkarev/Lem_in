@@ -5,6 +5,10 @@ CMakeFiles/tmp.dir/find_ways.c.o
  /Users/skarev/Desktop/tmp/./libft/libft.h
  /Users/skarev/Desktop/tmp/find_ways.c
  /Users/skarev/Desktop/tmp/lem_in.h
+CMakeFiles/tmp.dir/lgnl.c.o
+ /Users/skarev/Desktop/tmp/./libft/libft.h
+ /Users/skarev/Desktop/tmp/lem_in.h
+ /Users/skarev/Desktop/tmp/lgnl.c
 CMakeFiles/tmp.dir/libft/ft_atoi.c.o
  /Users/skarev/Desktop/tmp/libft/ft_atoi.c
 CMakeFiles/tmp.dir/libft/ft_bzero.c.o
@@ -189,6 +193,10 @@ CMakeFiles/tmp.dir/parsing.c.o
  /Users/skarev/Desktop/tmp/./libft/libft.h
  /Users/skarev/Desktop/tmp/lem_in.h
  /Users/skarev/Desktop/tmp/parsing.c
+CMakeFiles/tmp.dir/run_ants_run.c.o
+ /Users/skarev/Desktop/tmp/./libft/libft.h
+ /Users/skarev/Desktop/tmp/lem_in.h
+ /Users/skarev/Desktop/tmp/run_ants_run.c
 CMakeFiles/tmp.dir/tools.c.o
  /Users/skarev/Desktop/tmp/./libft/libft.h
  /Users/skarev/Desktop/tmp/lem_in.h
