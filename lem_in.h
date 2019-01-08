@@ -32,6 +32,13 @@
 # define ER15 "🖕\x1B[31m ERROR: duplicate room names \033[0m🖕\n"
 # define ER16 "🖕\x1B[31m ERROR: !!! TRASH !!! \033[0m🖕\n"
 
+typedef struct		s_a
+{
+	int			num;
+	struct	s_q	*path;
+	struct	s_a	*next;
+}					t_a;
+
 typedef struct		s_p
 {
 	struct	s_w	*ways;
@@ -49,6 +56,7 @@ typedef struct		s_w
 	int			len;
 	int			block;
 	int			flow;
+	int			num_of_path;
 	struct	s_q	*path;
 	struct	s_w	*next;
 }					t_w;
@@ -84,6 +92,8 @@ typedef struct		s_lem
 	t_q				*queue;
 	t_room			*rooms;
 }					t_lem;
+
+// t_q		*freeList(t_q *path);
 
 void	print_map(t_lem *lem);
 int		lgnl(int fd, char **line);  // delete me
@@ -125,5 +135,7 @@ void	add_to_pack(t_p *pack, t_q *path, int len);
 t_p		*add_new_pack(t_lem *lem, t_q *path, int len);
 
 void	run_ants_run(t_lem *lem);
+t_a		*create_ants(t_lem *lem);
+t_w		*choose_pack(t_lem *lem, t_a *ants);
 
 #endif

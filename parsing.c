@@ -26,7 +26,7 @@ void	parse_ants(t_lem *lem)
 			if (lem->ants <= 0)
 				lem->ants == 0 ? ft_error(str, NULL, ER02) : ft_error(str, NULL, ER03);
 			free(str);
-			break;
+			break ;
 		}
 		else if (ft_strequ(str, "##start") || ft_strequ(str, "##end"))
 			ft_error(str, NULL, ER01);
@@ -47,7 +47,7 @@ char	*parse_rooms(t_lem *lem)
 
 	det[0] = 0;
 	det[1] = 0;
-    type = 0;
+	type = 0;
 	while (lgnl(0, &str))
 	{
 		add_to_print(lem, str);
@@ -80,7 +80,7 @@ void	parse_room(char *str, t_lem *lem, int type)
 	space = space_detect(str);
 	arr = ft_strsplit(str, ' ');
 	if (arr[3] != NULL || space != 2 || !arr[0] || !arr[1] || !arr[2] ||\
-										 ft_strchr(arr[0], '-') != NULL)
+										ft_strchr(arr[0], '-') != NULL)
 		ft_error(str, arr, ER05);
 	if (get_room_by_name(lem, arr[0]))
 		ft_error(str, arr, ER15);

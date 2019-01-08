@@ -57,9 +57,8 @@ void	packs_of_path(t_lem *lem)
 
 	if (lem->ways)
 		way1 = lem->ways;
-    else
-        return;
-	
+	else
+		return ;
 	while (way1)
 	{
 		way2 = lem->ways;
@@ -74,7 +73,7 @@ void	packs_of_path(t_lem *lem)
 			}
 			way2 = way2->next;
 		}
-        way1->block = 1;
+		way1->block = 1;
 		way1 = way1->next;
 	}
 }
@@ -91,13 +90,13 @@ int		compare_ways(t_w *way1, t_w *way2)
 		while (head2)
 		{
 			if (ft_strequ(head1->room->name, head2->room->name))
-            {
-			    if ((head1->room->type == 1 && head2->room->type == 1) ||
-                        (head1->room->type == 3 && head2->room->type == 3))
-			        ;
-			    else
-			        return (1);
-            }
+			{
+				if ((head1->room->type == 1 && head2->room->type == 1) ||
+					(head1->room->type == 3 && head2->room->type == 3))
+					;
+				else
+					return (1);
+			}
 			head2 = head2->next;
 		}
 		head1 = head1->next;
@@ -114,6 +113,7 @@ void	add_to_pack(t_p *pack, t_q *path, int len)
 		pack->ways = (t_w*)ft_memalloc(sizeof(t_w));
 		pack->ways->path = path;
 		pack->ways->flow += len;
+		pack->ways->num_of_path += 1;
 		pack->ways->next = NULL;
 	}
 	else
@@ -121,10 +121,11 @@ void	add_to_pack(t_p *pack, t_q *path, int len)
 		current = pack->ways;
 		while (current->next)
 			current = current->next;
-        current->next = (t_w*)ft_memalloc(sizeof(t_w));
+		current->next = (t_w*)ft_memalloc(sizeof(t_w));
 		current->next->path = path;
 		current->next->flow = len;
 		pack->ways->flow += len;
+		pack->ways->num_of_path += 1;
 		current->next->len = len;
 		current->next->next = NULL;
 	}
@@ -133,14 +134,15 @@ void	add_to_pack(t_p *pack, t_q *path, int len)
 t_p		*add_new_pack(t_lem *lem, t_q *path, int len)
 {
 	t_p		*tmp;
- 
+
 	if (!lem->packs)
 	{
 		lem->packs = (t_p*)ft_memalloc(sizeof(t_p));
 		lem->packs->ways = (t_w*)ft_memalloc(sizeof(t_w));
 		lem->packs->ways->path = path;
 		lem->packs->ways->flow = len;
-        lem->packs->ways->len = len;
+		lem->packs->ways->len = len;
+		lem->packs->ways->num_of_path = 1;
 		lem->packs->next = NULL;
 		tmp = lem->packs;
 		return (tmp);
@@ -154,7 +156,8 @@ t_p		*add_new_pack(t_lem *lem, t_q *path, int len)
 		tmp->next->ways = (t_w*)ft_memalloc(sizeof(t_w));
 		tmp->next->ways->path = path;
 		tmp->next->ways->flow = len;
-        tmp->next->ways->len = len;
+		tmp->next->ways->len = len;
+		tmp->next->ways->num_of_path = 1;
 		tmp->next->next = NULL;
 		return (tmp->next);
 	}

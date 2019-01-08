@@ -22,7 +22,6 @@ t_room	*get_room_by_name(t_lem *lem, char *name)
 		if (ft_strequ(tmp->name, name))
 			return (tmp);
 		tmp = tmp->next;
-		
 	}
 	return (NULL);
 }
@@ -39,7 +38,7 @@ void	create_nghbrs(t_room *room, t_room *n)
 	}
 	else
 	{
-	    current = room->nghbrs;
+		current = room->nghbrs;
 		while (current->next)
 			current = current->next;
 		current->next = (t_nghbr*)ft_memalloc(sizeof(t_nghbr));
@@ -50,10 +49,10 @@ void	create_nghbrs(t_room *room, t_room *n)
 
 t_room		*find_room_by_type(t_lem *lem, int type)
 {
-	t_room		*current;
+	t_room	*current;
 
 	current = lem->rooms;
-	while(current)
+	while (current)
 	{
 		if (current->type == type)
 			return (current);

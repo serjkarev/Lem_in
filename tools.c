@@ -18,7 +18,7 @@ void	ft_error(char *str, char **arr, char *error)
 	if (str)
 		free(str);
 	else if (arr)
-		free_arr(arr); 
+		free_arr(arr);
 	exit(1);
 }
 
@@ -47,7 +47,7 @@ int		ft_isdigit_str(char *str)
 		i++;
 		d++;
 	}
-	while(str[i])
+	while (str[i])
 	{
 		if (ft_isdigit(str[i]))
 			d++;
@@ -72,7 +72,7 @@ int		space_detect(char *str)
 void	create_room(char **arr, t_lem *lem, int type)
 {
 	t_room	*current;
-	
+
 	if (!lem->rooms)
 	{
 		lem->rooms = (t_room*)ft_memalloc(sizeof(t_room));
@@ -91,7 +91,7 @@ void	create_room(char **arr, t_lem *lem, int type)
 	{
 		current = lem->rooms;
 		while (current->next)
-            current = current->next;
+			current = current->next;
 		current->next = (t_room*)ft_memalloc(sizeof(t_room));
 		current->next->name = ft_strdup(arr[0]);
 		current->next->type = type;
@@ -101,8 +101,7 @@ void	create_room(char **arr, t_lem *lem, int type)
 			current->next->y = ft_atoi(arr[2]);
 		}
 		else
-			ft_error(NULL, arr,ER06);
+			ft_error(NULL, arr, ER06);
 		current->next->next = NULL;
 	}
 }
-

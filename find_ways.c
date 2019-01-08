@@ -20,7 +20,7 @@ void	find_ways(t_lem *lem)
 	t_q		*newpath;
 
 	room = copy_room(find_room_by_type(lem, 1));
-	path  = push_back(path, room);
+	path = push_back(path, room);
 	queue = push(queue, path);
 	while (queue)
 	{
@@ -57,7 +57,7 @@ t_q		*push_back(t_q *path, t_room *room)
 	else
 	{
 		current = path;
-		while(current->next)
+		while (current->next)
 			current = current->next;
 		current->next = (t_q*)ft_memalloc(sizeof(t_q));
 		current->next->room = room;
@@ -156,28 +156,28 @@ void	print_way(t_q* path)
 	printf("\n");
 }
 
-t_q    *copy_path(t_q *path)
+t_q		*copy_path(t_q *path)
 {
-    t_q     *newpath = NULL;
+	t_q		*newpath = NULL;
 
-    while (path)
-    {
+	while (path)
+	{
 		newpath = push_back(newpath, path->room);
 		path = path->next;
-    }
+	}
 	return (newpath);
 }
 
 t_q		*freeList(t_q *path)
 {
-   t_q	*tmp;
+	t_q		*tmp;
 
 	while (path != NULL)
-    {
-       tmp = path;
-       path = path->next;
-       free(tmp);
-    }
+	{
+		tmp = path;
+		path = path->next;
+		free(tmp);
+	}
 	return (path);
 }
 
