@@ -137,5 +137,7 @@ t_p		*add_new_pack(t_lem *lem, t_q *path, int len);
 void	run_ants_run(t_lem *lem);
 t_a		*create_ants(t_lem *lem);
 t_w		*choose_pack(t_lem *lem, t_a *ants);
+void	distribution_ants_on_way(t_a *ants, t_w *ways, t_lem *lem);
+void	run_vasya_run(t_a *ants, int num_of_path);
 
 #endif

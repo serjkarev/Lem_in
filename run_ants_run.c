@@ -19,7 +19,8 @@ void	run_ants_run(t_lem *lem)
 
 	ants = create_ants(lem);
 	ways = choose_pack(lem, ants);
-
+	distribution_ants_on_way(ants, ways, lem);
+	run_vasya_run(ants, ways->num_of_path);
 }
 
 t_a		*create_ants(t_lem *lem)
@@ -65,7 +66,51 @@ t_w		*choose_pack(t_lem *lem, t_a *ants)
 	return (tmp);
 }
 
-void	distribution_ants_on_way(t_a *ants, t_w *ways)
+void	distribution_ants_on_way(t_a *ants, t_w *ways, t_lem *lem)
 {
+	int		max_ant;
+	t_w		*tmp;	
+	t_w		*head;
 
+	head = ways;
+	max_ant = lem->ants;
+	tmp = ways;
+	while (max_ant != 0)
+	{
+		// printf("L%d |", ants->num);
+		// print_way(tmp->path);
+		ants->path = tmp->path;
+		ants = ants->next;
+		if (tmp->next)
+			tmp = tmp->next;
+		else
+			tmp = head;
+		max_ant--;
+		// printf("\n");
+	}
+}
+
+void	run_vasya_run(t_a *ants, int num_of_path)
+{
+	int		i;
+	t_a		*head;
+
+	head = ants;
+	while (ants->path)
+	{
+		i = num_of_path;
+		while (i > 0 && ants)
+		{
+			printf("L%d-", ants->num);
+			printf("%s ", ants->path->room->name);
+			i--;
+			ants->path = ants->path->next;
+			ants = ants->next;
+		}
+		printf("\n");
+        num_of_path += num_of_path;
+        while (!head->path && head->next)
+            head = head->next;
+		ants = head;
+	}
 }
