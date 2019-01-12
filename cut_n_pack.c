@@ -66,7 +66,7 @@ void	packs_of_path(t_lem *lem)
 			pack = add_new_pack(lem, way1->path, way1->len);
 		while (way2)
 		{
-			if (way1 != way2 && compare_ways(way1, way2) == 0 && way2->block == 0)
+			if (way1 != way2 && compare_ways(way1, way2) == 0 && way2->block == 0 && not_in_pack(pack->ways, way2->path))
 			{
 				way2->block = 1;
 				add_to_pack(pack, way2->path, way2->len);
@@ -104,6 +104,35 @@ int		compare_ways(t_w *way1, t_w *way2)
 	return (0);
 }
 
+int		not_in_pack(t_w *ways, t_q *path)
+{
+	while (ways)
+	{
+		if (have_same_room(ways->path, path))
+			return (0);
+		ways = ways->next;
+	}
+	return (1);
+}
+
+int		have_same_room(t_q *path1, t_q *path2)
+{
+	t_q		*tmp;
+
+	while (path1)
+	{
+		tmp = path2;
+		while (tmp)
+		{
+			if (ft_strequ(path1->room->name, tmp->room->name) && path1->room->type != 3 && tmp->room->type != 3)
+				return (1);
+			tmp = tmp->next;
+		}
+		path1 = path1->next;
+	}
+	return (0);
+}
+
 void	add_to_pack(t_p *pack, t_q *path, int len)
 {
 	t_w		*current;
@@ -116,7 +145,7 @@ void	add_to_pack(t_p *pack, t_q *path, int len)
 		pack->ways->num_of_path += 1;
 		pack->ways->next = NULL;
 	}
-	else
+	else/* if (not_in_pack(pack, path))*/
 	{
 		current = pack->ways;
 		while (current->next)

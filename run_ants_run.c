@@ -77,8 +77,8 @@ void	distribution_ants_on_way(t_a *ants, t_w *ways, t_lem *lem)
 	tmp = ways;
 	while (max_ant != 0)
 	{
-		// printf("L%d |", ants->num);
-		// print_way(tmp->path);
+		printf("L%d |", ants->num);
+		print_way(tmp->path);
 		ants->path = tmp->path;
 		ants = ants->next;
 		if (tmp->next)
@@ -101,16 +101,26 @@ void	run_vasya_run(t_a *ants, int num_of_path)
 		i = num_of_path;
 		while (i > 0 && ants)
 		{
-			printf("L%d-", ants->num);
-			printf("%s ", ants->path->room->name);
+			// printf("L%d-", ants->num);
+			// printf("%s ", ants->path->room->name);
+			print_run(ants->num, ants->path->room->name);
 			i--;
 			ants->path = ants->path->next;
 			ants = ants->next;
 		}
-		printf("\n");
+		write(1, "\n", 1);
         num_of_path += num_of_path;
         while (!head->path && head->next)
             head = head->next;
 		ants = head;
 	}
+}
+
+void	print_run(int num, char *str)
+{
+	write(1, "L", 1);
+	ft_putnbr(num);
+	write(1, "-", 1);
+	ft_putstr(str);
+	write(1, " ", 1);
 }
