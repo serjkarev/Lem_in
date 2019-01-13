@@ -145,7 +145,7 @@ void	add_to_pack(t_p *pack, t_q *path, int len)
 		pack->ways->num_of_path += 1;
 		pack->ways->next = NULL;
 	}
-	else/* if (not_in_pack(pack, path))*/
+	else
 	{
 		current = pack->ways;
 		while (current->next)

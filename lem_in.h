@@ -32,6 +32,8 @@
 # define ER15 "🖕\x1B[31m ERROR: duplicate room names \033[0m🖕\n"
 # define ER16 "🖕\x1B[31m ERROR: !!! TRASH !!! \033[0m🖕\n"
 
+# define ABS(n) (n >= 0 ? n : (n * -1))
+
 typedef struct		s_a
 {
 	int			num;
@@ -139,11 +141,30 @@ t_p		*add_new_pack(t_lem *lem, t_q *path, int len);
 void	run_ants_run(t_lem *lem);
 t_a		*create_ants(t_lem *lem);
 t_w		*choose_pack(t_lem *lem, t_a *ants);
+int		number_of_iterations(t_w *ways, int ants, t_a *a);
+int		noi(t_a *a, int ants, int n);
+int		empty(t_a *head, t_room *room, int j);
 void	distribution_ants_on_way(t_a *ants, t_w *ways, t_lem *lem);
 void	run_vasya_run(t_a *ants, int num_of_path);
 void	print_run(int num, char *str);
 
 #endif
+
+
+// t_w		*choose_pack(t_lem *lem, t_a *ants)
+// {
+// 	t_w		*tmp = NULL;
+// 	if (lem->ants <= lem->packs->ways->flow)
+// 		tmp = lem->packs->ways;
+// 	else
+// 	{
+// 		if (lem->packs->next)
+// 			tmp = lem->packs->next->ways;
+// 		else
+// 			tmp = lem->packs->ways;
+// 	}
+// 	return (tmp);
+// }
 
 // void	distribution_ants_on_way(t_a *ants, t_w *ways, t_lem *lem)
 // {
@@ -156,8 +177,8 @@ void	print_run(int num, char *str);
 // 	tmp = ways;
 // 	while (max_ant != 0)
 // 	{
-// 		// printf("L%d |", ants->num);
-// 		// print_way(tmp->path);
+// 		printf("L%d |", ants->num);
+// 		print_way(tmp->path);
 // 		ants->path = tmp->path;
 // 		ants = ants->next;
 // 		if (tmp->next)
@@ -180,13 +201,14 @@ void	print_run(int num, char *str);
 // 		i = num_of_path;
 // 		while (i > 0 && ants)
 // 		{
-// 			printf("L%d-", ants->num);
-// 			printf("%s ", ants->path->room->name);
+// 			// printf("L%d-", ants->num);
+// 			// printf("%s ", ants->path->room->name);
+// 			print_run(ants->num, ants->path->room->name);
 // 			i--;
 // 			ants->path = ants->path->next;
 // 			ants = ants->next;
 // 		}
-// 		printf("\n");
+// 		write(1, "\n", 1);
 //         num_of_path += num_of_path;
 //         while (!head->path && head->next)
 //             head = head->next;
