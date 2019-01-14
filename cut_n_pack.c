@@ -51,10 +51,12 @@ int		way_len(t_q *path)
 
 void	packs_of_path(t_lem *lem)
 {
+	int		i;
 	t_w	*way1;
 	t_w	*way2;
 	t_p	*pack;
 
+	i = 0;
 	if (lem->ways)
 		way1 = lem->ways;
 	else
@@ -62,7 +64,7 @@ void	packs_of_path(t_lem *lem)
 	while (way1)
 	{
 		way2 = lem->ways;
-		if (way1->block == 0)
+		if (way1->block == 0 && i <= 2) //ограничение по количеству паков
 			pack = add_new_pack(lem, way1->path, way1->len);
 		while (way2)
 		{
@@ -73,6 +75,7 @@ void	packs_of_path(t_lem *lem)
 			}
 			way2 = way2->next;
 		}
+		i++;
 		way1->block = 1;
 		way1 = way1->next;
 	}

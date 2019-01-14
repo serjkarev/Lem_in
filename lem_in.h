@@ -37,6 +37,7 @@
 typedef struct		s_a
 {
 	int			num;
+	struct	s_room	*current_room;
 	struct	s_q	*path;
 	struct	s_a	*next;
 }					t_a;
@@ -142,76 +143,11 @@ void	run_ants_run(t_lem *lem);
 t_a		*create_ants(t_lem *lem);
 t_w		*choose_pack(t_lem *lem, t_a *ants);
 int		number_of_iterations(t_w *ways, int ants, t_a *a);
-int		noi(t_a *a, int ants, int n);
-int		empty(t_a *head, t_room *room, int j);
-void	distribution_ants_on_way(t_a *ants, t_w *ways, t_lem *lem);
-void	run_vasya_run(t_a *ants, int num_of_path);
+int		noi(t_a *a, int n);
+int		empty(t_a *head, t_a *a, int j);
+void	ft_list_remove_if(t_a **head, int num);
+void	distribution_ants_on_way(t_w *ways, int ants, t_a *a);
+void	run_vasya_run(t_a *a, int n);
 void	print_run(int num, char *str);
 
 #endif
-
-
-// t_w		*choose_pack(t_lem *lem, t_a *ants)
-// {
-// 	t_w		*tmp = NULL;
-// 	if (lem->ants <= lem->packs->ways->flow)
-// 		tmp = lem->packs->ways;
-// 	else
-// 	{
-// 		if (lem->packs->next)
-// 			tmp = lem->packs->next->ways;
-// 		else
-// 			tmp = lem->packs->ways;
-// 	}
-// 	return (tmp);
-// }
-
-// void	distribution_ants_on_way(t_a *ants, t_w *ways, t_lem *lem)
-// {
-// 	int		max_ant;
-// 	t_w		*tmp;	
-// 	t_w		*head;
-
-// 	head = ways;
-// 	max_ant = lem->ants;
-// 	tmp = ways;
-// 	while (max_ant != 0)
-// 	{
-// 		printf("L%d |", ants->num);
-// 		print_way(tmp->path);
-// 		ants->path = tmp->path;
-// 		ants = ants->next;
-// 		if (tmp->next)
-// 			tmp = tmp->next;
-// 		else
-// 			tmp = head;
-// 		max_ant--;
-// 		// printf("\n");
-// 	}
-// }
-
-// void	run_vasya_run(t_a *ants, int num_of_path)
-// {
-// 	int		i;
-// 	t_a		*head;
-
-// 	head = ants;
-// 	while (ants->path)
-// 	{
-// 		i = num_of_path;
-// 		while (i > 0 && ants)
-// 		{
-// 			// printf("L%d-", ants->num);
-// 			// printf("%s ", ants->path->room->name);
-// 			print_run(ants->num, ants->path->room->name);
-// 			i--;
-// 			ants->path = ants->path->next;
-// 			ants = ants->next;
-// 		}
-// 		write(1, "\n", 1);
-//         num_of_path += num_of_path;
-//         while (!head->path && head->next)
-//             head = head->next;
-// 		ants = head;
-// 	}
-// }

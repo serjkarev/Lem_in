@@ -19,9 +19,8 @@ void	run_ants_run(t_lem *lem)
 
 	ants = create_ants(lem);
 	ways = choose_pack(lem, ants);
-	// noi(ants, lem->ants, 1);
-	// distribution_ants_on_way(ants, ways, lem);
-	// run_vasya_run(ants, ways->num_of_path);
+	ants = create_ants(lem);
+	distribution_ants_on_way(ways, lem->ants, ants);
 }
 
 t_a		*create_ants(t_lem *lem)
@@ -37,6 +36,7 @@ t_a		*create_ants(t_lem *lem)
 		{
 			ants = (t_a*)ft_memalloc(sizeof(t_a));
 			ants->num = i++;
+			ants->current_room = NULL;
 			ants->next = NULL;
 		}
 		else
@@ -46,6 +46,7 @@ t_a		*create_ants(t_lem *lem)
 				current = current->next;
 			current->next = (t_a*)ft_memalloc(sizeof(t_a));
 			current->next->num = i++;
+			current->next->current_room = NULL;
 			current->next->next = NULL;
 		}
 	}
@@ -65,7 +66,7 @@ t_w		*choose_pack(t_lem *lem, t_a *ants)
 	n1 = number_of_iterations(tmp1, lem->ants, ants);
 	if (lem->packs->next)
 	{
-		write(1, "tyt\n", 4);
+		ants = create_ants(lem);
 		tmp2 = lem->packs->next->ways;
 		n2 = number_of_iterations(tmp2, lem->ants, ants);
 		return (n1 <= n2 ? tmp1 : tmp2);
@@ -78,12 +79,10 @@ int		number_of_iterations(t_w *ways, int ants, t_a *a)
 	t_w		*mw;
 	t_w		*cw;
 	t_a		*tmp_a;
-	int		j;
 
 	mw = ways;
 	cw = ways;
 	tmp_a = a;
-	j = ants;
 	while (ants != 0)
 	{
 		if (!cw)
@@ -96,47 +95,49 @@ int		number_of_iterations(t_w *ways, int ants, t_a *a)
 		}
 		cw = cw->next;
 	}
-	return (noi(a, j, ways->num_of_path));
+	return (noi(a, ways->num_of_path));
 }
 
-int		noi(t_a *a, int ants, int n)
+int		noi(t_a *a, int n)
 {
 	int		i;
 	int		j;
+	int     f;
 	t_a		*head;
 
 	i = 1;
 	head = a;
-	while (ants)
+	while (a)
 	{
 		j = n * i;
-		while (j > 0 && ants)
+		f = j;
+		while (j > 0 && a)
 		{
-//			if (empty(head, a->path->room, n - 1))
-//			{
-				print_run(a->num, a->path->room->name);
-				a->path->room = a->path->next->room;
-//			}
-			if (a->path->room->type == 3)
-			    ants--; //and delete ant from list
+			if (empty(head, a, f))
+			{
+                if (a->path->room->type == 3)
+					ft_list_remove_if(&head, a->num);
+				a->current_room = a->path->room;
+				a->path = a->path->next;
+			}
             a = a->next;
 			j--;
 		}
         a = head;
-		write(1, "\n", 1);
 		i++;
 	}
 	return (i);
 }
 
-int		empty(t_a *head, t_room *room, int j)
+int		empty(t_a *head, t_a *a, int j)
 {
 	t_a		*tmp;
 
-	tmp = head->next;
+	tmp = head;
 	while (tmp && j)
 	{
-		if (ft_strequ(tmp->path->room->name, room->name))
+		if (tmp->current_room && ft_strequ(tmp->current_room->name, a->path->room->name) && tmp->num != a->num \
+		&& (a->path->room->type != 3 && tmp->current_room->type != 3))
 			return (0);
 		tmp = tmp->next;
 		j--;
@@ -144,31 +145,85 @@ int		empty(t_a *head, t_room *room, int j)
 	return (1);
 }
 
-// void	run_vasya_run(t_a *ants, int num_of_path)
-// {
-// 	int		i;
-// 	t_a		*head;
+void	ft_list_remove_if(t_a **head, int num)
+{
+	t_a	*tmp;
+	t_a	*current;
 
-// 	head = ants;
-// 	while (ants->path)
-// 	{
-// 		i = num_of_path;
-// 		while (i > 0 && ants)
-// 		{
-// 			// printf("L%d-", ants->num);
-// 			// printf("%s ", ants->path->room->name);
-// 			print_run(ants->num, ants->path->room->name);
-// 			i--;
-// 			ants->path = ants->path->next;
-// 			ants = ants->next;
-// 		}
-// 		write(1, "\n", 1);
-//         num_of_path += num_of_path;
-//         while (!head->path && head->next)
-//             head = head->next;
-// 		ants = head;
-// 	}
-// }
+	while (*head && (*head)->num == num)
+	{
+		tmp = *head;
+		*head = (*head)->next;
+		free(tmp);
+	}
+	current = *head;
+	while (current && current->next)
+	{
+		if (current->next->num == num)
+		{
+			tmp = current->next;
+			current->next = tmp->next;
+			free(tmp);
+		}
+		current = current->next;
+	}
+}
+
+void	distribution_ants_on_way(t_w *ways, int ants, t_a *a)
+{
+	t_w		*mw;
+	t_w		*cw;
+	t_a		*tmp_a;
+
+	mw = ways;
+	cw = ways;
+	tmp_a = a;
+	while (ants != 0)
+	{
+		if (!cw)
+			cw = mw;
+		if (ABS(ants - (mw->len - 1)) >= (cw->len - 1) - (mw->len - 1))
+		{
+			tmp_a->path = cw->path;
+			tmp_a = tmp_a->next;
+			ants--;
+		}
+		cw = cw->next;
+	}
+	run_vasya_run(a, ways->num_of_path);
+}
+
+void	run_vasya_run(t_a *a, int n)
+{
+	int		i;
+	int		j;
+	int     f;
+	t_a		*head;
+
+	i = 1;
+	head = a;
+	while (a)
+	{
+		j = n * i;
+		f = j;
+		while (j > 0 && a)
+		{
+			if (empty(head, a, f))
+			{
+				print_run(a->num, a->path->room->name);
+                if (a->path->room->type == 3)
+					ft_list_remove_if(&head, a->num);
+				a->current_room = a->path->room;
+				a->path = a->path->next;
+			}
+            a = a->next;
+			j--;
+		}
+        a = head;
+		write(1, "\n", 1);
+		i++;
+	}
+}
 
 void	print_run(int num, char *str)
 {
