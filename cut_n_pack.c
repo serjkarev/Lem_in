@@ -71,7 +71,8 @@ void	packs_of_path(t_lem *lem)
 			if (way1 != way2 && compare_ways(way1, way2) == 0 && way2->block == 0 && not_in_pack(pack->ways, way2->path))
 			{
 				way2->block = 1;
-				add_to_pack(pack, way2->path, way2->len);
+				// if (pack->ways->num_of_path <= lem->ants - pack->ways->num_of_path && pack->ways->flow <= lem->ants - pack->ways->num_of_path)
+					add_to_pack(pack, way2->path, way2->len);
 			}
 			way2 = way2->next;
 		}

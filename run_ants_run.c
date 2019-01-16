@@ -223,6 +223,7 @@ void	run_vasya_run(t_a *a, int n)
 		write(1, "\n", 1);
 		i++;
 	}
+	printf("NUMBER_OF_ITEARATION = %d\n", i - 1);
 }
 
 void	print_run(int num, char *str)

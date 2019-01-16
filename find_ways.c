@@ -18,6 +18,7 @@ void	find_ways(t_lem *lem)
 	t_q		*path = NULL;
 	t_room	*room;
 	t_q		*newpath;
+	int	i = 0;
 
 	room = copy_room(find_room_by_type(lem, 1));
 	path = push_back(path, room);
@@ -27,9 +28,10 @@ void	find_ways(t_lem *lem)
 		path = queue->path;
 		queue = pop(queue);
 		room = copy_room(get_last_elem(path));
-		if (room->type == 3)
+		if (room->type == 3 /*&& i < 9*/)
 		{
-			write(1, "way\n", 4);
+			// write(1, "way\n", 4);
+			i++;
 			add_path_to_ways(lem, path);
 		}
 		while (room->nghbrs)
@@ -39,11 +41,11 @@ void	find_ways(t_lem *lem)
 				newpath = copy_path(path);
 				newpath = push_back(newpath, room->nghbrs->neighbor);
 				queue = push(queue, newpath);
-//				newpath = freeList(newpath);
+				// newpath = freeList(newpath);
 			}
 			room->nghbrs = room->nghbrs->next;
 		}
-//		free(room);
+		free(room);
 	}
 }
 
@@ -180,6 +182,7 @@ t_q		*freeList(t_q *path)
 		tmp = path;
 		path = path->next;
 		free(tmp);
+		tmp = NULL;
 	}
 	return (path);
 }

@@ -57,6 +57,7 @@ char	*parse_rooms(t_lem *lem)
 			(ft_strequ(str, "##start") == 1) ? (det[0] += 1) : (det[1] += 1);
 			if (det[0] > 1 || det[1] > 1)
 				det[0] > 1 ? ft_error(str, NULL, ER07) : ft_error(str, NULL, ER08);
+			free(str);
 			continue ;
 		}
 		else if (str[0] == '#')
@@ -86,6 +87,7 @@ void	parse_room(char *str, t_lem *lem, int type)
 		ft_error(str, arr, ER15);
 	create_room(arr, lem, type);
 	free_arr(arr);
+	free(str);
 }
 
 void	parse_links(t_lem *lem, char *str)
@@ -114,8 +116,8 @@ void	parse_links(t_lem *lem, char *str)
 			find_neighbor(lem, arr, 0, 1);
 			find_neighbor(lem, arr, 1, 0);
 			free_arr(arr);
-			free(str);
 		}
+		free(str);
 	}
 }
 

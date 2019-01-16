@@ -88,6 +88,7 @@ void	print_map(t_lem *lem)
 	{
 		ft_putstr(lem->print->str);
 		write(1, "\n", 1);
+		free(lem->print->str);
 		lem->print = lem->print->next;
 	}
 	write(1, "\n", 1);
