@@ -10,227 +10,129 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "lem_in.h"
 
-void	run_ants_run(t_lem *lem)
+void	r_a_r(t_lem *lem)
 {
-	t_a		*ants;
-	t_w		*ways;
+	t_w		*curr;
+	int		sn;
 
-	ants = create_ants(lem);
-	ways = choose_pack(lem, ants);
-	ants = create_ants(lem);
-	distribution_ants_on_way(ways, lem->ants, ants);
-}
-
-t_a		*create_ants(t_lem *lem)
-{
-	t_a     *ants = NULL;
-	t_a     *current;
-	int     i;
-
-	i = 1;
-	while (i <= lem->ants)
+	sn = lem->ants;
+	while (lem->ants)
 	{
-		if (!ants)
+		curr = lem->packs->ways;
+		while (curr)
 		{
-			ants = (t_a*)ft_memalloc(sizeof(t_a));
-			ants->num = i++;
-			ants->current_room = NULL;
-			ants->next = NULL;
-		}
-		else
-		{
-			current = ants;
-			while (current->next)
-				current = current->next;
-			current->next = (t_a*)ft_memalloc(sizeof(t_a));
-			current->next->num = i++;
-			current->next->current_room = NULL;
-			current->next->next = NULL;
-		}
-	}
-	return (ants);
-}
-
-t_w		*choose_pack(t_lem *lem, t_a *ants)
-{
-	t_w		*tmp1 = NULL;
-	t_w		*tmp2 = NULL;
-	int		n1;
-	int		n2;
-
-	n1 = 0;
-	n2 = 0;
-	tmp1 = lem->packs->ways;
-	n1 = number_of_iterations(tmp1, lem->ants, ants);
-	if (lem->packs->next)
-	{
-		ants = create_ants(lem);
-		tmp2 = lem->packs->next->ways;
-		n2 = number_of_iterations(tmp2, lem->ants, ants);
-		return (n1 <= n2 ? tmp1 : tmp2);
-	}
-	return (tmp1);
-}
-
-int		number_of_iterations(t_w *ways, int ants, t_a *a)
-{
-	t_w		*mw;
-	t_w		*cw;
-	t_a		*tmp_a;
-
-	mw = ways;
-	cw = ways;
-	tmp_a = a;
-	while (ants != 0)
-	{
-		if (!cw)
-			cw = mw;
-		if (ABS(ants - (mw->len - 1)) >= (cw->len - 1) - (mw->len - 1))
-		{
-			tmp_a->path = cw->path;
-			tmp_a = tmp_a->next;
-			ants--;
-		}
-		cw = cw->next;
-	}
-	return (noi(a, ways->num_of_path));
-}
-
-int		noi(t_a *a, int n)
-{
-	int		i;
-	int		j;
-	int     f;
-	t_a		*head;
-
-	i = 1;
-	head = a;
-	while (a)
-	{
-		j = n * i;
-		f = j;
-		while (j > 0 && a)
-		{
-			if (empty(head, a, f))
+			if (norm(lem, curr))
 			{
-                if (a->path->room->type == 3)
-					ft_list_remove_if(&head, a->num);
-				a->current_room = a->path->room;
-				a->path = a->path->next;
+				add_ant(curr, sn - lem->ants + 1);
+				lem->ants--;
 			}
-            a = a->next;
-			j--;
+			else
+				break ;
+			curr = curr->next;
 		}
-        a = head;
-		i++;
 	}
-	return (i);
+	run(lem);
 }
 
-int		empty(t_a *head, t_a *a, int j)
+int		norm(t_lem *lem, t_w *ways)
 {
-	t_a		*tmp;
+	t_w		*curr;
+	int		sum;
 
-	tmp = head;
-	while (tmp && j)
+	sum = 0;
+	curr = lem->packs->ways;
+	if (lem->ants <= ways->len - lem->ways->len)
+		return (0);
+	while (curr != ways)
 	{
-		if (tmp->current_room && ft_strequ(tmp->current_room->name, a->path->room->name) && tmp->num != a->num \
-		&& (a->path->room->type != 3 && tmp->current_room->type != 3))
-			return (0);
-		tmp = tmp->next;
-		j--;
+		sum += ways->len - curr->len;
+		curr = curr->next;
 	}
-	return (1);
+	return (lem->ants > sum);
 }
 
-void	ft_list_remove_if(t_a **head, int num)
+void	add_ant(t_w *ways, int ant_num)
 {
-	t_a	*tmp;
-	t_a	*current;
+	t_a		*new;
+	t_a		*curr;
 
-	while (*head && (*head)->num == num)
+	new = (t_a*)ft_memalloc(sizeof(t_a));
+	new->pos = 0;
+	new->num = ant_num;
+	new->next = NULL;
+	if (!ways->ants)
+		ways->ants = new;
+	else
 	{
-		tmp = *head;
-		*head = (*head)->next;
-		free(tmp);
+		curr = ways->ants;
+		while (curr->next)
+			curr = curr->next;
+		curr->next = new;
 	}
-	current = *head;
-	while (current && current->next)
+}
+
+void	run(t_lem *lem)
+{
+	t_w		*curr;
+	// int	count = 0;
+	while (lem->packs->ways->ants)
 	{
-		if (current->next->num == num)
+		curr = lem->packs->ways;
+		while (curr)
 		{
-			tmp = current->next;
-			current->next = tmp->next;
-			free(tmp);
+			print(curr);
+			if(!curr->next)
+			// {
+				// count++;
+				write(1, "\n", 1);
+			// }
+			else
+				write(1, " ", 1);
+			curr = curr->next;
 		}
-		current = current->next;
 	}
+	// printf("%d\n", count);
 }
 
-void	distribution_ants_on_way(t_w *ways, int ants, t_a *a)
+void	print(t_w *ways)
 {
-	t_w		*mw;
-	t_w		*cw;
-	t_a		*tmp_a;
+	t_a		*curr;
 
-	mw = ways;
-	cw = ways;
-	tmp_a = a;
-	while (ants != 0)
+	curr = ways->ants;
+	while (curr)
 	{
-		if (!cw)
-			cw = mw;
-		if (ABS(ants - (mw->len - 1)) >= (cw->len - 1) - (mw->len - 1))
+		if (curr->pos == 0)
 		{
-			tmp_a->path = cw->path;
-			tmp_a = tmp_a->next;
-			ants--;
+			write(1, "L", 1);
+			ft_putnbr(curr->num);
+			write(1, "-", 1);
+			ft_putstr(ways->path->room->name);
+			curr->pos++;
+			break ;
 		}
-		cw = cw->next;
+		write(1, "L", 1);
+		ft_putnbr(curr->num);
+		write(1, "-", 1);
+		t_q		*tmp = ways->path;
+		int		i = 0;
+		while (i < curr->pos)
+		{
+			i++;
+			tmp = tmp->next;
+		}
+		ft_putstr(tmp->room->name);
+		if (curr->next)
+			write(1, " ", 1);
+		curr->pos++;
+		curr = curr->next;
 	}
-	run_vasya_run(a, ways->num_of_path);
-}
-
-void	run_vasya_run(t_a *a, int n)
-{
-	int		i;
-	int		j;
-	int     f;
-	t_a		*head;
-
-	i = 1;
-	head = a;
-	while (a)
+	if (ways->ants && ways->ants->pos == ways->len)
 	{
-		j = n * i;
-		f = j;
-		while (j > 0 && a)
-		{
-			if (empty(head, a, f))
-			{
-				print_run(a->num, a->path->room->name);
-                if (a->path->room->type == 3)
-					ft_list_remove_if(&head, a->num);
-				a->current_room = a->path->room;
-				a->path = a->path->next;
-			}
-            a = a->next;
-			j--;
-		}
-        a = head;
-		write(1, "\n", 1);
-		i++;
+		curr = ways->ants;
+		ways->ants = ways->ants->next;
+		free(curr);
 	}
-	printf("NUMBER_OF_ITEARATION = %d\n", i - 1);
-}
-
-void	print_run(int num, char *str)
-{
-	write(1, "L", 1);
-	ft_putnbr(num);
-	write(1, "-", 1);
-	ft_putstr(str);
-	write(1, " ", 1);
 }

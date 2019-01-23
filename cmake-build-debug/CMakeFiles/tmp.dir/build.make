@@ -889,18 +889,18 @@ CMakeFiles/tmp.dir/libft/get_next_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tmp.dir/libft/get_next_line.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/skarev/Desktop/tmp/libft/get_next_line.c -o CMakeFiles/tmp.dir/libft/get_next_line.c.s
 
-CMakeFiles/tmp.dir/run_ants_run.c.o: CMakeFiles/tmp.dir/flags.make
-CMakeFiles/tmp.dir/run_ants_run.c.o: ../run_ants_run.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/tmp.dir/run_ants_run.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/run_ants_run.c.o   -c /Users/skarev/Desktop/tmp/run_ants_run.c
+CMakeFiles/tmp.dir/r_a_r2.c.o: CMakeFiles/tmp.dir/flags.make
+CMakeFiles/tmp.dir/r_a_r2.c.o: ../r_a_r2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/tmp.dir/r_a_r2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tmp.dir/r_a_r2.c.o   -c /Users/skarev/Desktop/tmp/r_a_r2.c
 
-CMakeFiles/tmp.dir/run_ants_run.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tmp.dir/run_ants_run.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/skarev/Desktop/tmp/run_ants_run.c > CMakeFiles/tmp.dir/run_ants_run.c.i
+CMakeFiles/tmp.dir/r_a_r2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tmp.dir/r_a_r2.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/skarev/Desktop/tmp/r_a_r2.c > CMakeFiles/tmp.dir/r_a_r2.c.i
 
-CMakeFiles/tmp.dir/run_ants_run.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tmp.dir/run_ants_run.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/skarev/Desktop/tmp/run_ants_run.c -o CMakeFiles/tmp.dir/run_ants_run.c.s
+CMakeFiles/tmp.dir/r_a_r2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tmp.dir/r_a_r2.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/skarev/Desktop/tmp/r_a_r2.c -o CMakeFiles/tmp.dir/r_a_r2.c.s
 
 CMakeFiles/tmp.dir/cut_n_pack.c.o: CMakeFiles/tmp.dir/flags.make
 CMakeFiles/tmp.dir/cut_n_pack.c.o: ../cut_n_pack.c
@@ -1059,7 +1059,7 @@ tmp_OBJECTS = \
 "CMakeFiles/tmp.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/tmp.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/tmp.dir/libft/get_next_line.c.o" \
-"CMakeFiles/tmp.dir/run_ants_run.c.o" \
+"CMakeFiles/tmp.dir/r_a_r2.c.o" \
 "CMakeFiles/tmp.dir/cut_n_pack.c.o" \
 "CMakeFiles/tmp.dir/find_ways.c.o" \
 "CMakeFiles/tmp.dir/main.c.o" \
@@ -1135,7 +1135,7 @@ tmp: CMakeFiles/tmp.dir/libft/ft_swap.c.o
 tmp: CMakeFiles/tmp.dir/libft/ft_tolower.c.o
 tmp: CMakeFiles/tmp.dir/libft/ft_toupper.c.o
 tmp: CMakeFiles/tmp.dir/libft/get_next_line.c.o
-tmp: CMakeFiles/tmp.dir/run_ants_run.c.o
+tmp: CMakeFiles/tmp.dir/r_a_r2.c.o
 tmp: CMakeFiles/tmp.dir/cut_n_pack.c.o
 tmp: CMakeFiles/tmp.dir/find_ways.c.o
 tmp: CMakeFiles/tmp.dir/main.c.o

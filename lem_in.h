@@ -37,8 +37,9 @@
 typedef struct		s_a
 {
 	int			num;
-	struct	s_room	*current_room;
-	struct	s_q	*path;
+	int			pos;
+	// struct	s_room	*current_room;
+	// struct	s_q	*path;
 	struct	s_a	*next;
 }					t_a;
 
@@ -60,6 +61,7 @@ typedef struct		s_w
 	int			block;
 	int			flow;
 	int			num_of_path;
+	t_a			*ants;
 	struct	s_q	*path;
 	struct	s_w	*next;
 }					t_w;
@@ -96,10 +98,8 @@ typedef struct		s_lem
 	t_room			*rooms;
 }					t_lem;
 
-// t_q		*freeList(t_q *path);
-
 void	print_map(t_lem *lem);
-int		lgnl(int fd, char **line);  // delete me
+int		lgnl(int fd, char **line);
 void	add_to_print(t_lem *lem, char *str);
 void	ft_error(char *str, char **arr, char *error);
 int		ft_isdigit_str(char *str);
@@ -127,7 +127,6 @@ int		is_not_visited(t_room *n, t_q *path);
 void	print_way(t_q* path);
 t_q		*copy_path(t_q *path);
 t_q		*freeList(t_q *path);
-t_room	*copy_room(t_room *room);
 void	add_path_to_ways(t_lem *lem, t_q *path);
 t_w		*cut_the_way(t_w *ways);
 int		way_len(t_q *path);
@@ -139,15 +138,10 @@ int		have_same_room(t_q *path1, t_q *path2);
 void	add_to_pack(t_p *pack, t_q *path, int len);
 t_p		*add_new_pack(t_lem *lem, t_q *path, int len);
 
-void	run_ants_run(t_lem *lem);
-t_a		*create_ants(t_lem *lem);
-t_w		*choose_pack(t_lem *lem, t_a *ants);
-int		number_of_iterations(t_w *ways, int ants, t_a *a);
-int		noi(t_a *a, int n);
-int		empty(t_a *head, t_a *a, int j);
-void	ft_list_remove_if(t_a **head, int num);
-void	distribution_ants_on_way(t_w *ways, int ants, t_a *a);
-void	run_vasya_run(t_a *a, int n);
-void	print_run(int num, char *str);
+void	r_a_r(t_lem *lem);
+int		norm(t_lem *lem, t_w *ways);
+void	add_ant(t_w *ways, int ant_num);
+void	run(t_lem *lem);
+void	print(t_w *ways);
 
 #endif

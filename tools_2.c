@@ -84,14 +84,19 @@ void	add_to_print(t_lem *lem, char *str)
 
 void	print_map(t_lem *lem)
 {
+	t_s		*tmp;
+
 	while (lem->print)
 	{
-		ft_putstr(lem->print->str);
+		tmp = lem->print;
+		ft_putstr(tmp->str);
 		write(1, "\n", 1);
-		free(lem->print->str);
+		free(tmp->str);
 		lem->print = lem->print->next;
+		free(tmp);
 	}
 	write(1, "\n", 1);
+	
 }
 
 int		check_link(char *str)

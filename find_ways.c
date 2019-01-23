@@ -11,41 +11,36 @@
 /* ************************************************************************** */
 
 #include "lem_in.h"
-
 void	find_ways(t_lem *lem)
 {
 	t_w		*queue = NULL;
 	t_q		*path = NULL;
-	t_room	*room;
-	t_q		*newpath;
-	int	i = 0;
+	t_room	*room = NULL;
+	t_q		*newpath = NULL;
+	t_nghbr	*tmp;
 
-	room = copy_room(find_room_by_type(lem, 1));
+	room = find_room_by_type(lem, 1);
 	path = push_back(path, room);
 	queue = push(queue, path);
+	write(1, "\nHUI\n", 5);
 	while (queue)
 	{
 		path = queue->path;
-		queue = pop(queue);
-		room = copy_room(get_last_elem(path));
-		if (room->type == 3 /*&& i < 9*/)
-		{
-			// write(1, "way\n", 4);
-			i++;
+		room = get_last_elem(path);
+		if (room->type == 3)
 			add_path_to_ways(lem, path);
-		}
-		while (room->nghbrs)
+		tmp = room->nghbrs;
+		while (tmp)
 		{
-			if (is_not_visited(room->nghbrs->neighbor, path))
+			if (is_not_visited(tmp->neighbor, path))
 			{
-				newpath = copy_path(path);
-				newpath = push_back(newpath, room->nghbrs->neighbor);
+				newpath = copy_path(path); // у тебя был поинтер на алоцированые данные
+				newpath = push_back(newpath, tmp->neighbor); // и тут
 				queue = push(queue, newpath);
-				// newpath = freeList(newpath);
 			}
-			room->nghbrs = room->nghbrs->next;
+			tmp = tmp->next;
 		}
-		free(room);
+		queue = pop(queue);
 	}
 }
 
@@ -177,30 +172,11 @@ t_q		*freeList(t_q *path)
 {
 	t_q		*tmp;
 
-	while (path != NULL)
+	while (path)
 	{
 		tmp = path;
 		path = path->next;
 		free(tmp);
-		tmp = NULL;
 	}
 	return (path);
-}
-
-t_room		*copy_room(t_room *room)
-{
-	t_room		*newroom;
-
-	newroom = NULL;
-	if (room)
-	{
-		newroom = (t_room*)ft_memalloc(sizeof(t_room));
-		newroom->name = room->name;
-		newroom->x = room->x;
-		newroom->y = room->y;
-		newroom->type = room->type;
-		newroom->next = NULL;
-		newroom->nghbrs = room->nghbrs;
-	}
-	return (newroom);
 }
