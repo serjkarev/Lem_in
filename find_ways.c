@@ -16,23 +16,26 @@ void	find_ways(t_lem *lem)
 {
 	t_w		*queue = NULL;
 	t_q		*path = NULL;
-	t_room	*room;
-	t_q		*newpath;
-	t_nghbr	*tmp;
+	t_room	*room = NULL;
+	t_q		*newpath = NULL;
+	t_nghbr	*tmp = NULL;
+	int flag;
+	t_q	*buf;
 
 	room = find_room_by_type(lem, 1);
 	path = push_back(path, room);
 	queue = push(queue, path);
-	// write(1, "\nHUI\n", 5);
-	// int i = 0;
 	while (queue)
 	{
+		flag = 0;
 		path = queue->path;
 		room = get_last_elem(path);
 		if (room->type == 3)
-			add_path_to_ways(lem, path);
+            add_path_to_ways(lem, path);
+		else
+			flag = 1;
 		tmp = room->nghbrs;
-		while (tmp)
+		while (tmp && room->type != 3)
 		{
 			if (is_not_visited(tmp->neighbor, path))
 			{
@@ -42,15 +45,18 @@ void	find_ways(t_lem *lem)
 			}
 			tmp = tmp->next;
 		}
-		// i++;
+		if (flag)
+		{
+			while (queue->path)
+			{
+				buf = queue->path;
+				buf = buf->next;
+				free(queue->path);
+				queue->path = buf;
+			}
+		}
 		queue = pop(queue);
-		// if (i == 2)
-		// {
-		// 	system("leaks -q lem-in");
-		// 	exit(1);
-		// }
 	}
-	// printf("%d\n", i);
 }
 
 t_q		*push_back(t_q *path, t_room *room)

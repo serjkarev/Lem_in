@@ -77,44 +77,15 @@ int		main(int ac, char **av)
 	piece_of_valid(lem, str);
 	parse_links(lem, str);
 	find_ways(lem);
-	// system("leaks -q lem-in");
 	if (!lem->ways)
 		ft_error(NULL, NULL, ER14);
 	lem->ways = cut_the_way(lem->ways);
 	packs_of_path(lem);
+	system("leaks -q lem-in");
 	if (!lem->flags || lem->flags->hide_map != 1)
 		print_map(lem);
 	if (lem->flags && lem->flags->show_ways)
 		print_pack(lem);
-
-	// printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
-	// t_w		*buf;
-	// buf = lem->ways;
-	// while (buf)
-	// {
-	// 	print_way(buf->path);
-	// 	buf = buf->next;
-	// }
-	// printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
-	// t_p		*tmp;
-	// t_w		*tmp2;
-	// tmp = lem->packs;
-	// while (tmp)
-	// {
-	// 	tmp2 = tmp->ways;
-	// 	printf("##########################\n");
-	// 	printf("num_of_path = %d\n", tmp2->num_of_path);
-	// 	printf("flow = %d\n", tmp2->flow);
-	// 	while (tmp2)
-	// 	{
-	// 		printf("len = %d | ", tmp2->len);
-	// 		print_way(tmp2->path);
-	// 		tmp2 = tmp2->next;
-	// 	}
-	// 	tmp = tmp->next;
-	// }
-	// printf("##########################\n");
-
 	if (lem->packs->next)
 		choose_pack(lem);
 	r_a_r(lem);
