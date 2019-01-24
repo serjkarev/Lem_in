@@ -72,7 +72,9 @@ add_executable(tmp
         libft/ft_toupper.c
         libft/get_next_line.c
         libft/libft.h
-        r_a_r2.c
+        run_ants_run.c
+        tools_3.c
+        choose_pack.c
         cut_n_pack.c
         find_ways.c
         lem_in.h

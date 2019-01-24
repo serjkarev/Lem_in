@@ -11,18 +11,20 @@
 /* ************************************************************************** */
 
 #include "lem_in.h"
+
 void	find_ways(t_lem *lem)
 {
 	t_w		*queue = NULL;
 	t_q		*path = NULL;
-	t_room	*room = NULL;
-	t_q		*newpath = NULL;
+	t_room	*room;
+	t_q		*newpath;
 	t_nghbr	*tmp;
 
 	room = find_room_by_type(lem, 1);
 	path = push_back(path, room);
 	queue = push(queue, path);
-	write(1, "\nHUI\n", 5);
+	// write(1, "\nHUI\n", 5);
+	// int i = 0;
 	while (queue)
 	{
 		path = queue->path;
@@ -40,8 +42,15 @@ void	find_ways(t_lem *lem)
 			}
 			tmp = tmp->next;
 		}
+		// i++;
 		queue = pop(queue);
+		// if (i == 2)
+		// {
+		// 	system("leaks -q lem-in");
+		// 	exit(1);
+		// }
 	}
+	// printf("%d\n", i);
 }
 
 t_q		*push_back(t_q *path, t_room *room)

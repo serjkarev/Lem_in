@@ -86,6 +86,8 @@ void	print_map(t_lem *lem)
 {
 	t_s		*tmp;
 
+	if (lem->flags && lem->flags->color_on == 1)
+		write(1, "\x1b[36m", 5);
 	while (lem->print)
 	{
 		tmp = lem->print;
@@ -96,7 +98,7 @@ void	print_map(t_lem *lem)
 		free(tmp);
 	}
 	write(1, "\n", 1);
-	
+	write(1, "\033[0m", 5);
 }
 
 int		check_link(char *str)

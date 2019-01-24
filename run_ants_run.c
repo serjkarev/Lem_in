@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "lem_in.h"
 
 void	r_a_r(t_lem *lem)
@@ -44,7 +43,7 @@ int		norm(t_lem *lem, t_w *ways)
 
 	sum = 0;
 	curr = lem->packs->ways;
-	if (lem->ants <= ways->len - lem->ways->len)
+	if (lem->ants <= ways->len - lem->packs->ways->len)
 		return (0);
 	while (curr != ways)
 	{
@@ -77,27 +76,30 @@ void	add_ant(t_w *ways, int ant_num)
 void	run(t_lem *lem)
 {
 	t_w		*curr;
-	// int	count = 0;
+	int		count;
+
+	count = 0;
 	while (lem->packs->ways->ants)
 	{
 		curr = lem->packs->ways;
 		while (curr)
 		{
-			print(curr);
-			if(!curr->next)
-			// {
-				// count++;
+			print(curr, lem);
+			if (!curr->next)
+			{
+				count++;
 				write(1, "\n", 1);
-			// }
+			}
 			else
 				write(1, " ", 1);
 			curr = curr->next;
 		}
 	}
-	// printf("%d\n", count);
+	if (lem->flags && lem->flags->iterations)
+		print_iter(lem, count);
 }
 
-void	print(t_w *ways)
+void	print(t_w *ways, t_lem *lem)
 {
 	t_a		*curr;
 
@@ -106,24 +108,11 @@ void	print(t_w *ways)
 	{
 		if (curr->pos == 0)
 		{
-			write(1, "L", 1);
-			ft_putnbr(curr->num);
-			write(1, "-", 1);
-			ft_putstr(ways->path->room->name);
+			print_v2(ways->path->room->name, curr, NULL, lem);
 			curr->pos++;
 			break ;
 		}
-		write(1, "L", 1);
-		ft_putnbr(curr->num);
-		write(1, "-", 1);
-		t_q		*tmp = ways->path;
-		int		i = 0;
-		while (i < curr->pos)
-		{
-			i++;
-			tmp = tmp->next;
-		}
-		ft_putstr(tmp->room->name);
+		print_v2(NULL, curr, ways->path, lem);
 		if (curr->next)
 			write(1, " ", 1);
 		curr->pos++;

@@ -31,15 +31,23 @@
 # define ER14 "🖕\x1B[31m ERROR: no way available \033[0m🖕\n"
 # define ER15 "🖕\x1B[31m ERROR: duplicate room names \033[0m🖕\n"
 # define ER16 "🖕\x1B[31m ERROR: !!! TRASH !!! \033[0m🖕\n"
+# define USAGE "\x1b[32m Usage: ./lem-in [-chais] < map \033[0m\n"
 
 # define ABS(n) (n >= 0 ? n : (n * -1))
+
+typedef struct		s_f
+{
+	int		color_on; 
+	int		hide_map;
+	int		approve_flags;
+	int		iterations;
+	int		show_ways;
+}					t_f;
 
 typedef struct		s_a
 {
 	int			num;
 	int			pos;
-	// struct	s_room	*current_room;
-	// struct	s_q	*path;
 	struct	s_a	*next;
 }					t_a;
 
@@ -96,7 +104,13 @@ typedef struct		s_lem
 	t_w				*ways;
 	t_q				*queue;
 	t_room			*rooms;
+	t_f				*flags;
 }					t_lem;
+
+void	print_way(t_q* path);
+void	print_pack(t_lem *lem);
+void	print_iter(t_lem *lem, int count);
+void	print_flags(t_lem *lem);
 
 void	print_map(t_lem *lem);
 int		lgnl(int fd, char **line);
@@ -124,7 +138,6 @@ t_w		*push(t_w *queue, t_q *newpath);
 t_w		*pop(t_w *queue);
 t_room	*get_last_elem(t_q *path);
 int		is_not_visited(t_room *n, t_q *path);
-void	print_way(t_q* path);
 t_q		*copy_path(t_q *path);
 t_q		*freeList(t_q *path);
 void	add_path_to_ways(t_lem *lem, t_q *path);
@@ -142,6 +155,8 @@ void	r_a_r(t_lem *lem);
 int		norm(t_lem *lem, t_w *ways);
 void	add_ant(t_w *ways, int ant_num);
 void	run(t_lem *lem);
-void	print(t_w *ways);
+void	print(t_w *ways, t_lem *lem);
+void	print_v2(char *rname, t_a *curr, t_q *path, t_lem *lem);
+void	choose_pack(t_lem *lem);
 
 #endif
