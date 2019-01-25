@@ -20,18 +20,31 @@ void	find_ways(t_lem *lem)
 	t_q		*newpath = NULL;
 	t_nghbr	*tmp = NULL;
 	int flag;
-	t_q	*buf;
+	int counter = 0;
 
 	room = find_room_by_type(lem, 1);
 	path = push_back(path, room);
 	queue = push(queue, path);
-	while (queue)
+//    int fd = open("/tmp/logLemin.txt", O_WRONLY); //
+	int		way = 0;
+    while (queue)
 	{
 		flag = 0;
 		path = queue->path;
 		room = get_last_elem(path);
+		t_q	*jopa = path;
+		int i = 0;
+		while (jopa)
+		{
+			i++;
+			jopa = jopa->next;
+		}
+		printf("len = %d\n", i);
 		if (room->type == 3)
+		{
             add_path_to_ways(lem, path);
+			way++;
+		}
 		else
 			flag = 1;
 		tmp = room->nghbrs;
@@ -39,23 +52,34 @@ void	find_ways(t_lem *lem)
 		{
 			if (is_not_visited(tmp->neighbor, path))
 			{
-				newpath = copy_path(path); // у тебя был поинтер на алоцированые данные
-				newpath = push_back(newpath, tmp->neighbor); // и тут
+				newpath = copy_path(path);
+				newpath = push_back(newpath, tmp->neighbor);
 				queue = push(queue, newpath);
 			}
 			tmp = tmp->next;
 		}
-		if (flag)
-		{
-			while (queue->path)
-			{
-				buf = queue->path;
-				buf = buf->next;
-				free(queue->path);
-				queue->path = buf;
-			}
-		}
+        printf("\ncounter = %d\nway = %d\n", counter++, way);
+		print_way(path);
+//		dprintf(fd, "\ncounter = %d\n", counter++);
+		free_path(queue, flag);
 		queue = pop(queue);
+	}
+//    close(fd);
+}
+
+void	free_path(t_w *queue, int flag)
+{
+	t_q	*buf;
+
+	if (flag)
+	{
+		while (queue->path)
+		{
+			buf = queue->path;
+			buf = buf->next;
+			free(queue->path);
+			queue->path = buf;
+		}
 	}
 }
 
@@ -130,7 +154,8 @@ int		is_not_visited(t_room *n, t_q *path)
 {
 	while (path)
 	{
-		if (ft_strequ(path->room->name, n->name))
+		// if (ft_strequ(path->room->name, n->name))
+		if (path->room == n)
 			return (0);
 		path = path->next;
 	}
@@ -181,17 +206,4 @@ t_q		*copy_path(t_q *path)
 		path = path->next;
 	}
 	return (newpath);
-}
-
-t_q		*freeList(t_q *path)
-{
-	t_q		*tmp;
-
-	while (path)
-	{
-		tmp = path;
-		path = path->next;
-		free(tmp);
-	}
-	return (path);
 }

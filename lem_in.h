@@ -111,6 +111,7 @@ void	print_way(t_q* path);
 void	print_pack(t_lem *lem);
 void	print_iter(t_lem *lem, int count);
 void	print_flags(t_lem *lem);
+void	free_path(t_w *queue, int flag);
 
 void	print_map(t_lem *lem);
 int		lgnl(int fd, char **line);
@@ -139,7 +140,6 @@ t_w		*pop(t_w *queue);
 t_room	*get_last_elem(t_q *path);
 int		is_not_visited(t_room *n, t_q *path);
 t_q		*copy_path(t_q *path);
-t_q		*freeList(t_q *path);
 void	add_path_to_ways(t_lem *lem, t_q *path);
 t_w		*cut_the_way(t_w *ways);
 int		way_len(t_q *path);
