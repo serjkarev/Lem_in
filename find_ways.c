@@ -20,31 +20,17 @@ void	find_ways(t_lem *lem)
 	t_q		*newpath = NULL;
 	t_nghbr	*tmp = NULL;
 	int flag;
-	int counter = 0;
 
 	room = find_room_by_type(lem, 1);
 	path = push_back(path, room);
 	queue = push(queue, path);
-//    int fd = open("/tmp/logLemin.txt", O_WRONLY); //
-	int		way = 0;
     while (queue)
 	{
 		flag = 0;
 		path = queue->path;
-		room = get_last_elem(path);
-		t_q	*jopa = path;
-		int i = 0;
-		while (jopa)
-		{
-			i++;
-			jopa = jopa->next;
-		}
-		printf("len = %d\n", i);
+		room = path->tail->room;
 		if (room->type == 3)
-		{
             add_path_to_ways(lem, path);
-			way++;
-		}
 		else
 			flag = 1;
 		tmp = room->nghbrs;
@@ -58,13 +44,21 @@ void	find_ways(t_lem *lem)
 			}
 			tmp = tmp->next;
 		}
-        printf("\ncounter = %d\nway = %d\n", counter++, way);
-		print_way(path);
-//		dprintf(fd, "\ncounter = %d\n", counter++);
 		free_path(queue, flag);
 		queue = pop(queue);
 	}
-//    close(fd);
+}
+
+t_q		*copy_path(t_q *path)
+{
+	t_q		*newpath = NULL;
+
+	while (path)
+	{
+		newpath = push_back(newpath, path->room);
+		path = path->next;
+	}
+	return (newpath);
 }
 
 void	free_path(t_w *queue, int flag)
@@ -85,44 +79,38 @@ void	free_path(t_w *queue, int flag)
 
 t_q		*push_back(t_q *path, t_room *room)
 {
-	t_q		*current;
-
 	if (!path)
 	{
-		path = (t_q*)ft_memalloc(sizeof(t_q));
+		path = (t_q*)malloc(sizeof(t_q));
 		path->room = room;
+		path->tail = path;
 		path->next = NULL;
 	}
 	else
 	{
-		current = path;
-		while (current->next)
-			current = current->next;
-		current->next = (t_q*)ft_memalloc(sizeof(t_q));
-		current->next->room = room;
-		current->next->next = NULL;
+		path->tail->next = (t_q*)malloc(sizeof(t_q));
+		path->tail = path->tail->next;
+		path->tail->room = room;
+		path->tail->next = NULL;
 	}
 	return (path);
 }
 
 t_w		*push(t_w *queue, t_q *path)
 {
-	t_w		*curr;
-
 	if (!queue)
 	{
-		queue = (t_w*)ft_memalloc(sizeof(t_w));
+		queue = (t_w*)malloc(sizeof(t_w));
 		queue->path = path;
+		queue->tail = queue;
 		queue->next = NULL;
 	}
 	else
 	{
-		curr = queue;
-		while (curr->next)
-			curr = curr->next;
-		curr->next = (t_w*)ft_memalloc(sizeof(t_w));
-		curr->next->path = path;
-		curr->next->next = NULL;
+		queue->tail->next = (t_w*)malloc(sizeof(t_w));
+		queue->tail = queue->tail->next;
+		queue->tail->path = path;
+		queue->tail->next = NULL;
 	}
 	return (queue);
 }
@@ -135,26 +123,17 @@ t_w		*pop(t_w *queue)
 	{
 		head = queue;
 		queue = queue->next;
+		if (queue)
+		    queue->tail = head->tail;
 		free(head);
 	}
 	return (queue);
-}
-
-t_room	*get_last_elem(t_q *path)
-{
-	t_q	*current;
-
-	current = path;
-	while (current->next)
-		current = current->next;
-	return (current->room);
 }
 
 int		is_not_visited(t_room *n, t_q *path)
 {
 	while (path)
 	{
-		// if (ft_strequ(path->room->name, n->name))
 		if (path->room == n)
 			return (0);
 		path = path->next;
@@ -164,22 +143,19 @@ int		is_not_visited(t_room *n, t_q *path)
 
 void	add_path_to_ways(t_lem *lem, t_q *path)
 {
-	t_w		*current;
-
 	if (!lem->ways)
 	{
-		lem->ways = (t_w*)ft_memalloc(sizeof(t_w));
+		lem->ways = (t_w*)malloc(sizeof(t_w));
 		lem->ways->path = path;
+		lem->ways->tail = lem->ways;
 		lem->ways->next = NULL;
 	}
 	else
 	{
-		current = lem->ways;
-		while (current->next)
-			current = current->next;
-		current->next = (t_w*)ft_memalloc(sizeof(t_w));
-		current->next->path = path;
-		current->next->next = NULL;
+		lem->ways->tail->next = (t_w*)malloc(sizeof(t_w));
+		lem->ways->tail = lem->ways->tail->next;
+		lem->ways->tail->path = path;
+		lem->ways->tail->next = NULL;
 	}
 }
 
@@ -194,16 +170,4 @@ void	print_way(t_q* path)
 		path = path->next;
 	}
 	printf("\n");
-}
-
-t_q		*copy_path(t_q *path)
-{
-	t_q		*newpath = NULL;
-
-	while (path)
-	{
-		newpath = push_back(newpath, path->room);
-		path = path->next;
-	}
-	return (newpath);
 }

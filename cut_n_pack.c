@@ -64,7 +64,7 @@ void	packs_of_path(t_lem *lem)
 	while (way1)
 	{
 		way2 = lem->ways;
-		if (way1->block == 0 && i <= 2) //ограничение по количеству паков
+		if (way1->block == 0 && i <= 2)
 			pack = add_new_pack(lem, way1->path, way1->len);
 		while (way2)
 		{
@@ -93,7 +93,7 @@ int		compare_ways(t_w *way1, t_w *way2)
 		head2 = way2->path;
 		while (head2)
 		{
-			if (ft_strequ(head1->room->name, head2->room->name))
+			if (head1->room->name == head2->room->name)
 			{
 				if ((head1->room->type == 1 && head2->room->type == 1) ||
 					(head1->room->type == 3 && head2->room->type == 3))

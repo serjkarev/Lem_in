@@ -92,33 +92,31 @@ void	parse_room(char *str, t_lem *lem, int type)
 
 void	parse_links(t_lem *lem, char *str)
 {
-	char	**arr;
-
 	if (str)
 	{
 		add_to_print(lem, str);
-		arr = ft_strsplit(str, '-');
-		if (arr[2] != NULL || !arr[0] || !arr[1] || check_link(str) > 1)
-			ft_error(NULL, arr, ER09);
-		find_neighbor(lem, arr, 0, 1);
-		find_neighbor(lem, arr, 1, 0);
-		free_arr(arr);
+		parce_links_v2(str, lem);
 		free(str);
 	}
 	while (lgnl(0, &str))
 	{
 		add_to_print(lem, str);
 		if (str[0] != '#')
-		{
-			arr = ft_strsplit(str, '-');
-			if (arr[2] != NULL || !arr[0] || !arr[1] || check_link(str) > 1)
-				ft_error(NULL, arr, ER09);
-			find_neighbor(lem, arr, 0, 1);
-			find_neighbor(lem, arr, 1, 0);
-			free_arr(arr);
-		}
+			parce_links_v2(str, lem);
 		free(str);
 	}
+}
+
+void	parce_links_v2(char *str, t_lem *lem)
+{
+	char	**arr;
+
+	arr = ft_strsplit(str, '-');
+	if (arr[2] != NULL || !arr[0] || !arr[1] || check_link(str) > 1)
+		ft_error(NULL, arr, ER09);
+	find_neighbor(lem, arr, 0, 1);
+	find_neighbor(lem, arr, 1, 0);
+	free_arr(arr);
 }
 
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2)
@@ -141,7 +139,7 @@ int		check_nghbrs(t_nghbr *ns, char *name)
 	head = ns;
 	while (head)
 	{
-		if (ft_strequ(head->neighbor->name, name))
+		if (head->neighbor->name == name)
 			return (0);
 		head = head->next;
 	}

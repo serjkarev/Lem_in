@@ -81,7 +81,7 @@ int		main(int ac, char **av)
 		ft_error(NULL, NULL, ER14);
 	lem->ways = cut_the_way(lem->ways);
 	packs_of_path(lem);
-	system("leaks -q lem-in");
+	// system("leaks -q lem-in");
 	if (!lem->flags || lem->flags->hide_map != 1)
 		print_map(lem);
 	if (lem->flags && lem->flags->show_ways)
@@ -91,6 +91,6 @@ int		main(int ac, char **av)
 	r_a_r(lem);
 	if (lem->flags && lem->flags->approve_flags)
 		print_flags(lem);
-	// system("leaks -q lem-in");
+	system("leaks -q lem-in");
 	return (0);
 }

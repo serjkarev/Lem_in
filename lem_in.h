@@ -71,12 +71,14 @@ typedef struct		s_w
 	int			num_of_path;
 	t_a			*ants;
 	struct	s_q	*path;
+	struct	s_w	*tail;
 	struct	s_w	*next;
 }					t_w;
 
 typedef struct		s_q
 {
 	struct	s_room	*room;
+	struct	s_q		*tail;
 	struct	s_q		*next;
 }					t_q;
 
@@ -126,6 +128,7 @@ void	parse_room(char *str, t_lem *lem, int type);
 void	create_room(char **arr, t_lem *lem, int type);
 void	piece_of_valid(t_lem *lem, char *str);
 void	parse_links(t_lem *lem, char *str);
+void	parce_links_v2(char *str, t_lem *lem);
 int		check_link(char *str);
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2);
 t_room	*get_room_by_name(t_lem *lem, char *name);
@@ -137,7 +140,6 @@ void	find_ways(t_lem *lem);
 t_q		*push_back(t_q *path, t_room *room);
 t_w		*push(t_w *queue, t_q *newpath);
 t_w		*pop(t_w *queue);
-t_room	*get_last_elem(t_q *path);
 int		is_not_visited(t_room *n, t_q *path);
 t_q		*copy_path(t_q *path);
 void	add_path_to_ways(t_lem *lem, t_q *path);
