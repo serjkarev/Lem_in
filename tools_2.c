@@ -47,7 +47,7 @@ void	create_nghbrs(t_room *room, t_room *n)
 	}
 }
 
-t_room		*find_room_by_type(t_lem *lem, int type)
+t_room	*find_room_by_type(t_lem *lem, int type)
 {
 	t_room	*current;
 
@@ -99,32 +99,4 @@ void	print_map(t_lem *lem)
 	}
 	write(1, "\n", 1);
 	write(1, "\033[0m", 5);
-}
-
-int		check_link(char *str)
-{
-	int		i;
-	int		count;
-
-	i = 0;
-	count = 0;
-	while (str[i])
-	{
-		if (str[i] == '-')
-			count += 1;
-		i++;
-	}
-	return (count);
-}
-
-void	piece_of_valid(t_lem *lem, char *str)
-{
-	if (!str)
-		ft_error(NULL, NULL, ER13);
-	else if (check_link(str) > 1 || check_link(str) == 0)
-		ft_error(str, NULL, ER16);
-	else if (!find_room_by_type(lem, 1))
-		ft_error(str, NULL, ER11);
-	else if (!find_room_by_type(lem, 3))
-		ft_error(str, NULL, ER12);
 }

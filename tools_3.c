@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-void	print_flags(t_lem *lem)
+void		print_flags(t_lem *lem)
 {
 	if (lem->flags->color_on == 1)
 		write(1, "\x1b[36m", 5);
@@ -34,7 +34,7 @@ void	print_flags(t_lem *lem)
 	write(1, "\n", 1);
 }
 
-void	print_iter(t_lem *lem, int count)
+void		print_iter(t_lem *lem, int count)
 {
 	if (lem->flags->color_on == 1)
 	{
@@ -52,7 +52,7 @@ void	print_iter(t_lem *lem, int count)
 	}
 }
 
-void	print_pack(t_lem *lem)
+void		print_pack(t_lem *lem)
 {
 	t_p		*tmp;
 	t_w		*tmp2;
@@ -91,7 +91,7 @@ static void	print_v3(char *rname, t_a *curr, t_q *path)
 			tmp = tmp->next;
 		}
 		write(1, "\x1b[32m", 5);
-		ft_putstr(tmp->room->name);	
+		ft_putstr(tmp->room->name);
 	}
 	else
 	{
@@ -100,11 +100,11 @@ static void	print_v3(char *rname, t_a *curr, t_q *path)
 	}
 }
 
-void	print_v2(char *rname, t_a *curr, t_q *path, t_lem *lem)
+void		print_v2(char *rname, t_a *curr, t_q *path, t_lem *lem)
 {
 	t_q		*tmp;
 	int		i;
-	
+
 	if (lem->flags && lem->flags->color_on)
 		print_v3(rname, curr, path);
 	else
@@ -121,7 +121,7 @@ void	print_v2(char *rname, t_a *curr, t_q *path, t_lem *lem)
 				i++;
 				tmp = tmp->next;
 			}
-			ft_putstr(tmp->room->name);	
+			ft_putstr(tmp->room->name);
 		}
 		else
 			ft_putstr(rname);

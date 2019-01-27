@@ -35,7 +35,7 @@ static void	no_print(t_w *ways)
 	}
 }
 
-static int		run_iter(t_p *pack)
+static int	run_iter(t_p *pack)
 {
 	t_w		*curr;
 	int		count;
@@ -47,7 +47,7 @@ static int		run_iter(t_p *pack)
 		while (curr)
 		{
 			no_print(curr);
-			if(!curr->next)
+			if (!curr->next)
 				count++;
 			curr = curr->next;
 		}
@@ -55,7 +55,7 @@ static int		run_iter(t_p *pack)
 	return (count);
 }
 
-static int		norm_v2(t_lem *lem, t_w *ways, t_p *pack)
+static int	norm_v2(t_lem *lem, t_w *ways, t_p *pack)
 {
 	t_w		*curr;
 	int		sum;
@@ -83,7 +83,7 @@ static int	choose(t_lem *lem, t_p *pack)
 	while (ants)
 	{
 		curr = pack->ways;
-		while (curr  && ants > 0)
+		while (curr && ants > 0)
 		{
 			if (norm_v2(lem, curr, pack))
 			{
@@ -98,7 +98,7 @@ static int	choose(t_lem *lem, t_p *pack)
 	return (run_iter(pack));
 }
 
-void	choose_pack(t_lem *lem)
+void		choose_pack(t_lem *lem)
 {
 	int		one;
 	int		two;
@@ -110,6 +110,7 @@ void	choose_pack(t_lem *lem)
 	{
 		tmp = lem->packs;
 		lem->packs = lem->packs->next;
+		free(tmp->ways);
 		free(tmp);
 	}
 }

@@ -24,7 +24,8 @@ void	parse_ants(t_lem *lem)
 		{
 			lem->ants = ft_atoi(str);
 			if (lem->ants <= 0)
-				lem->ants == 0 ? ft_error(str, NULL, ER02) : ft_error(str, NULL, ER03);
+				lem->ants == 0 ? ft_error(str, NULL, ER02) : \
+												ft_error(str, NULL, ER03);
 			free(str);
 			break ;
 		}
@@ -45,23 +46,15 @@ char	*parse_rooms(t_lem *lem)
 	int		type;
 	int		det[2];
 
-	det[0] = 0;
-	det[1] = 0;
+	*((unsigned long int *)det) = 0;
 	type = 0;
 	while (lgnl(0, &str))
 	{
 		add_to_print(lem, str);
 		if (ft_strequ(str, "##start") || ft_strequ(str, "##end"))
-		{
-			(ft_strequ(str, "##start") == 1) ? (type = 1) : (type = 3);
-			(ft_strequ(str, "##start") == 1) ? (det[0] += 1) : (det[1] += 1);
-			if (det[0] > 1 || det[1] > 1)
-				det[0] > 1 ? ft_error(str, NULL, ER07) : ft_error(str, NULL, ER08);
-			free(str);
-			continue ;
-		}
+			parce_rooms_v2(&det[0], &det[1], str, &type);
 		else if (str[0] == '#')
-			continue ;
+			free(str);
 		else if (space_detect(str) == 2)
 		{
 			parse_room(str, lem, type);
@@ -71,23 +64,6 @@ char	*parse_rooms(t_lem *lem)
 			return (str);
 	}
 	return (str);
-}
-
-void	parse_room(char *str, t_lem *lem, int type)
-{
-	int		space;
-	char	**arr;
-
-	space = space_detect(str);
-	arr = ft_strsplit(str, ' ');
-	if (arr[3] != NULL || space != 2 || !arr[0] || !arr[1] || !arr[2] ||\
-										ft_strchr(arr[0], '-') != NULL)
-		ft_error(str, arr, ER05);
-	if (get_room_by_name(lem, arr[0]))
-		ft_error(str, arr, ER15);
-	create_room(arr, lem, type);
-	free_arr(arr);
-	free(str);
 }
 
 void	parse_links(t_lem *lem, char *str)
@@ -105,18 +81,6 @@ void	parse_links(t_lem *lem, char *str)
 			parce_links_v2(str, lem);
 		free(str);
 	}
-}
-
-void	parce_links_v2(char *str, t_lem *lem)
-{
-	char	**arr;
-
-	arr = ft_strsplit(str, '-');
-	if (arr[2] != NULL || !arr[0] || !arr[1] || check_link(str) > 1)
-		ft_error(NULL, arr, ER09);
-	find_neighbor(lem, arr, 0, 1);
-	find_neighbor(lem, arr, 1, 0);
-	free_arr(arr);
 }
 
 void	find_neighbor(t_lem *lem, char **arr, int n1, int n2)

@@ -14,25 +14,26 @@
 
 void	find_ways(t_lem *lem)
 {
-	t_w		*queue = NULL;
-	t_q		*path = NULL;
-	t_room	*room = NULL;
-	t_q		*newpath = NULL;
-	t_nghbr	*tmp = NULL;
-	int flag;
+	t_w		*queue;
+	t_q		*path;
+	t_room	*room;
+	t_q		*newpath;
+	t_nghbr	*tmp;
 
+	queue = NULL;
+	path = NULL;
 	room = find_room_by_type(lem, 1);
 	path = push_back(path, room);
 	queue = push(queue, path);
-    while (queue)
+	while (queue)
 	{
-		flag = 0;
+		lem->flag = 0;
 		path = queue->path;
 		room = path->tail->room;
 		if (room->type == 3)
-            add_path_to_ways(lem, path);
+			add_path_to_ways(lem, path);
 		else
-			flag = 1;
+			lem->flag = 1;
 		tmp = room->nghbrs;
 		while (tmp && room->type != 3)
 		{
@@ -44,36 +45,7 @@ void	find_ways(t_lem *lem)
 			}
 			tmp = tmp->next;
 		}
-		free_path(queue, flag);
-		queue = pop(queue);
-	}
-}
-
-t_q		*copy_path(t_q *path)
-{
-	t_q		*newpath = NULL;
-
-	while (path)
-	{
-		newpath = push_back(newpath, path->room);
-		path = path->next;
-	}
-	return (newpath);
-}
-
-void	free_path(t_w *queue, int flag)
-{
-	t_q	*buf;
-
-	if (flag)
-	{
-		while (queue->path)
-		{
-			buf = queue->path;
-			buf = buf->next;
-			free(queue->path);
-			queue->path = buf;
-		}
+		queue = pop(queue, lem->flag);
 	}
 }
 
@@ -115,30 +87,20 @@ t_w		*push(t_w *queue, t_q *path)
 	return (queue);
 }
 
-t_w		*pop(t_w *queue)
+t_w		*pop(t_w *queue, int flag)
 {
 	t_w		*head;
 
+	free_path(queue, flag);
 	if (queue)
 	{
 		head = queue;
 		queue = queue->next;
 		if (queue)
-		    queue->tail = head->tail;
+			queue->tail = head->tail;
 		free(head);
 	}
 	return (queue);
-}
-
-int		is_not_visited(t_room *n, t_q *path)
-{
-	while (path)
-	{
-		if (path->room == n)
-			return (0);
-		path = path->next;
-	}
-	return (1);
 }
 
 void	add_path_to_ways(t_lem *lem, t_q *path)
@@ -157,17 +119,4 @@ void	add_path_to_ways(t_lem *lem, t_q *path)
 		lem->ways->tail->path = path;
 		lem->ways->tail->next = NULL;
 	}
-}
-
-void	print_way(t_q* path)
-{
-	while (path)
-	{
-		if (path->next)
-			printf("%s -> ", path->room->name);
-		else
-			printf("%s", path->room->name);
-		path = path->next;
-	}
-	printf("\n");
 }

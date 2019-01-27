@@ -64,7 +64,7 @@ static void	get_flags(t_lem *lem, int ac, char **av)
 	}
 }
 
-int		main(int ac, char **av)
+int			main(int ac, char **av)
 {
 	char	*str;
 	t_lem	*lem;
@@ -81,7 +81,6 @@ int		main(int ac, char **av)
 		ft_error(NULL, NULL, ER14);
 	lem->ways = cut_the_way(lem->ways);
 	packs_of_path(lem);
-	// system("leaks -q lem-in");
 	if (!lem->flags || lem->flags->hide_map != 1)
 		print_map(lem);
 	if (lem->flags && lem->flags->show_ways)

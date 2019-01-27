@@ -16,7 +16,7 @@ CFLAG = -g -O3 -Wall -Wextra
 
 SRCS = main.c parsing.c tools.c tools_2.c find_ways.c \
 		lgnl.c cut_n_pack.c run_ants_run.c tools_3.c \
-		choose_pack.c
+		choose_pack.c helpers.c tools_4.c tools_5.c
 
 LIBS = ./libft/libft.a
 
