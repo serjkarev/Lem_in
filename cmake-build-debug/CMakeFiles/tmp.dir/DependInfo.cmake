@@ -7,6 +7,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/skarev/Desktop/tmp/choose_pack.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/choose_pack.c.o"
   "/Users/skarev/Desktop/tmp/cut_n_pack.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/cut_n_pack.c.o"
   "/Users/skarev/Desktop/tmp/find_ways.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/find_ways.c.o"
+  "/Users/skarev/Desktop/tmp/find_ways_v2.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/find_ways_v2.c.o"
+  "/Users/skarev/Desktop/tmp/helpers.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/helpers.c.o"
   "/Users/skarev/Desktop/tmp/lgnl.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/lgnl.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_atoi.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_atoi.c.o"
   "/Users/skarev/Desktop/tmp/libft/ft_bzero.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/libft/ft_bzero.c.o"
@@ -78,6 +80,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/skarev/Desktop/tmp/tools.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/tools.c.o"
   "/Users/skarev/Desktop/tmp/tools_2.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/tools_2.c.o"
   "/Users/skarev/Desktop/tmp/tools_3.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/tools_3.c.o"
+  "/Users/skarev/Desktop/tmp/tools_4.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/tools_4.c.o"
+  "/Users/skarev/Desktop/tmp/tools_5.c" "/Users/skarev/Desktop/tmp/cmake-build-debug/CMakeFiles/tmp.dir/tools_5.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

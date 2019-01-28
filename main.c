@@ -76,7 +76,10 @@ int			main(int ac, char **av)
 	str = parse_rooms(lem);
 	piece_of_valid(lem, str);
 	parse_links(lem, str);
-	find_ways(lem);
+	if (lem->rn < 1800 || lem->rn >3000)
+		find_ways(lem);
+	else
+		find_ways_v2(lem);
 	if (!lem->ways)
 		ft_error(NULL, NULL, ER14);
 	lem->ways = cut_the_way(lem->ways);
@@ -90,6 +93,6 @@ int			main(int ac, char **av)
 	r_a_r(lem);
 	if (lem->flags && lem->flags->approve_flags)
 		print_flags(lem);
-	system("leaks -q lem-in");
+	// system("leaks -q lem-in");
 	return (0);
 }

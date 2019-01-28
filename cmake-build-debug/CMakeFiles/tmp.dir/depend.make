@@ -13,6 +13,14 @@ CMakeFiles/tmp.dir/find_ways.c.o: .././libft/libft.h
 CMakeFiles/tmp.dir/find_ways.c.o: ../find_ways.c
 CMakeFiles/tmp.dir/find_ways.c.o: ../lem_in.h
 
+CMakeFiles/tmp.dir/find_ways_v2.c.o: .././libft/libft.h
+CMakeFiles/tmp.dir/find_ways_v2.c.o: ../find_ways_v2.c
+CMakeFiles/tmp.dir/find_ways_v2.c.o: ../lem_in.h
+
+CMakeFiles/tmp.dir/helpers.c.o: .././libft/libft.h
+CMakeFiles/tmp.dir/helpers.c.o: ../helpers.c
+CMakeFiles/tmp.dir/helpers.c.o: ../lem_in.h
+
 CMakeFiles/tmp.dir/lgnl.c.o: .././libft/libft.h
 CMakeFiles/tmp.dir/lgnl.c.o: ../lem_in.h
 CMakeFiles/tmp.dir/lgnl.c.o: ../lgnl.c
@@ -216,4 +224,12 @@ CMakeFiles/tmp.dir/tools_2.c.o: ../tools_2.c
 CMakeFiles/tmp.dir/tools_3.c.o: .././libft/libft.h
 CMakeFiles/tmp.dir/tools_3.c.o: ../lem_in.h
 CMakeFiles/tmp.dir/tools_3.c.o: ../tools_3.c
+
+CMakeFiles/tmp.dir/tools_4.c.o: .././libft/libft.h
+CMakeFiles/tmp.dir/tools_4.c.o: ../lem_in.h
+CMakeFiles/tmp.dir/tools_4.c.o: ../tools_4.c
+
+CMakeFiles/tmp.dir/tools_5.c.o: .././libft/libft.h
+CMakeFiles/tmp.dir/tools_5.c.o: ../lem_in.h
+CMakeFiles/tmp.dir/tools_5.c.o: ../tools_5.c
 

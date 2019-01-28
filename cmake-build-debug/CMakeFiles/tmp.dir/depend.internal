@@ -13,6 +13,14 @@ CMakeFiles/tmp.dir/find_ways.c.o
  /Users/skarev/Desktop/tmp/./libft/libft.h
  /Users/skarev/Desktop/tmp/find_ways.c
  /Users/skarev/Desktop/tmp/lem_in.h
+CMakeFiles/tmp.dir/find_ways_v2.c.o
+ /Users/skarev/Desktop/tmp/./libft/libft.h
+ /Users/skarev/Desktop/tmp/find_ways_v2.c
+ /Users/skarev/Desktop/tmp/lem_in.h
+CMakeFiles/tmp.dir/helpers.c.o
+ /Users/skarev/Desktop/tmp/./libft/libft.h
+ /Users/skarev/Desktop/tmp/helpers.c
+ /Users/skarev/Desktop/tmp/lem_in.h
 CMakeFiles/tmp.dir/lgnl.c.o
  /Users/skarev/Desktop/tmp/./libft/libft.h
  /Users/skarev/Desktop/tmp/lem_in.h
@@ -217,3 +225,11 @@ CMakeFiles/tmp.dir/tools_3.c.o
  /Users/skarev/Desktop/tmp/./libft/libft.h
  /Users/skarev/Desktop/tmp/lem_in.h
  /Users/skarev/Desktop/tmp/tools_3.c
+CMakeFiles/tmp.dir/tools_4.c.o
+ /Users/skarev/Desktop/tmp/./libft/libft.h
+ /Users/skarev/Desktop/tmp/lem_in.h
+ /Users/skarev/Desktop/tmp/tools_4.c
+CMakeFiles/tmp.dir/tools_5.c.o
+ /Users/skarev/Desktop/tmp/./libft/libft.h
+ /Users/skarev/Desktop/tmp/lem_in.h
+ /Users/skarev/Desktop/tmp/tools_5.c

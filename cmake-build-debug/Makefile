@@ -204,6 +204,60 @@ find_ways.c.s:
 	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/find_ways.c.s
 .PHONY : find_ways.c.s
 
+find_ways_v2.o: find_ways_v2.c.o
+
+.PHONY : find_ways_v2.o
+
+# target to build an object file
+find_ways_v2.c.o:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/find_ways_v2.c.o
+.PHONY : find_ways_v2.c.o
+
+find_ways_v2.i: find_ways_v2.c.i
+
+.PHONY : find_ways_v2.i
+
+# target to preprocess a source file
+find_ways_v2.c.i:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/find_ways_v2.c.i
+.PHONY : find_ways_v2.c.i
+
+find_ways_v2.s: find_ways_v2.c.s
+
+.PHONY : find_ways_v2.s
+
+# target to generate assembly for a file
+find_ways_v2.c.s:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/find_ways_v2.c.s
+.PHONY : find_ways_v2.c.s
+
+helpers.o: helpers.c.o
+
+.PHONY : helpers.o
+
+# target to build an object file
+helpers.c.o:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/helpers.c.o
+.PHONY : helpers.c.o
+
+helpers.i: helpers.c.i
+
+.PHONY : helpers.i
+
+# target to preprocess a source file
+helpers.c.i:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/helpers.c.i
+.PHONY : helpers.c.i
+
+helpers.s: helpers.c.s
+
+.PHONY : helpers.s
+
+# target to generate assembly for a file
+helpers.c.s:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/helpers.c.s
+.PHONY : helpers.c.s
+
 lgnl.o: lgnl.c.o
 
 .PHONY : lgnl.o
@@ -2121,6 +2175,60 @@ tools_3.c.s:
 	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/tools_3.c.s
 .PHONY : tools_3.c.s
 
+tools_4.o: tools_4.c.o
+
+.PHONY : tools_4.o
+
+# target to build an object file
+tools_4.c.o:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/tools_4.c.o
+.PHONY : tools_4.c.o
+
+tools_4.i: tools_4.c.i
+
+.PHONY : tools_4.i
+
+# target to preprocess a source file
+tools_4.c.i:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/tools_4.c.i
+.PHONY : tools_4.c.i
+
+tools_4.s: tools_4.c.s
+
+.PHONY : tools_4.s
+
+# target to generate assembly for a file
+tools_4.c.s:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/tools_4.c.s
+.PHONY : tools_4.c.s
+
+tools_5.o: tools_5.c.o
+
+.PHONY : tools_5.o
+
+# target to build an object file
+tools_5.c.o:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/tools_5.c.o
+.PHONY : tools_5.c.o
+
+tools_5.i: tools_5.c.i
+
+.PHONY : tools_5.i
+
+# target to preprocess a source file
+tools_5.c.i:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/tools_5.c.i
+.PHONY : tools_5.c.i
+
+tools_5.s: tools_5.c.s
+
+.PHONY : tools_5.s
+
+# target to generate assembly for a file
+tools_5.c.s:
+	$(MAKE) -f CMakeFiles/tmp.dir/build.make CMakeFiles/tmp.dir/tools_5.c.s
+.PHONY : tools_5.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2139,6 +2247,12 @@ help:
 	@echo "... find_ways.o"
 	@echo "... find_ways.i"
 	@echo "... find_ways.s"
+	@echo "... find_ways_v2.o"
+	@echo "... find_ways_v2.i"
+	@echo "... find_ways_v2.s"
+	@echo "... helpers.o"
+	@echo "... helpers.i"
+	@echo "... helpers.s"
 	@echo "... lgnl.o"
 	@echo "... lgnl.i"
 	@echo "... lgnl.s"
@@ -2352,6 +2466,12 @@ help:
 	@echo "... tools_3.o"
 	@echo "... tools_3.i"
 	@echo "... tools_3.s"
+	@echo "... tools_4.o"
+	@echo "... tools_4.i"
+	@echo "... tools_4.s"
+	@echo "... tools_5.o"
+	@echo "... tools_5.i"
+	@echo "... tools_5.s"
 .PHONY : help
 
 

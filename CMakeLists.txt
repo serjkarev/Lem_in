@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.12)
-project(tmp)
+cmake_minimum_required(VERSION 3.13)
+project(tmp C)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 include_directories(libft)
@@ -72,13 +72,18 @@ add_executable(tmp
         libft/ft_toupper.c
         libft/get_next_line.c
         libft/libft.h
-        run_ants_run.c
-        tools_3.c
         choose_pack.c
         cut_n_pack.c
         find_ways.c
+        find_ways_v2.c
+        helpers.c
         lem_in.h
+        lgnl.c
         main.c
         parsing.c
+        run_ants_run.c
         tools.c
-        tools_2.c lgnl.c)
+        tools_2.c
+        tools_3.c
+        tools_4.c
+        tools_5.c)

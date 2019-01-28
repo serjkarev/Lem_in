@@ -17,6 +17,7 @@ void	parse_room(char *str, t_lem *lem, int type)
 	int		space;
 	char	**arr;
 
+	lem->rn += 1;
 	space = space_detect(str);
 	arr = ft_strsplit(str, ' ');
 	if (arr[3] != NULL || space != 2 || !arr[0] || !arr[1] || !arr[2] ||\

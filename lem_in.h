@@ -91,6 +91,7 @@ typedef struct		s_nghbr
 typedef struct		s_room
 {
 	char			*name;
+	int				visited;
 	int				x;
 	int				y;
 	int				type;
@@ -103,6 +104,7 @@ typedef struct		s_lem
 {
 	int				ants;
 	int				flag;
+	int				rn;
 	t_s				*print;
 	t_p				*packs;
 	t_w				*ways;
@@ -165,5 +167,7 @@ void				run(t_lem *lem);
 void				print(t_w *ways, t_lem *lem);
 void				print_v2(char *rname, t_a *curr, t_q *path, t_lem *lem);
 void				choose_pack(t_lem *lem);
+
+void	find_ways_v2(t_lem *lem);
 
 #endif

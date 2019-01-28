@@ -58,7 +58,7 @@ void	print_way(t_q *path)
 	while (path)
 	{
 		if (path->next)
-			printf("%s -> ", path->room->name);
+			printf("%s -> ", path->room->name);//поудалять ебучие принтфи
 		else
 			printf("%s", path->room->name);
 		path = path->next;

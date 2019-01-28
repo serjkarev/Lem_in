@@ -76,6 +76,7 @@ void	create_room(char **arr, t_lem *lem, int type)
 		lem->rooms = (t_room*)ft_memalloc(sizeof(t_room));
 		lem->rooms->name = ft_strdup(arr[0]);
 		lem->rooms->type = type;
+		lem->rooms->visited = 0;
 		create_room_v2(arr, lem->rooms);
 		lem->rooms->tail = lem->rooms;
 		lem->rooms->tail->next = NULL;
@@ -86,6 +87,7 @@ void	create_room(char **arr, t_lem *lem, int type)
 		lem->rooms->tail = lem->rooms->tail->next;
 		lem->rooms->tail->name = ft_strdup(arr[0]);
 		lem->rooms->tail->type = type;
+		lem->rooms->tail->visited = 0;
 		create_room_v2(arr, lem->rooms->tail);
 		lem->rooms->tail->next = NULL;
 	}

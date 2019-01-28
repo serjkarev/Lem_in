@@ -20,7 +20,7 @@ sys/stat.h
 stdio.h
 -
 
-/Users/skarev/Desktop/tmp/find_ways.c
+/Users/skarev/Desktop/tmp/find_ways_v2.c
 lem_in.h
 /Users/skarev/Desktop/tmp/lem_in.h
 
@@ -29,4 +29,8 @@ lem_in.h
 /Users/skarev/Desktop/tmp/./libft/libft.h
 stdio.h
 -
+
+/Users/skarev/Desktop/tmp/main.c
+lem_in.h
+/Users/skarev/Desktop/tmp/lem_in.h
 

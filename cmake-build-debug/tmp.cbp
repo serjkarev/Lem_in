@@ -95,6 +95,12 @@
 		<Unit filename="/Users/skarev/Desktop/tmp/find_ways.c">
 			<Option target="tmp"/>
 		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/find_ways_v2.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/helpers.c">
+			<Option target="tmp"/>
+		</Unit>
 		<Unit filename="/Users/skarev/Desktop/tmp/lem_in.h">
 			<Option target="tmp"/>
 		</Unit>
@@ -312,6 +318,12 @@
 			<Option target="tmp"/>
 		</Unit>
 		<Unit filename="/Users/skarev/Desktop/tmp/tools_3.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/tools_4.c">
+			<Option target="tmp"/>
+		</Unit>
+		<Unit filename="/Users/skarev/Desktop/tmp/tools_5.c">
 			<Option target="tmp"/>
 		</Unit>
 		<Unit filename="/Users/skarev/Desktop/tmp/CMakeLists.txt">

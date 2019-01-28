@@ -17,6 +17,7 @@ void	parse_ants(t_lem *lem)
 	char	*str;
 
 	lem->ants = 0;
+	lem->rn = 0;
 	while (lgnl(0, &str))
 	{
 		add_to_print(lem, str);
