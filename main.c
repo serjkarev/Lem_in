@@ -64,6 +64,19 @@ static void	get_flags(t_lem *lem, int ac, char **av)
 	}
 }
 
+void		main_helper(t_lem *lem)
+{
+	if (!lem->flags || lem->flags->hide_map != 1)
+		print_map(lem);
+	if (lem->flags && lem->flags->show_ways)
+		print_pack(lem);
+	if (lem->packs->next)
+		choose_pack(lem);
+	r_a_r(lem);
+	if (lem->flags && lem->flags->approve_flags)
+		print_flags(lem);
+}
+
 int			main(int ac, char **av)
 {
 	char	*str;
@@ -76,7 +89,7 @@ int			main(int ac, char **av)
 	str = parse_rooms(lem);
 	piece_of_valid(lem, str);
 	parse_links(lem, str);
-	if (lem->rn < 1800 || lem->rn >3000)
+	if (lem->rn < 1800 || lem->rn > 3000)
 		find_ways(lem);
 	else
 		find_ways_v2(lem);
@@ -84,15 +97,6 @@ int			main(int ac, char **av)
 		ft_error(NULL, NULL, ER14);
 	lem->ways = cut_the_way(lem->ways);
 	packs_of_path(lem);
-	if (!lem->flags || lem->flags->hide_map != 1)
-		print_map(lem);
-	if (lem->flags && lem->flags->show_ways)
-		print_pack(lem);
-	if (lem->packs->next)
-		choose_pack(lem);
-	r_a_r(lem);
-	if (lem->flags && lem->flags->approve_flags)
-		print_flags(lem);
-	// system("leaks -q lem-in");
+	main_helper(lem);
 	return (0);
 }

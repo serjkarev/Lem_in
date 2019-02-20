@@ -33,7 +33,7 @@ void	parse_ants(t_lem *lem)
 		else if (ft_strequ(str, "##start") || ft_strequ(str, "##end"))
 			ft_error(str, NULL, ER01);
 		else if (str[0] == '#')
-			continue ;
+			free(str);
 		else if (lem->ants == 0 && str)
 			ft_error(str, NULL, ER04);
 	}
@@ -71,7 +71,6 @@ void	parse_links(t_lem *lem, char *str)
 {
 	if (str)
 	{
-		add_to_print(lem, str);
 		parce_links_v2(str, lem);
 		free(str);
 	}

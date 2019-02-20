@@ -18,10 +18,10 @@ void	find_ways(t_lem *lem)
 	t_q		*path;
 	t_room	*room;
 	t_q		*newpath;
-	t_nghbr	*tmp;
 
 	queue = NULL;
 	path = NULL;
+	newpath = NULL;
 	room = find_room_by_type(lem, 1);
 	path = push_back(path, room);
 	queue = push(queue, path);
@@ -34,17 +34,7 @@ void	find_ways(t_lem *lem)
 			add_path_to_ways(lem, path);
 		else
 			lem->flag = 1;
-		tmp = room->nghbrs;
-		while (tmp && room->type != 3)
-		{
-			if (is_not_visited(tmp->neighbor, path))
-			{
-				newpath = copy_path(path);
-				newpath = push_back(newpath, tmp->neighbor);
-				queue = push(queue, newpath);
-			}
-			tmp = tmp->next;
-		}
+		find_ways_h(room, path, newpath, queue);
 		queue = pop(queue, lem->flag);
 	}
 }

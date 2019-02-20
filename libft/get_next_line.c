@@ -81,7 +81,6 @@ int			get_next_line(const int fd, char **line)
 	if ((fd < 0 || fd > MAX_FD || !line ||
 		read(fd, buf, 0) < 0) || BUFF_SIZE < 1)
 		return (-1);
-//	 *line ? ft_strdel(line) : line;
 	buf = ft_strnew(BUFF_SIZE + 1);
 	if (tmp[fd] != NULL)
 		if (ft_line(&tmp[fd], line, buf))

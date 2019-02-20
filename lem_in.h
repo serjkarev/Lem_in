@@ -13,7 +13,6 @@
 #ifndef LEM_IN_H
 # define LEM_IN_H
 # include "./libft/libft.h"
-# include <stdio.h>
 
 # define ER01 "🖕\x1B[31m ERROR: start/end room before ants \033[0m🖕\n"
 # define ER02 "🖕\x1B[31m ERROR: NO ANTS \033[0m🖕\n"
@@ -168,6 +167,10 @@ void				print(t_w *ways, t_lem *lem);
 void				print_v2(char *rname, t_a *curr, t_q *path, t_lem *lem);
 void				choose_pack(t_lem *lem);
 
-void	find_ways_v2(t_lem *lem);
+void				find_ways_v2(t_lem *lem);
+void				find_ways_v2h(t_room *room, t_q *path, t_q *newpath,\
+															t_w *queue);
+void				find_ways_h(t_room *room, t_q *path, t_q *newpath, \
+															t_w *queue);
 
 #endif

@@ -12,7 +12,6 @@
 
 #include "lem_in.h"
 
-
 t_q		*copy_path(t_q *path)
 {
 	t_q		*newpath;
@@ -58,10 +57,13 @@ void	print_way(t_q *path)
 	while (path)
 	{
 		if (path->next)
-			printf("%s -> ", path->room->name);//поудалять ебучие принтфи
+		{
+			ft_putstr(path->room->name);
+			write(1, " -> ", 4);
+		}
 		else
-			printf("%s", path->room->name);
+			ft_putstr(path->room->name);
 		path = path->next;
 	}
-	printf("\n");
+	write(1, "\n", 1);
 }

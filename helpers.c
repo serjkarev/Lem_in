@@ -21,7 +21,7 @@ void	parse_room(char *str, t_lem *lem, int type)
 	space = space_detect(str);
 	arr = ft_strsplit(str, ' ');
 	if (arr[3] != NULL || space != 2 || !arr[0] || !arr[1] || !arr[2] ||\
-										ft_strchr(arr[0], '-') != NULL)
+						ft_strchr(arr[0], '-') != NULL || arr[0][0] == 'L')
 		ft_error(str, arr, ER05);
 	if (get_room_by_name(lem, arr[0]))
 		ft_error(str, arr, ER15);
